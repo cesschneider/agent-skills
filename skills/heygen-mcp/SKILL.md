@@ -112,17 +112,31 @@ The Claude Code settings at `.claude/settings.json` wires these automatically:
 | `heygen_add_webhook` | Register an HTTPS URL for event notifications (`avatar_video.success`, etc.) |
 | `heygen_delete_webhook` | Remove a webhook endpoint |
 
+## Production Configuration
+
+### Confirmed Avatar — "City Loft Studio with Microphone"
+
+| Engine | Avatar ID | Use when |
+|--------|-----------|----------|
+| Avatar V (standard) | `731e46ac49bf4795bd4e4c799f1d3b95` | Walkthroughs, tutorials, bulk scenes |
+| Avatar IV (cinematic) | `0b89efd1a0a446e29b155177f63a0446` | Intros, outros, hero segments |
+
+- **Look name:** Cesar Schneider at the microphone
+- **Group:** Cesar Schneider (`d835d346a0cc455cb41b98c1b73d1c78`)
+- **Voice:** Cesar Schneider cloned voice — `c0a044792fc64b3fa7dfc0700da93016`
+- **Resolution:** `1080p` · **Aspect ratio:** `16:9` (YouTube main), `9:16` (Shorts)
+
+This avatar is used for **all talking-head scenes** across every video. Do not switch looks mid-episode — visual consistency is the brand.
+
 ## Process
 
 ### Creating a Video (Standard Flow)
 
 ```
 1. heygen_get_remaining_quota       → confirm credits before generating
-2. heygen_list_avatars              → pick avatar_id
-3. heygen_list_voices               → pick voice_id (filter by language/gender)
-4. heygen_create_video              → submit job, receive video_id
-5. heygen_get_video_status          → poll until status = "completed" or "failed"
-6. [on failure] inspect failure_code + failure_message in response
+2. heygen_create_video              → submit job using confirmed avatar + voice IDs above
+3. heygen_get_video_status          → poll until status = "completed" or "failed"
+4. [on failure] inspect failure_code + failure_message in response
 ```
 
 ### One-Shot Video from Prompt
