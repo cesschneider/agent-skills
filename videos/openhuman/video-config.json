@@ -2,13 +2,22 @@
   "title": "OpenHuman: The AI Assistant That Learns Everything About You",
   "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
   "avatar_name": "Cesar Schneider at the microphone (city loft)",
-  "voice_id": "12075274141e4fccae353873d281094e",
-  "voice_name": "Canyon Rivers — Broadcaster (English)",
+  "voice_id": "c0a044792fc64b3fa7dfc0700da93016",
+  "voice_name": "Cesar Schneider cloned voice",
   "resolution": "1080p",
   "dimension": { "width": 1920, "height": 1080 },
   "aspect_ratio": "16:9",
   "caption": true,
-  "submitted_video_id": "cb7552d31c684de2ac06298b7310fc3a",
+  "draft_video_id": "cb7552d31c684de2ac06298b7310fc3a",
+  "draft_video_voice": "Canyon Rivers (English) — replaced by cloned voice",
+  "draft_video_status": "completed",
+  "submitted_video_id": "bde6c762b8864b01af36b3c3458e560b",
+  "submitted_video_status": "completed",
+  "submitted_video_duration_s": 187.768,
+  "submitted_video_background": "#0f0f1a (dark brand color — image backgrounds blocked, see known_issues)",
+  "submitted_video_gif": "https://resource2.heygen.ai/video/bde6c762b8864b01af36b3c3458e560b/gif.gif",
+  "diagram_images_path": "videos/openhuman/diagrams/",
+  "diagram_cdn": "https://cdn.jsdelivr.net/gh/cesschneider/agent-skills@7112e8a/videos/openhuman/diagrams/",
   "scenes": [
     {
       "id": 1,
@@ -67,5 +76,9 @@
       "script": "OpenHuman is still in beta, but with 30,000 GitHub stars in just a few months, it is clearly one of the most promising open-source projects of 2026. If you want to explore it for your business, the link is in the description. And if practical AI for business is what you are here for — subscribe and hit the bell. See you in the next one."
     }
   ],
-  "submission_instructions": "When MCP server is back: for each scene, call heygen_upload_asset(url=diagram_url, type='image') to get asset_id, then call heygen_generate_video_v2 with background.type='image' and background.value=asset_id for each scene."
+  "known_issues": {
+    "heygen_upload_asset": "Returns HeyGen API 404 for any URL — endpoint appears broken in the MCP proxy.",
+    "background_image_v2": "MCP schema maps 'value' field but HeyGen API expects nested 'image.url' or 'image_asset_id' — proxy mapping mismatch.",
+    "workaround": "To add diagram backgrounds, fix the Replit proxy to call the correct HeyGen asset upload endpoint and map background.image.url correctly."
+  }
 }
