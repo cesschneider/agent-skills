@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "heygen": {
+      "type": "http",
+      "url": "${MCP_URL}",
+      "headers": {
+        "Authorization": "Bearer ${API_KEY}"
+      }
+    }
+  }
+}
