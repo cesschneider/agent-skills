@@ -1,0 +1,50 @@
+{
+  "title": "5 Secret AI Workflows That Tripled My Output",
+  "reference_video": "https://youtube.com/shorts/0zkbu4jedZM",
+  "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
+  "avatar_name": "Cesar Schneider at the microphone (city loft)",
+  "voice_id": "c0a044792fc64b3fa7dfc0700da93016",
+  "voice_name": "Cesar Schneider cloned voice",
+  "resolution": "1080p",
+  "dimension": { "width": 1920, "height": 1080 },
+  "aspect_ratio": "16:9",
+  "caption": true,
+  "background": "#0f0f1a",
+  "video_id": "ae559f4ea2384513acdd4977c1b2cf6e",
+  "status": "completed",
+  "duration_s": 108.904,
+  "gif_url": "",
+  "captioned_url": "https://files2.heygen.ai/movio/video/ae559f4ea2384513acdd4977c1b2cf6e/36952c306df343ed876d21e0bfcdaf1d/caption.mp4",
+  "scenes": [
+    {
+      "id": 1,
+      "name": "Hook",
+      "script": "You only need one AI tool to make money. And these five secret workflows, I'll show you live that helped triple my output. The tool: Perplexity Computer. It has 60 pre-built workflows. You don't write the prompt, you fill in the blanks, and then it'll call on Claude, or whatever AI tool is best for the job. It's super hot. Then you layer these five workflows."
+    },
+    {
+      "id": 2,
+      "name": "Workflow 1 — Landing Page Generator",
+      "script": "One. Landing page generator. You type your product, your audience, your offer. Claude writes the copy and then codes the page. And then it generates the images and product mockups. Two models chain together for one input in 90 seconds. What used to cost you a designer, a copywriter, and two weeks now takes no time."
+    },
+    {
+      "id": 3,
+      "name": "Workflow 2 — Competitor Intelligence",
+      "script": "Number two. Competitor intelligence. Tell Perplexity who your market competitors are. It'll run a recurring report to show you at a glance their product launches, their pricing changes, and partnership announcements. This one is so good, it feels illegal."
+    },
+    {
+      "id": 4,
+      "name": "Workflow 3 — Sales Prep",
+      "script": "Three. Sales prep. Drop in a prospect. Out comes a one pager: how do they make money, where do they bleed it, what to pitch. Now you have a unified plan. Like look how powerful this one is."
+    },
+    {
+      "id": 5,
+      "name": "Workflow 4 — Slide Creation",
+      "script": "Four. Slide creation. Research any topic, distill the key insights, get back polished slides with sourced facts, visual data, all presentation ready. I wasted so many years on PowerPoint in my career. Never again."
+    },
+    {
+      "id": 6,
+      "name": "Workflow 5 — Contract Review + CTA",
+      "script": "Five. Final pass. Drop in any contract. You get the five clauses that'll bite you and the exact language to push back on. A lawyer would charge you thousands for this. Now you can do it while sipping your latte. I love being ambitious but lazy. I'm over learning AI and into just getting results from my AI."
+    }
+  ]
+}
