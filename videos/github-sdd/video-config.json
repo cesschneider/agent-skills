@@ -1,0 +1,76 @@
+{
+  "title": "AI-Assisted Development & Spec-Driven Development — GitHub Interview Breakdown",
+  "source_interview": "Inference show by Ting Post — ~30min interview with GitHub engineering leader",
+  "target_duration_min": 10,
+  "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
+  "avatar_name": "Cesar Schneider at the microphone (city loft)",
+  "voice_id": "c0a044792fc64b3fa7dfc0700da93016",
+  "voice_name": "Cesar Schneider cloned voice",
+  "resolution": "1080p",
+  "dimension": { "width": 1920, "height": 1080 },
+  "aspect_ratio": "16:9",
+  "caption": true,
+  "background": "#0f0f1a",
+  "status": "pending_submission",
+  "key_ideas": [
+    "Micro-delegation vs micro-steering — the two modes of AI-assisted development",
+    "Low floor / high ceiling — democratisation of creation (Mozart analogy)",
+    "3D printer / CAD drawing analogy → the core of Spec-Driven Development",
+    "Four-part spec framework: intent, constraints, context, acceptance criteria",
+    "AX (Agentic Experience) — bidirectional canvas + agent collaboration",
+    "Co-pilot not pilot — human always in the loop",
+    "You do not want your bank app vibe-coded — quality requires specs"
+  ],
+  "scenes": [
+    {
+      "id": 1,
+      "name": "Hook",
+      "words": 97,
+      "script": "In December 2025, something shifted in software development. Not gradually — it happened almost overnight.\n\nAI agents stopped making constant mistakes. GitHub went from expecting five percent growth to seeing three times growth. Seventeen million AI-generated pull requests in March alone.\n\nI analyzed a long-form interview with a senior engineering leader at GitHub — and what came out of it completely changed how I think about building software with AI.\n\nThere is one core principle that separates developers who are thriving in the AI era from those who are drowning in it. And it maps directly to a methodology we call Spec-Driven Development.\n\nThis video is my breakdown of the most important ideas from that conversation. Let's go."
+    },
+    {
+      "id": 2,
+      "name": "The Moment Agents Started Working",
+      "words": 175,
+      "script": "Before late 2025, using an AI agent to write code felt like babysitting a toddler. You would give the agent a task. It would go left when it should go right. You would correct it. It would make another wrong turn. The whole experience was a correction process, not a creation process.\n\nThe shift happened when the models got good enough that you could say: go ahead and play. And the output came back with high quality.\n\nThe GitHub leader described it perfectly: it started feeling iterative — like you were actually building something together — instead of constantly fixing what the agent broke.\n\nHe called this micro-delegation and micro-steering.\n\nMicro-delegation is when you hand off a clearly defined task and let the agent execute it fully.\n\nMicro-steering is when you step in — lightly — to adjust direction.\n\nThis is the foundation of productive AI-assisted development. If you do not understand the difference between these two modes, working with agents will feel expensive and chaotic. If you do, it becomes a genuine creative superpower."
+    },
+    {
+      "id": 3,
+      "name": "Low Floor, High Ceiling",
+      "words": 168,
+      "script": "Here is one of the most important ideas from the interview: GitHub's design philosophy is now built around two principles — lower the floor, raise the ceiling.\n\nLowering the floor means making software creation accessible to people who never wrote a line of code. GitHub is moving toward conversational interfaces, mobile-first development, and agents that remove every friction point between an idea and working software.\n\nRaising the ceiling means giving professional developers tools to do things that were impossible before. More automation, better agents, faster iteration — without losing depth or quality.\n\nThe analogy that hit me hardest: Mozart was probably not the only musical genius alive in his era. But most of those geniuses never had access to a piano. What is happening right now is that we are putting a piano in front of millions of people who never had one.\n\nFor you as a developer or a builder — this is your moment. The floor is lower than it has ever been. The ceiling has never been higher. The question is what you are going to build."
+    },
+    {
+      "id": 4,
+      "name": "The 3D Printer — Why Spec-Driven Development Matters",
+      "words": 185,
+      "script": "Here is where it gets concrete. The best analogy I have ever heard for why Spec-Driven Development is the critical skill of this era came directly from this interview.\n\nThe leader compared AI-assisted development to a 3D printer.\n\nWhen you 3D print something, you spend most of your time on the CAD drawing — the detailed technical specification. You define every dimension, every constraint, every material property. Once that design is right, you hand it to the printer. The printer executes. You review the output and refine.\n\nWorking with AI agents is exactly the same.\n\nThe quality of your output is determined almost entirely by the quality of your specification. A vague prompt produces vague code. A precise spec — with context, constraints, edge cases, and acceptance criteria defined up front — produces output that is close to production-ready on the first pass.\n\nThis is Spec-Driven Development. You shift your investment from writing code to writing specifications. The agent writes the code. You review, steer, and iterate.\n\nHe put it this way: he spends more time on the CAD drawing than on the printing process. The agent handles the tokens. He handles the design."
+    },
+    {
+      "id": 5,
+      "name": "What Makes a Good Spec",
+      "words": 180,
+      "script": "So what does a strong spec actually look like in practice?\n\nFour components. Every spec I write now includes all four.\n\nFirst: intent. What are you building and why? What problem does this solve, for which user, in which context?\n\nSecond: constraints. What must this never do? What are the security requirements, the performance limits, the architectural rules that must not be violated?\n\nThird: context. What does the agent need to know about the existing codebase, the business rules, or the system architecture before it writes a single line? Agents do not know your system. You have to tell them.\n\nFourth: acceptance criteria. How will you know if the output is correct? What tests must pass? What behavior must be observable?\n\nWhen you give an agent all four of those, you are not prompting. You are specifying. And that distinction matters enormously.\n\nBecause the interview was crystal clear on one thing: you do not want your bank application vibe-coded. You do not want your production system built from a vague prompt and optimism. For prototypes, for exploration — acceptable. For anything that ships to real users — you need the spec."
+    },
+    {
+      "id": 6,
+      "name": "The New GitHub — Agentic Experience",
+      "words": 155,
+      "script": "GitHub is redesigning itself around what their head of design calls AX — Agentic Experience.\n\nThe idea: instead of a user jumping through fifty UI screens to accomplish a goal, the agent navigates the interface on your behalf. You declare the intent. The agent handles the execution.\n\nBut here is what makes it different from just chatting with a bot: it is bidirectional. You interact with the canvas and affect the agent. The agent reads the canvas and affects the UI. It is a real-time creative feedback loop.\n\nThe analogy used was Picasso at a canvas. You are painting on one side, talking to the agent on the other side, and both of you are shaping the final output together.\n\nFor developers, this is the future of your development environment. You bring the judgment and the creative intent. The agent brings the execution speed. Neither replaces the other — they amplify each other.\n\nThis is also why the spec matters even more in an agentic environment. The better you articulate your intent — the better the canvas looks at the end."
+    },
+    {
+      "id": 7,
+      "name": "Human Always in the Loop",
+      "words": 150,
+      "script": "GitHub named their product Co-pilot. Not Pilot. That was a deliberate choice in 2021, and it remains their core position today.\n\nThe human is always at the center of the creative process.\n\nThe self-driving car analogy from the interview: you do not manage every sensor. You do not control every wheel rotation. But you decide where you are going. The car handles the mechanics. You provide the judgment.\n\nThis is the right mental model for AI-assisted development. The goal is not to maximize how many agents you have running in parallel. The leader himself said he usually has one to three things going at once. The goal is to maximize creation — to build things that matter, faster, with better quality than you could alone.\n\nParalyzing yourself to no value is not the vision. Creation is.\n\nAnd the skill that makes you a better creator in this environment is exactly the skill at the core of Spec-Driven Development: knowing what you want, articulating it precisely, and giving the agent what it needs to execute."
+    },
+    {
+      "id": 8,
+      "name": "Your Next Step",
+      "words": 105,
+      "script": "Here is what I want you to take from this.\n\nIf you are building software today — with AI or without — the most valuable skill you can develop is not learning to write more code. It is learning to write better specifications.\n\nStart with the four-part framework: intent, constraints, context, acceptance criteria. Write that before you write a single prompt. Give it to your agent. Review the output. Iterate on the spec, not just the code.\n\nThe floor has never been lower. The ceiling has never been higher. The interview I analyzed is linked in the description — I strongly recommend listening to the full version.\n\nIf Spec-Driven Development is something you want to go deeper on, subscribe. I cover practical AI development workflows every week — focused on what actually works in production.\n\nDrop a comment: what is the hardest part of working with AI agents in your current workflow? I read every single one."
+    }
+  ],
+  "total_words": 1215,
+  "estimated_duration_min": 9.3
+}
