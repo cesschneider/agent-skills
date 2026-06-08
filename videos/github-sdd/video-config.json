@@ -14,7 +14,7 @@
   "aspect_ratio": "16:9",
   "caption": true,
   "background": "#0f0f1a",
-  "status": "processing",
+  "status": "completed",
   "key_ideas": [
     "Micro-delegation vs micro-steering \u2014 the two modes of AI-assisted development",
     "Low floor / high ceiling \u2014 democratisation of creation (Mozart analogy)",
@@ -76,5 +76,9 @@
   ],
   "total_words": 1215,
   "estimated_duration_min": 9.3,
-  "video_id": "27da5daba50f46e1bbce548a80531f73"
+  "video_id": "27da5daba50f46e1bbce548a80531f73",
+  "duration_s": 532.062,
+  "gif_url": "https://resource2.heygen.ai/video/27da5daba50f46e1bbce548a80531f73/gif.gif",
+  "captioned_url": "https://files2.heygen.ai/movio/video/27da5daba50f46e1bbce548a80531f73/1b5a580239234bf8a81578f9a2ae62a1/caption.mp4?Expires=1781524461&Signature=lE6WOKnCT-o6oTEH29morg8dkv6u7R~iiOYZv0QsKITYALoBujb1P7wldV7NKYX2ssNsn8sgwl5e6f7RVgViUG4VIksAQ4XYRSwHrQa4vw79UnQcRtv9Bb3d6JNQj-uFh9uDXSRcoLBgtCmVaaW3sBYGaGp8diWIs2fbW4woKjAF7DhucB0dLMA3xgawfXbbbkLlnXu03db7VADL3RGrrYTWnu6t3XMXM9z0ADr~4GEPEgJ8TpvYYvs6tDhwH5TW3zar2JFSKuxxb4ip73eoapud9v4NMb9MCSDHmg1VNUsYaczN1tpy6J7DLjvbvcF7yjdSWhuYmnLmEUJL0q6Rfw__&Key-Pair-Id=K38HBHX5LX3X2H",
+  "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/27da5daba50f46e1bbce548a80531f73.mp4?Expires=1781524252&Signature=asnoO8GAOFmFA7kSNXyindAqEMcAIr0jTKI2UxowUjXn2uVJ~Z20zS7uCnYj~pgQOCFBw2s6iM43YR-1id6PTkDH0dXWLuMSb4e1jcKITeBAFm9GEpMu3ZHaX-0V4i-9ABZHLavbcoaQebPUoMZiD451MT8WQlF5ugLT8CP6tZ44dGw~Y7R2t8OaaPenmn2Uyrucce5Zn233oALziU4ztoleheVhGatpA1tPDKL-09TTUFlAEelUK1EnTLcoqs18eg0OwYgjEDG7eS96TGVQmo7cokv~j4TMLJMtr5DZnIyoCOhfT8UUJuKVGkyTc2e0~V9rwS71cbqwfVUKb5HqKw__&Key-Pair-Id=K38HBHX5LX3X2H"
 }
