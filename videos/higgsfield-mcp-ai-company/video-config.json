@@ -1,5 +1,5 @@
 {
-  "title": "Build a Self-Running AI Company in 16 Minutes (Move 75% Faster) — Higgsfield MCP Breakdown",
+  "title": "Build a Self-Running AI Company in 16 Minutes (Move 75% Faster) \u2014 Higgsfield MCP Breakdown",
   "source_video": "https://youtu.be/Baa71rPgxvA",
   "target_duration_min": 9,
   "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
@@ -14,16 +14,16 @@
   "aspect_ratio": "16:9",
   "caption": true,
   "background": "#0f0f1a",
-  "status": "draft",
+  "status": "processing",
   "key_ideas": [
-    "Higgsfield MCP gives Claude 'hands' — direct access to 30+ image/video models (Soul, Cinema Studio, Flux, Seedream, Kling, Minimax Hailuo, Veo) through one interface",
-    "Outputs land directly in your working folders — images up to 4K, videos up to 15 seconds, ready to drop into a campaign",
-    "Soul Characters keep a consistent 'face' across every asset — same character in product shots, ads, and video clips",
+    "Higgsfield MCP gives Claude 'hands' \u2014 direct access to 30+ image/video models (Soul, Cinema Studio, Flux, Seedream, Kling, Minimax Hailuo, Veo) through one interface",
+    "Outputs land directly in your working folders \u2014 images up to 4K, videos up to 15 seconds, ready to drop into a campaign",
+    "Soul Characters keep a consistent 'face' across every asset \u2014 same character in product shots, ads, and video clips",
     "The 'self-running company' stack = Higgsfield CLI + GWS CLI + Claude Code + a Google Sheets tracking schema",
-    "Every generation is logged automatically — prompt, job ID, model, cost — building a searchable creative database over time",
+    "Every generation is logged automatically \u2014 prompt, job ID, model, cost \u2014 building a searchable creative database over time",
     "Claude Code becomes the creative director: it plans a content calendar, queues generations, and reviews outputs against the brief",
     "A self-improving planning layer feeds each cycle's results back into prompts, so quality compounds run over run",
-    "Result: a one-person team moving roughly 75% faster — a week of social/landing-page assets in one focused session"
+    "Result: a one-person team moving roughly 75% faster \u2014 a week of social/landing-page assets in one focused session"
   ],
   "scenes": [
     {
@@ -76,5 +76,6 @@
     }
   ],
   "total_words": 1152,
-  "estimated_duration_min": 8.9
+  "estimated_duration_min": 8.9,
+  "video_id": "158da6e7362c4ac79928cae12ca5b6aa"
 }
