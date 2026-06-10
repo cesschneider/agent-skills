@@ -13,6 +13,8 @@ A shared client module, `higgsfield_client.py` (in this skill directory), wraps 
 
 > **Unverified surface area.** Higgsfield's official docs are sparse and the exact request/response field names vary by model and change without notice. Treat the model catalog and payload shapes below as a starting point — always run one cheap test generation for a model before relying on it in a full production run (see Verification).
 
+> **Connectivity confirmed, generation not yet exercised end-to-end.** The base URL, auth header, submit/status endpoint shapes, and several model IDs below were verified live (see Process). However every test submission so far returned `403 {"detail":"not_enough_credits"}` — the configured account needs credits topped up before a full generation/poll/result cycle can be confirmed.
+
 ## Environment Variables
 
 | Variable | Purpose |
@@ -29,19 +31,19 @@ A shared client module, `higgsfield_client.py` (in this skill directory), wraps 
 
 ## Model Reference
 
-All endpoints are on `https://platform.higgsfield.ai`, header `Authorization: Key $HIGGSFIELD_API_KEY:$HIGGSFIELD_API_SECRET`. Submit with `POST /{model_id}`, body `{"input": {...}}`.
+All endpoints are on `https://platform.higgsfield.ai`, header `Authorization: Key $HIGGSFIELD_API_KEY:$HIGGSFIELD_API_SECRET`. Submit with `POST /{model_id}` — **the JSON body is the arguments dict directly, with no `{"input": {...}}` wrapper** (e.g. `{"prompt": "...", "aspect_ratio": "16:9", "resolution": "1080p"}`).
 
-| Model ID | Type | Purpose |
-|----------|------|---------|
-| `higgsfield-ai/soul/standard` | Image | Soul — stylized portraits/characters with consistent identity |
-| `reve/text-to-image` | Image | General text-to-image |
-| `bytedance/seedream/v4/text-to-image` | Image | Text-to-image (cheapest — use for connectivity tests) |
-| `bytedance/seedream/v4/edit` | Image | Image editing/inpainting |
-| `higgsfield-ai/dop/preview`, `higgsfield-ai/dop/standard` | Video | Image-to-video animation ("DOP") |
-| `bytedance/seedance/v1/pro/image-to-video` | Video | Image-to-video, cinematic motion |
-| `kling-video/v2.1/pro/image-to-video` | Video | Image-to-video, Kling engine |
+| Model ID | Type | Purpose | Status |
+|----------|------|---------|--------|
+| `higgsfield-ai/soul/standard` | Image | Soul — stylized portraits/characters with consistent identity | Confirmed to exist (422 on bad params); requires `resolution: "720p"` or `"1080p"` (not `"2K"`) |
+| `reve/text-to-image` | Image | General text-to-image | Confirmed to exist (403 `not_enough_credits` on submit) |
+| `bytedance/seedream/v4/text-to-image` | Image | Text-to-image | **Returns `404 {"detail":"Model not found"}` on this account** — despite appearing in the official SDK's README example. Do not use until re-verified. |
+| `bytedance/seedream/v4/edit` | Image | Image editing/inpainting | Unverified |
+| `higgsfield-ai/dop/preview`, `higgsfield-ai/dop/standard` | Video | Image-to-video animation ("DOP") | Unverified |
+| `bytedance/seedance/v1/pro/image-to-video` | Video | Image-to-video, cinematic motion | Unverified |
+| `kling-video/v2.1/pro/image-to-video` | Video | Image-to-video, Kling engine | Unverified |
 
-`input` typically includes `prompt` (text models) or `image_url` + `prompt` (image-to-video models), plus model-specific params like `aspect_ratio`/`resolution` or `width`/`height` — confirm the exact keys for a model with one test call before bulk use.
+Arguments typically include `prompt` (text models) or `image_url` + `prompt` (image-to-video models), plus model-specific params like `aspect_ratio`/`resolution` or `width`/`height` — confirm the exact keys for a model with one test call before bulk use. For connectivity tests, prefer `higgsfield-ai/soul/standard` (with `resolution: "720p"`) over `bytedance/seedream/v4/text-to-image`, which 404s on this account.
 
 ## Production Configuration
 
@@ -60,29 +62,32 @@ import sys
 sys.path.insert(0, "<repo>/skills/higgsfield-api")
 from higgsfield_client import submit, poll_until_done
 
-MODEL = "bytedance/seedream/v4/text-to-image"
+MODEL = "higgsfield-ai/soul/standard"
 
 request_id = submit(MODEL, {
     "prompt": "A neon-lit city loft at night, cinematic, 35mm",
     "aspect_ratio": "16:9",
+    "resolution": "1080p",
 })
 
-result = poll_until_done(MODEL, request_id,
+result = poll_until_done(request_id,
                           on_update=lambda i, status, d: print(f"[{i*5}s] {status}"))
 print(result)  # inspect once — field names (images[].url vs video.url) vary by model
 ```
 
-1. `submit(model_id, input)` → returns `request_id`; save it immediately (in case polling is interrupted)
-2. `poll_until_done(model_id, request_id)` → polls status every 5s until `COMPLETED`/`FAILED`/`NSFW`/`CANCELLED`
-3. On a terminal non-`COMPLETED` status, `poll_until_done` raises with the full status payload — inspect it for the failure reason
+1. `submit(model_id, arguments)` → POSTs `arguments` directly as the JSON body (no `{"input": ...}` wrapper), returns `request_id`; save it immediately (in case polling is interrupted)
+2. `poll_until_done(request_id)` → polls `GET /requests/{request_id}/status` every 5s until `completed`/`failed`/`nsfw`/`canceled` (note: single-L "canceled")
+3. On a terminal non-`completed` status, `poll_until_done` raises with the full status payload — inspect it for the failure reason
 4. Download the resulting image/video URL(s) from the result payload (field names vary by model — print and inspect on first use)
+
+A `403 {"detail":"not_enough_credits"}` on `submit()` means the account needs a credit top-up — it is not a code/auth problem.
 
 ### Resuming a Poll
 
 If a script crashes mid-poll, **do not resubmit** — re-run with the saved `request_id`:
 
 ```python
-result = poll_until_done(MODEL, request_id, on_update=...)
+result = poll_until_done(request_id, on_update=...)
 ```
 
 ### Image-to-Video with a Reference Image
@@ -97,24 +102,27 @@ request_id = submit("higgsfield-ai/dop/standard", {
     "image_url": image_url,
     "prompt": "slow push-in, subtle parallax",
 })
-result = poll_until_done("higgsfield-ai/dop/standard", request_id)
+result = poll_until_done(request_id)
 ```
 
 ## Common Rationalizations
 
 | Rationalization | Reality |
 |---|---|
-| "The model catalog in this doc is final, I'll trust the field names" | Higgsfield's docs are sparse and change without notice. Run one cheap test (`bytedance/seedream/v4/text-to-image`) and print the raw result before scripting a full batch. |
-| "I'll poll once and assume it's done" | Generation is async — always poll until `COMPLETED`/`FAILED`/`NSFW`/`CANCELLED`. |
+| "The model catalog in this doc is final, I'll trust the field names" | Higgsfield's docs are sparse and change without notice. Run one cheap test (`higgsfield-ai/soul/standard`) and print the raw result before scripting a full batch. |
+| "I'll wrap my arguments in `{"input": {...}}` like a fal.ai client" | Higgsfield's API takes the arguments dict directly as the JSON body — no `input` wrapper. |
+| "I'll poll once and assume it's done" | Generation is async — always poll until `completed`/`failed`/`nsfw`/`canceled`. |
 | "I'll hardcode the API key/secret to save env lookups" | Never. Both `HIGGSFIELD_API_KEY` and `HIGGSFIELD_API_SECRET` must come from the environment. |
 | "A request failed once, I'll resubmit" | Retry the *same* status/result call (idempotent); only `submit()` creates a new job — don't resend it for a `request_id` you already have. |
+| "`not_enough_credits` means my code is broken" | It's an account-balance issue, not a bug — top up credits before bulk runs. |
 
 ## Red Flags
 
-- Calling `submit()` for a new model without a prior cheap test call to confirm `input` keys and result field names
+- Calling `submit()` for a new model without a prior cheap test call to confirm argument keys and result field names
 - Hardcoded API keys/secrets, or keys committed to `video-config.json` / scripts
-- Treating `IN_QUEUE`/`IN_PROGRESS` as failure — only `COMPLETED`/`FAILED`/`NSFW`/`CANCELLED` are terminal
+- Treating `queued`/`in_progress` as failure — only `completed`/`failed`/`nsfw`/`canceled` are terminal
 - Using the unofficial `cloud.higgsfield.ai`/`fnf.higgsfield.ai` web backend (cookie/session auth, reverse-engineered, against this skill's "no proxy" rule)
+- Wrapping the submit body in `{"input": {...}}` — it goes directly as the top-level JSON
 
 ## Verification
 
@@ -123,5 +131,6 @@ After any generation:
 - [ ] `request_id` saved immediately after `submit()` (before polling)
 - [ ] Polled via `poll_until_done`/`get_status` until a terminal status (not assumed)
 - [ ] Result payload printed/inspected at least once per model to confirm field names before scripting a batch
-- [ ] On `FAILED`/`NSFW`, the full status payload was inspected for the reason
+- [ ] On `failed`/`nsfw`, the full status payload was inspected for the reason
 - [ ] Generated asset URLs downloaded/saved into `videos/<topic>/` before the signed URLs expire
+- [ ] If `submit()` returns `403 not_enough_credits`, reported to the user as an account balance issue (not a code bug)

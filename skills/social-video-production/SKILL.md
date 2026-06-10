@@ -91,7 +91,7 @@ If `generate_broll: true`, use the `higgsfield-api` skill to generate a handful 
 
 If a script crashes or the session restarts mid-poll, the HeyGen render continues server-side — don't resubmit. Re-poll `get_video_status(video_id)` with the saved `video_id`.
 
-**If `render_backend` is `"higgsfield"`**: follow the `higgsfield-api` skill's standard flow using `higgsfield_client.py`: `submit(model_id, input)` per scene → `poll_until_done(model_id, request_id)` until `COMPLETED`. Save `request_id`s immediately after submission. This path is less verified — run one test scene first and inspect the result shape before submitting the full set.
+**If `render_backend` is `"higgsfield"`**: follow the `higgsfield-api` skill's standard flow using `higgsfield_client.py`: `submit(model_id, arguments)` per scene → `poll_until_done(request_id)` until `completed`. Save `request_id`s immediately after submission. This path is less verified — run one test scene first and inspect the result shape before submitting the full set.
 
 ### 5. Generate the Instagram Carousel
 
