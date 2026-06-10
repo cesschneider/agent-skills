@@ -14,7 +14,7 @@ Turns one source video into a full publishing package: an avatar-narrated breakd
 - The user provides a YouTube URL and asks for a breakdown/summary video, a "new video", or a "content package" from it.
 - The user pastes a transcript directly and asks for the same output.
 - The user asks for marketing assets (carousel, captions) for an already-produced `videos/<topic>/` video.
-- NOT for: editing raw footage, live/interactive avatar streaming (see `heygen-mcp` skill), or generating unrelated standalone images.
+- NOT for: editing raw footage, or generating unrelated standalone images.
 
 ## Inputs
 
@@ -24,7 +24,7 @@ Turns one source video into a full publishing package: an avatar-narrated breakd
 | `target_duration_min` | No | Default 9–10 min for long-form 16:9, ~90s for Shorts/9:16. Ask if ambiguous and the source is long-form. |
 | `topic` slug | No | Derived from the video title (lowercase-hyphenated) — becomes `videos/<topic>/` |
 
-Production defaults (avatar, voice, resolution, background) come from the **`heygen-mcp`** skill's "Production Configuration" section — do not redefine them here.
+Production defaults (avatar, voice, resolution, background) come from the **`heygen-api`** skill's "Production Configuration" section — do not redefine them here.
 
 ## Process
 
@@ -52,8 +52,8 @@ From whatever material you gather, produce a `key_ideas` list (6–8 bullets) �
   "title": "...",
   "source_video": "https://youtu.be/...",
   "target_duration_min": 9,
-  "avatar_id": "<from heygen-mcp skill>",
-  "voice_id": "<from heygen-mcp skill>",
+  "avatar_id": "<from heygen-api skill>",
+  "voice_id": "<from heygen-api skill>",
   "dimension": {"width": 1920, "height": 1080},
   "aspect_ratio": "16:9",
   "caption": true,
@@ -72,13 +72,13 @@ Compute `words`, `total_words`, and `estimated_duration_min` (= `total_words / 1
 
 Render one 1920×1080 image per scene/key idea using `generate_slides.py` (in this skill directory) — eyebrow label, big headline of the core idea, short supporting line. Save to `videos/<topic>/scene-images/`.
 
-> **Known limitation:** `heygen_upload_asset` and `background: {type:"image"}` both fail (404/400) on the current HeyGen MCP proxy — see the `heygen-mcp` skill. These images are **not** wired into the HeyGen submission; they're standalone assets for thumbnails, B-roll overlays in a video editor, and social posts. HeyGen submissions use a solid `background.color` per the `heygen-mcp` skill.
+> These images are **not** wired into the HeyGen submission; they're standalone assets for thumbnails, B-roll overlays in a video editor, and social posts. HeyGen submissions use a solid `background.color` (see the `heygen-api` skill for using uploaded images as backgrounds instead, now that asset upload is a direct API call).
 
 ### 4. Submit to HeyGen
 
-Follow the `heygen-mcp` skill's standard flow: check quota → `heygen_generate_video_v2` with `video_inputs` built from `config["scenes"]` (talking_photo character, text voice, color background) → poll `heygen_get_video_status` until `completed`/`failed`. Write `video_id`, `duration_s`, `gif_url`, `captioned_url` back into `video-config.json`.
+Follow the `heygen-api` skill's standard flow using `heygen_client.py`: `get_remaining_quota()` → `generate_video_v2(...)` with `video_inputs` built from `config["scenes"]` (talking_photo character, text voice, color background) → `poll_until_done(video_id)` until `completed`/`failed`. Write `video_id`, `duration_s`, `gif_url`, `captioned_url`, `video_url` back into `video-config.json`, saving `video_id` immediately after submission (before polling).
 
-If the MCP proxy returns HTTP 404 mid-poll, the HeyGen render continues server-side — don't resubmit. Re-check `heygen_get_video_status` with the saved `video_id` once the proxy is back up.
+If a script crashes or the session restarts mid-poll, the HeyGen render continues server-side — don't resubmit. Re-poll `get_video_status(video_id)` with the saved `video_id`.
 
 ### 5. Generate the Instagram Carousel
 
@@ -123,16 +123,16 @@ videos/<topic>/
 | Rationalization | Reality |
 |---|---|
 | "I'll paste the transcript text directly into the script" | Copyright risk. Summarize into `key_ideas`, then write an original script. |
-| "I'll skip the scene images, HeyGen backgrounds don't work anyway" | Scene images still ship as thumbnails/B-roll/social assets — generate them regardless. |
+| "I'll skip the scene images, they're not used in the HeyGen submission" | Scene images still ship as thumbnails/B-roll/social assets — generate them regardless. |
 | "I'll just describe the captions instead of writing them out" | The user needs copy-paste text. Always emit full fenced blocks per platform. |
 | "Word count is close enough, I'll skip computing it" | Compute it — it drives both `estimated_duration_min` and the YouTube chapter timestamps. |
-| "The proxy 404'd, I'll resubmit the video" | The render continues server-side. Re-poll with the saved `video_id` instead of resubmitting. |
+| "The poll was interrupted, I'll resubmit the video" | The render continues server-side. Re-poll with the saved `video_id` instead of resubmitting. |
 
 ## Red Flags
 
 - Long verbatim quotes (>25 words) from the source video/article in the script or `marketing.md`.
 - `video-config.json` missing `total_words`/`estimated_duration_min`, or scene `words` not matching the actual script.
-- HeyGen submission using `background.type: "image"` or `heygen_upload_asset` (both broken — color backgrounds only).
+- HeyGen submission missing `video_id` saved to `video-config.json` immediately after `generate_video_v2` (before polling).
 - Carousel or scene images with overlapping/clipped text — always inspect rendered PNGs before shipping.
 - Marketing copy missing hashtags on any of the three platforms.
 
