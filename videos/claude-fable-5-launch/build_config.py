@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+"""Build video-config.json for the Claude Fable 5 / Mythos-class launch breakdown video."""
+
+import json, os
+
+scenes = [
+    {
+        "id": 1,
+        "name": "Hook",
+        "script": "What if the AI model you have been using all year quietly became dramatically more capable overnight, and the new version is already state of the art on almost every benchmark that matters? On June ninth, twenty twenty six, Anthropic released Claude Fable five, and the company is calling it the most capable model it has ever made generally available. It belongs to a brand new tier Anthropic calls Mythos class, its frontier research track, now offered to the public for the first time. During early testing, Stripe used it to migrate a fifty million line Ruby codebase in a single day, a project that would normally take a team more than two months. In this video, I want to walk through what actually changed under the hood, how Anthropic is keeping a model this capable safe, what it costs, and whether it is worth switching to today."
+    },
+    {
+        "id": 2,
+        "name": "A New Tier Called Mythos-Class",
+        "script": "So what does Mythos class actually mean? Inside Anthropic, Mythos is the name for the frontier research track, the most advanced models the company builds before deciding how much of that capability is safe to release widely. Claude Fable five is the first model from that track made generally available, and according to Anthropic it is state of the art on nearly all of the capability benchmarks they test, covering software engineering, broad knowledge work, vision, and scientific research. The interesting pattern is not just that it scores higher across the board. It is that the longer and more complex the task gets, the bigger Fable five's lead becomes over every other model, including Anthropic's own previous best, Claude Opus four point eight. In other words, this is not a small bump on quick questions. It is built for the kind of multi-step, multi-hour work that used to require a human checking in every few minutes."
+    },
+    {
+        "id": 3,
+        "name": "Long-Horizon Autonomous Work",
+        "script": "That brings us to the headline change: how long Fable five can work on its own before it needs a human to step back in. Anthropic says Fable five and its sibling, Claude Mythos five, can operate autonomously for longer stretches than any previous Claude model. The clearest example so far comes from Stripe. During early access, Stripe pointed Fable five at a Ruby codebase containing fifty million lines of code and asked it to perform a codebase-wide migration. A task like that would normally take an engineering team more than two months of careful, coordinated work. Fable five completed it in a single day. That is not a toy benchmark, it is a real production codebase at a company that processes a meaningful share of the world's online payments. The practical takeaway is a shift in how you delegate work: instead of breaking a big migration into dozens of small prompts, you can hand over the whole project and check back later."
+    },
+    {
+        "id": 4,
+        "name": "The Safety Net Underneath",
+        "script": "Naturally, a model this capable raises an obvious question: what stops it from being misused? Anthropic's answer is a new layer of classifiers, separate AI systems that run alongside Fable five and watch for jailbreak attempts and other misuse in real time. When a request touches certain sensitive areas, specifically cybersecurity, biology and chemistry, or attempts to distill the model's capabilities into another system, the classifiers quietly hand that conversation off to Claude Opus four point eight instead of Fable five. Anthropic says these safeguards are tuned conservatively, triggering in less than five percent of sessions, which means more than ninety five percent of everyday usage runs entirely on Fable five's full capabilities without ever noticing the safety layer. There is also a data retention change worth knowing about: prompts and outputs sent to Mythos class models are kept for thirty days specifically for trust and safety review, longer than Anthropic's typical retention window."
+    },
+    {
+        "id": 5,
+        "name": "Pricing: Frontier Capability, Lower Cost",
+        "script": "Here is the part that surprised a lot of people: a more capable model that costs less to run. Fable five and Mythos five are priced at ten dollars per million input tokens and fifty dollars per million output tokens, which Anthropic says is less than half the price of the earlier Claude Mythos preview. If you are paying for the API, that is a meaningful drop for a model that is, by Anthropic's own benchmarks, the strongest one they have shipped. And if you are on a Claude subscription rather than the API, there is a limited window to try it for free: from launch day through June twenty second, Fable five is included at no extra cost on Pro, Max, Team, and seat-based Enterprise plans. After that window, normal plan limits and pricing apply, so if you have been on the fence about testing it, that two-week window is the cheapest possible way to do it."
+    },
+    {
+        "id": 6,
+        "name": "Available Everywhere On Day One",
+        "script": "One thing Anthropic clearly prioritized this time was distribution. Fable five did not just land quietly in Anthropic's own app and API, it shipped simultaneously across the platforms a lot of teams already build on. It is available on Amazon Bedrock and across AWS for teams running infrastructure there. GitHub made it generally available inside GitHub Copilot on the same day, so developers get the upgrade directly inside their existing editor workflow. And Harvey, the legal AI platform used by law firms and in-house teams, rolled it out as well. The pattern here matters: instead of forcing teams to migrate to a new tool to get frontier capability, Anthropic pushed the upgrade into the tools people are already using every day. If your team already has Claude available through one of these platforms, there is a good chance Fable five is already accessible to you right now without any setup."
+    },
+    {
+        "id": 7,
+        "name": "The Other Half: Claude Mythos 5",
+        "script": "Fable five was not the only model released that day. Alongside it, Anthropic launched Claude Mythos five, the same underlying model, but with some of those safety classifiers loosened in specific areas. Mythos five is not broadly available. It is being offered to a small, vetted group of cyberdefenders and critical infrastructure providers, initially through something called Project Glasswing, run in collaboration with the US government. The idea is that defenders protecting power grids, financial systems, and other critical infrastructure sometimes need to ask an AI model questions that would normally get redirected by the safety classifiers, things that look like attack techniques but are actually being used for defense. Rather than build one model for everyone, Anthropic is running two tiers in parallel: a safety-tuned version for the public, and a less-restricted version for a narrow group doing defensive work under government oversight. It is a notable template for how frontier labs might handle increasingly capable models going forward."
+    },
+    {
+        "id": 8,
+        "name": "Your Next Step",
+        "script": "So here is where that leaves you. As of right now, Claude Fable five is the most capable model Anthropic has ever made publicly available, it is cheaper per token than its predecessor, and if you are on a paid Claude plan, it is free to use through June twenty second. That is a short window to test it on something real. Don't just ask it trivia. Give it the kind of long, messy, multi-step task you would normally break into a dozen smaller requests, a refactor, a research summary, a first draft of a whole project, and see how far it gets before it needs you again. That is where Fable five is built to shine. If this breakdown was useful, subscribe, I cover model releases like this as soon as they land, and let me know in the comments: what is the first big task you are going to throw at Fable five?"
+    },
+]
+
+for s in scenes:
+    s["words"] = len(s["script"].split())
+
+total_words = sum(s["words"] for s in scenes)
+estimated_duration_min = round(total_words / 130, 1)
+
+config = {
+    "title": "Claude Fable 5 Just Launched — Anthropic's First Public Mythos-Class Model Explained",
+    "source_video": "https://youtu.be/Y9Wz2PV404E",
+    "target_duration_min": 9,
+    "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
+    "avatar_name": "Cesar Schneider at the microphone (city loft)",
+    "voice_id": "c0a044792fc64b3fa7dfc0700da93016",
+    "voice_name": "Cesar Schneider cloned voice",
+    "resolution": "1080p",
+    "dimension": {"width": 1920, "height": 1080},
+    "aspect_ratio": "16:9",
+    "caption": True,
+    "background": "#0f0f1a",
+    "status": "draft",
+    "key_ideas": [
+        "Claude Fable 5 (released June 9, 2026) is Anthropic's first public Mythos-class model — its most capable model ever made generally available",
+        "State-of-the-art on nearly all tested capability benchmarks (software engineering, knowledge work, vision, scientific research) — the harder/longer the task, the bigger its lead",
+        "Can work autonomously far longer than prior Claude models — Stripe used it to migrate a 50M-line Ruby codebase in a day vs. 2+ months for a team",
+        "New classifier-based safeguards detect jailbreaks/misuse on cybersecurity, bio/chem, and distillation topics and reroute those to Claude Opus 4.8 instead",
+        "Safeguards trigger in <5% of sessions — over 95% of usage runs entirely on Fable 5's full capabilities",
+        "Priced at $10/M input and $50/M output tokens — less than half the cost of Claude Mythos Preview",
+        "Free on Pro/Max/Team/seat-based Enterprise plans through June 22, 2026 — a limited no-cost trial window",
+        "Day-one availability across Amazon Bedrock/AWS, GitHub Copilot, and Harvey — plus a parallel release, Claude Mythos 5, for vetted cyberdefenders via Project Glasswing"
+    ],
+    "scenes": scenes,
+    "total_words": total_words,
+    "estimated_duration_min": estimated_duration_min,
+}
+
+config_path = os.path.join(os.path.dirname(__file__), "video-config.json")
+with open(config_path, "w") as f:
+    json.dump(config, f, indent=2, ensure_ascii=False)
+
+print(f"Total words: {total_words}")
+print(f"Estimated duration: {estimated_duration_min} min")
+print(f"Wrote {config_path}")

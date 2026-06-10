@@ -1,0 +1,115 @@
+{
+  "width": 1080, "height": 1350, "margin": 72,
+  "background": "#0f0f1a", "grid_color": "#181828",
+  "colors": {"white": "#f5f5f7", "muted": "#9499a8",
+             "accent1": "#8b5cf6", "accent2": "#5eead4"},
+  "font_dir": "/mnt/skills/examples/canvas-design/canvas-fonts",
+  "fonts": {"headline": "BricolageGrotesque-Bold.ttf",
+            "body": "Outfit-Regular.ttf", "body_bold": "Outfit-Bold.ttf",
+            "mono": "GeistMono-Regular.ttf", "mono_bold": "GeistMono-Bold.ttf"},
+  "blueprint_grid": true, "corner_brackets": true, "page_dots": true,
+  "grid_step": 54,
+  "slides": [
+    {
+      "eyebrow": "Model Launch",
+      "elements": [
+        {"type": "headline", "text": "CLAUDE", "size": 98, "color": "white", "gap_before": 120},
+        {"type": "headline", "text": "GOT A", "size": 98, "color": "white"},
+        {"type": "headline", "text": "MYTHOS UPGRADE.", "size": 78, "color": "accent1"},
+        {"type": "body", "text": "Anthropic's first public Mythos-class model, explained.", "size": 38, "color": "muted", "gap_before": 70}
+      ],
+      "footer": "CLAUDE FABLE 5 BREAKDOWN  ·  SWIPE →"
+    },
+    {
+      "eyebrow": "01 — A New Tier",
+      "elements": [
+        {"type": "headline", "text": "STATE OF\nTHE ART", "size": 92, "color": "white", "gap_before": 90, "line_spacing": 1.2},
+        {"type": "body", "text": "Software engineering, knowledge work, vision, scientific research — Fable 5 leads on nearly every benchmark Anthropic tests.", "size": 40, "bold": true, "color": "accent2", "gap_before": 60},
+        {"type": "body", "text": "And the longer and harder the task, the bigger that lead gets.", "size": 36, "color": "muted", "gap_before": 40}
+      ],
+      "footer": "MYTHOS-CLASS = ANTHROPIC'S FRONTIER TRACK"
+    },
+    {
+      "eyebrow": "02 — Autonomy",
+      "elements": [
+        {"type": "headline", "text": "50M", "size": 220, "color": "accent2", "gap_before": 90},
+        {"type": "body", "text": "Lines of Ruby code. One full codebase migration.", "size": 46, "bold": true, "color": "white", "gap_before": 40},
+        {"type": "body", "text": "Stripe's early-access test: a job that would take a team 2+ months — done by Fable 5 in a single day.", "size": 36, "color": "muted", "gap_before": 60}
+      ],
+      "footer": "LONGER AUTONOMOUS RUNS THAN ANY PRIOR CLAUDE"
+    },
+    {
+      "eyebrow": "03 — Safety",
+      "elements": [
+        {"type": "headline", "text": "CLASSIFIERS\nON GUARD", "size": 78, "color": "white", "gap_before": 90, "line_spacing": 1.2},
+        {"type": "divider", "gap_before": 50},
+        {"type": "body", "text": "Separate AI systems watch every session for jailbreaks and misuse — in real time.", "size": 42, "bold": true, "color": "accent1", "gap_before": 50},
+        {"type": "divider", "gap_before": 70},
+        {"type": "body", "text": "Risky requests reroute to Claude Opus 4.8. Everything else runs on Fable 5, full strength.", "size": 38, "color": "muted", "gap_before": 60}
+      ],
+      "footer": "A SAFETY LAYER, NOT A LIMIT ON CAPABILITY"
+    },
+    {
+      "eyebrow": "03 — Safety (cont.)",
+      "elements": [
+        {"type": "body", "text": "FLAGGED TOPICS", "size": 38, "bold": true, "color": "accent2", "gap_before": 40},
+        {"type": "body", "text": "Cybersecurity · Biology & chemistry · Model distillation", "size": 32, "color": "muted", "gap_before": 16},
+        {"type": "divider", "gap_before": 50},
+        {"type": "body", "text": "WHAT HAPPENS", "size": 38, "bold": true, "color": "accent2", "gap_before": 50},
+        {"type": "body", "text": "Request quietly reroutes to Claude Opus 4.8 instead of Fable 5", "size": 32, "color": "muted", "gap_before": 16},
+        {"type": "divider", "gap_before": 50},
+        {"type": "body", "text": "HOW OFTEN", "size": 38, "bold": true, "color": "accent2", "gap_before": 50},
+        {"type": "body", "text": "Under 5% of sessions — 95%+ run on Fable 5 untouched", "size": 32, "color": "muted", "gap_before": 16}
+      ],
+      "footer": "30-DAY DATA RETENTION FOR TRUST & SAFETY"
+    },
+    {
+      "eyebrow": "04 — Pricing",
+      "elements": [
+        {"type": "headline", "text": "$10 / $50", "size": 110, "color": "accent2", "gap_before": 90},
+        {"type": "body", "text": "Per million input / output tokens — less than half the price of Claude Mythos Preview.", "size": 42, "bold": true, "color": "white", "gap_before": 50},
+        {"type": "body", "text": "And free on Pro, Max, Team, and seat-based Enterprise plans through June 22.", "size": 36, "color": "muted", "gap_before": 50}
+      ],
+      "footer": "FRONTIER CAPABILITY, LOWER COST"
+    },
+    {
+      "eyebrow": "05 — Day One",
+      "elements": [
+        {"type": "headline", "text": "ALREADY IN\nYOUR TOOLS", "size": 84, "color": "white", "gap_before": 90, "line_spacing": 1.2},
+        {"type": "body", "text": "Amazon Bedrock & AWS · GitHub Copilot · Harvey · Claude apps and API — all on day one.", "size": 40, "color": "accent1", "gap_before": 70}
+      ],
+      "footer": "NO MIGRATION NEEDED TO GET THE UPGRADE"
+    },
+    {
+      "eyebrow": "06 — Mythos 5",
+      "elements": [
+        {"type": "headline", "text": "THE OTHER", "size": 100, "color": "white", "gap_before": 90},
+        {"type": "headline", "text": "HALF", "size": 100, "color": "accent1"},
+        {"type": "body", "text": "Claude Mythos 5: same model, fewer guardrails — for a small group of vetted cyberdefenders via Project Glasswing with the US government.", "size": 38, "color": "muted", "gap_before": 70}
+      ],
+      "footer": "TWO TIERS, ONE FRONTIER MODEL"
+    },
+    {
+      "eyebrow": "07 — The Line",
+      "elements": [
+        {"type": "divider", "gap_before": 60},
+        {"type": "body", "text": "The longer and harder the task,", "size": 52, "bold": true, "color": "white", "gap_before": 70},
+        {"type": "body", "text": "the bigger Fable 5's lead.", "size": 52, "bold": true, "color": "accent2", "gap_before": 30},
+        {"type": "divider", "gap_before": 70},
+        {"type": "body", "text": "This is a model built for handing over whole projects, not answering one question at a time.", "size": 38, "color": "muted", "gap_before": 60}
+      ],
+      "footer": "ANTHROPIC'S MOST CAPABLE PUBLIC MODEL YET"
+    },
+    {
+      "eyebrow": "Your Next Step",
+      "elements": [
+        {"type": "headline", "text": "FREE THROUGH", "size": 72, "color": "white", "gap_before": 80},
+        {"type": "headline", "text": "JUNE 22.", "size": 72, "color": "accent1"},
+        {"type": "body", "text": "Don't ask trivia. Hand it a refactor, a research project, a full first draft — and see how far it gets.", "size": 38, "color": "white", "gap_before": 60},
+        {"type": "divider", "gap_before": 60},
+        {"type": "body", "text": "Full breakdown — link in bio. What's the first big task you'll throw at Fable 5?", "size": 36, "bold": true, "color": "accent2", "gap_before": 50}
+      ],
+      "footer": "WATCH · SUBSCRIBE · COMMENT"
+    }
+  ]
+}
