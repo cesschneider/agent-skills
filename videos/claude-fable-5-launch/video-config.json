@@ -1,5 +1,5 @@
 {
-  "title": "Claude Fable 5 Just Launched — Anthropic's First Public Mythos-Class Model Explained",
+  "title": "Claude Fable 5 Just Launched \u2014 Anthropic's First Public Mythos-Class Model Explained",
   "source_video": "https://youtu.be/Y9Wz2PV404E",
   "target_duration_min": 9,
   "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
@@ -14,16 +14,16 @@
   "aspect_ratio": "16:9",
   "caption": true,
   "background": "#0f0f1a",
-  "status": "draft",
+  "status": "processing",
   "key_ideas": [
-    "Claude Fable 5 (released June 9, 2026) is Anthropic's first public Mythos-class model — its most capable model ever made generally available",
-    "State-of-the-art on nearly all tested capability benchmarks (software engineering, knowledge work, vision, scientific research) — the harder/longer the task, the bigger its lead",
-    "Can work autonomously far longer than prior Claude models — Stripe used it to migrate a 50M-line Ruby codebase in a day vs. 2+ months for a team",
+    "Claude Fable 5 (released June 9, 2026) is Anthropic's first public Mythos-class model \u2014 its most capable model ever made generally available",
+    "State-of-the-art on nearly all tested capability benchmarks (software engineering, knowledge work, vision, scientific research) \u2014 the harder/longer the task, the bigger its lead",
+    "Can work autonomously far longer than prior Claude models \u2014 Stripe used it to migrate a 50M-line Ruby codebase in a day vs. 2+ months for a team",
     "New classifier-based safeguards detect jailbreaks/misuse on cybersecurity, bio/chem, and distillation topics and reroute those to Claude Opus 4.8 instead",
-    "Safeguards trigger in <5% of sessions — over 95% of usage runs entirely on Fable 5's full capabilities",
-    "Priced at $10/M input and $50/M output tokens — less than half the cost of Claude Mythos Preview",
-    "Free on Pro/Max/Team/seat-based Enterprise plans through June 22, 2026 — a limited no-cost trial window",
-    "Day-one availability across Amazon Bedrock/AWS, GitHub Copilot, and Harvey — plus a parallel release, Claude Mythos 5, for vetted cyberdefenders via Project Glasswing"
+    "Safeguards trigger in <5% of sessions \u2014 over 95% of usage runs entirely on Fable 5's full capabilities",
+    "Priced at $10/M input and $50/M output tokens \u2014 less than half the cost of Claude Mythos Preview",
+    "Free on Pro/Max/Team/seat-based Enterprise plans through June 22, 2026 \u2014 a limited no-cost trial window",
+    "Day-one availability across Amazon Bedrock/AWS, GitHub Copilot, and Harvey \u2014 plus a parallel release, Claude Mythos 5, for vetted cyberdefenders via Project Glasswing"
   ],
   "scenes": [
     {
@@ -76,5 +76,6 @@
     }
   ],
   "total_words": 1244,
-  "estimated_duration_min": 9.6
+  "estimated_duration_min": 9.6,
+  "video_id": "a961f745e11a42c2a6429e61f6511931"
 }
