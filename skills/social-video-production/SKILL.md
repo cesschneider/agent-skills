@@ -95,7 +95,7 @@ If a script crashes or the session restarts mid-poll, the HeyGen render continue
 
 ### 5. Generate the Instagram Carousel
 
-10 slides, 1080×1350, via `generate_slides.py`. Recommended structure:
+10 slides, 1080×1350, via `generate_slides.py`. Two themes are available: the default dark "blueprint" theme, and a light editorial "Claude brand" theme (cream background, sunburst logo, serif title, terracotta section rules, line-art icon grids, letterbox bars) — see the script's docstring for the theme's config schema and element types. Recommended structure:
 
 1. Cover (title + one-line promise)
 2. Hook stat or headline claim
