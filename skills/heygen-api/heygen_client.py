@@ -94,7 +94,7 @@ def generate_video_v2(title, video_inputs, dimension, caption=True, test=False):
 
 def get_video_status(video_id):
     """Returns the status payload: status, video_url, gif_url,
-    captioned_video_url, duration, thumbnail_url, error/failure_code/
+    video_url_caption, duration, thumbnail_url, error/failure_code/
     failure_message (when failed)."""
     resp = requests.get(
         f"{BASE_URL}/v1/video_status.get",

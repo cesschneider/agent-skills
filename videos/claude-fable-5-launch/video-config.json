@@ -14,7 +14,7 @@
   "aspect_ratio": "16:9",
   "caption": true,
   "background": "#0f0f1a",
-  "status": "processing",
+  "status": "completed",
   "key_ideas": [
     "Claude Fable 5 (released June 9, 2026) is Anthropic's first public Mythos-class model \u2014 its most capable model ever made generally available",
     "State-of-the-art on nearly all tested capability benchmarks (software engineering, knowledge work, vision, scientific research) \u2014 the harder/longer the task, the bigger its lead",
@@ -77,5 +77,9 @@
   ],
   "total_words": 1244,
   "estimated_duration_min": 9.6,
-  "video_id": "a961f745e11a42c2a6429e61f6511931"
+  "video_id": "a961f745e11a42c2a6429e61f6511931",
+  "duration_s": 475.899,
+  "gif_url": "https://resource2.heygen.ai/video/a961f745e11a42c2a6429e61f6511931/gif.gif",
+  "captioned_url": "https://files2.heygen.ai/movio/video/a961f745e11a42c2a6429e61f6511931/c77175ea63c04b10b9f226c15d04f5b2/caption.mp4?Expires=1781671150&Signature=bbOr2kf3NthEEkRi~B722BfvfxqNm5omwBtcWklsrVwIVRqLvkG0naGTsHwF48X~7NDruE7lXJAo87kdVaAHKx-Fc49o3CA5hmiBLSMdm9AIxmaVGGM~bSa9vO8Wn0lPePkS95h4wTVxKcRQfSF~MluHcg9bKJJfo6MaHPoaU8RzlmTdCS-iiN9Z7~5rUR6yOJJkTvhEXfpb-3FMQqctcIl6ewPH9734-QVF44p-J09uwd4atPpLREqUc0CqF6tlc5L1JYMB-E6x8-1TBsLy8bQPUPJ~n6ydQsT0~JJPZOc1NaOQNh5hyCkMAowRKkx9XNVyxpRz1EFxp3XZ1zRDLw__&Key-Pair-Id=K38HBHX5LX3X2H",
+  "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/a961f745e11a42c2a6429e61f6511931.mp4?Expires=1781671138&Signature=kFO~CMzGd85GbQEBaJTQsieJYKtGBMn09gmrmhL36Uo0Ml43UUrtJ5C1PypXI6W6ejH3Ix5r9RY9Eb-0u3WlZGWRspDXZCaTZQVRa7VjkkrJsXNCvQlk6QLAVbq2Q~3gvlIyVQZ7qLz-75Ti8X66M7iMSHC0CsZckBZ~Dg3NGWY55xuaBWkgRrtyIjlDpYDl6UT3G~bf7~3Aa7fvo6Ou4xuA1DBip9awek545f-REZzwAYVUN8IbZEZSHgIxSu4BKwa6x~55s9EvT5RA2btZkJKVyGWxXrVsZPQT94KmplIP38zKV53-eBclaKzF1wk9hmIEHaY~ZKQtNWGDTmofgA__&Key-Pair-Id=K38HBHX5LX3X2H"
 }

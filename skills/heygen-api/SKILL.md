@@ -36,7 +36,7 @@ All endpoints are on `https://api.heygen.com`, header `X-Api-Key: $HEYGEN_API_KE
 | `/v2/voices` | GET | List voices with `voice_id`, language, gender, emotion support | `list_voices()` |
 | `/v3/assets` | POST (multipart) | Upload an image/video/audio/PDF (max 32MB), returns `asset_id` + public `url` | `upload_asset(path)` |
 | `/v2/video/generate` | POST | Submit a 1-50 scene video (`video_inputs`, `dimension`, `caption`, `title`) | `generate_video_v2(...)` |
-| `/v1/video_status.get?video_id=...` | GET | Poll status (`pending → processing → completed/failed`); returns `video_url`, `gif_url`, `captioned_video_url`, `duration` | `get_video_status(id)` / `poll_until_done(id)` |
+| `/v1/video_status.get?video_id=...` | GET | Poll status (`pending → processing → completed/failed`); returns `video_url`, `gif_url`, `video_url_caption`, `duration` | `get_video_status(id)` / `poll_until_done(id)` |
 
 `/v1` and `/v2` endpoints (including the multi-scene `/v2/video/generate` used for this project's videos) are supported through October 31, 2026. HeyGen's newer `/v3/videos` and `/v3/video-agents` endpoints cover single-scene/agent-driven generation but do not yet replace the multi-scene Studio workflow — keep using `/v2/video/generate` for multi-scene avatar videos. Full reference: https://developers.heygen.com/docs/quick-start
 
@@ -80,7 +80,7 @@ video_id = generate_video_v2(title=title, video_inputs=video_inputs,
                               dimension={"width": 1920, "height": 1080}, caption=True)
 
 data = poll_until_done(video_id, on_update=lambda i, status, d: print(f"[{i*15}s] {status}"))
-print(data["video_url"], data["captioned_video_url"], data["gif_url"], data["duration"])
+print(data["video_url"], data["video_url_caption"], data["gif_url"], data["duration"])
 ```
 
 1. `get_remaining_quota()` → confirm credits before generating
@@ -124,4 +124,4 @@ After any video creation:
 - [ ] `video_id` saved to `video-config.json` immediately after submission (before polling)
 - [ ] Polled via `poll_until_done`/`get_video_status` until status is `completed` (not assumed)
 - [ ] `error`/`failure_code`/`failure_message` checked when status is `failed`
-- [ ] `video_url`, `captioned_video_url`, `gif_url`, `duration` written back to `video-config.json` on completion
+- [ ] `video_url`, `video_url_caption`, `gif_url`, `duration` written back to `video-config.json` on completion

@@ -46,7 +46,7 @@ config.update({
     "status": "completed",
     "duration_s": data.get("duration"),
     "gif_url": data.get("gif_url", ""),
-    "captioned_url": data.get("captioned_video_url", ""),
+    "captioned_url": data.get("video_url_caption", ""),
     "video_url": data.get("video_url", ""),
 })
 with open(config_path, "w") as f:
