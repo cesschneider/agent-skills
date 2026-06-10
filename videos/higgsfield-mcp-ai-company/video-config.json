@@ -14,7 +14,7 @@
   "aspect_ratio": "16:9",
   "caption": true,
   "background": "#0f0f1a",
-  "status": "processing",
+  "status": "completed",
   "key_ideas": [
     "Higgsfield MCP gives Claude 'hands' \u2014 direct access to 30+ image/video models (Soul, Cinema Studio, Flux, Seedream, Kling, Minimax Hailuo, Veo) through one interface",
     "Outputs land directly in your working folders \u2014 images up to 4K, videos up to 15 seconds, ready to drop into a campaign",
@@ -77,5 +77,9 @@
   ],
   "total_words": 1152,
   "estimated_duration_min": 8.9,
-  "video_id": "158da6e7362c4ac79928cae12ca5b6aa"
+  "video_id": "158da6e7362c4ac79928cae12ca5b6aa",
+  "duration_s": 428.565,
+  "gif_url": "https://resource2.heygen.ai/video/158da6e7362c4ac79928cae12ca5b6aa/gif.gif",
+  "captioned_url": "https://files2.heygen.ai/movio/video/158da6e7362c4ac79928cae12ca5b6aa/b4814a16e31c4bb68e738b55eb4073eb/caption.mp4?Expires=1781660608&Signature=UmpapBw~4nnG-1-tcq2UoTiv-IpjX7-2nPJiwStAhXiz1BrA1PUK06p0j9hxPnPZUXlKHnYWk42obmH3s6H2DGVaUxJG5pTCi3TJQ2AFFk~xhCN54~BtwQMxmvDR-2NVwsS9Kl6a5HoIOqLYLMZKySnCXArEon3hfgR8aneJ8m5gNxzVFIJRgf1-dSx5Dwcg6v9q8aXpBsirJz3qjtWJ~s1ahFOHJxtUfMhZLDO32WDlM6cG-5yqJSQmatfaLvayo3qxxgGJp2PMOSXu9Afn7QhTF1tzsGK4~5ZiSSXGe-uYnAmhzMDW5y5HfcUBrjiawwtHg5kI1Bi~aXvFjFw1Yw__&Key-Pair-Id=K38HBHX5LX3X2H",
+  "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/158da6e7362c4ac79928cae12ca5b6aa.mp4?Expires=1781659937&Signature=nUaSqw6mByhivQT7YseIyjiSI4TKlICP-1BxRT2-G~gfrJrm0015POECuMjoNtltUl91az-uPyvcKiyHRFMPeoCt5dCUPjZDZqYn20fNG2DPNzRi9C3oLT0fw8RwkUq9ylmjRm8HefA1wfzJ-44naOgoKmJOtnY7SC4E96VBMPf3FS-WmUO~D2PRa-NFkxWOrgtFmK59N5SKKpiUXJoJtuex7JKyY9guI1QDftier8PajXFpp1ASERPE9Cr23ouZ1W9mWFokXjMrEP0lpd-aLoV1fy7GGIk-fHZJ60nO4PxcMfJwN8VThkDfto~5xIEDeizuzGsyVuM8ea9-LSLeqw__&Key-Pair-Id=K38HBHX5LX3X2H"
 }
