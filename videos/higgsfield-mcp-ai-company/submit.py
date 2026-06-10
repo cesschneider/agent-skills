@@ -37,7 +37,16 @@ config_path = os.path.join(os.path.dirname(__file__), "video-config.json")
 with open(config_path) as f:
     config = json.load(f)
 
-mcp("initialize", {"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"submit","version":"1.0"}})
+for attempt in range(10):
+    try:
+        mcp("initialize", {"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"submit","version":"1.0"}})
+        break
+    except urllib.error.HTTPError as e:
+        wait = min(60, 10 * (attempt + 1))
+        print(f"initialize failed ({e}), retrying in {wait}s...")
+        time.sleep(wait)
+else:
+    sys.exit("Could not initialize MCP session after retries")
 
 quota = tool("heygen_get_remaining_quota", {})
 print(f"Quota: {(quota.get('data') or {}).get('remaining_quota')} API credits")
