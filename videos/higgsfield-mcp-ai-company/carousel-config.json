@@ -1,0 +1,117 @@
+{
+  "width": 1080, "height": 1350, "margin": 72,
+  "background": "#0f0f1a", "grid_color": "#181828",
+  "colors": {"white": "#f5f5f7", "muted": "#9499a8",
+             "accent1": "#8b5cf6", "accent2": "#5eead4"},
+  "font_dir": "/mnt/skills/examples/canvas-design/canvas-fonts",
+  "fonts": {"headline": "BricolageGrotesque-Bold.ttf",
+            "body": "Outfit-Regular.ttf", "body_bold": "Outfit-Bold.ttf",
+            "mono": "GeistMono-Regular.ttf", "mono_bold": "GeistMono-Bold.ttf"},
+  "blueprint_grid": true, "corner_brackets": true, "page_dots": true,
+  "grid_step": 54,
+  "slides": [
+    {
+      "eyebrow": "AI-Native Production",
+      "elements": [
+        {"type": "headline", "text": "CLAUDE", "size": 98, "color": "white", "gap_before": 120},
+        {"type": "headline", "text": "JUST GOT", "size": 98, "color": "white"},
+        {"type": "headline", "text": "HANDS.", "size": 98, "color": "accent1"},
+        {"type": "body", "text": "How one MCP server turns Claude into a full creative production team.", "size": 38, "color": "muted", "gap_before": 70}
+      ],
+      "footer": "HIGGSFIELD MCP BREAKDOWN  ·  SWIPE →"
+    },
+    {
+      "eyebrow": "01 — The Bridge",
+      "elements": [
+        {"type": "headline", "text": "30+", "size": 220, "color": "accent2", "gap_before": 90},
+        {"type": "body", "text": "AI image and video models, exposed to Claude through one protocol.", "size": 46, "bold": true, "color": "white", "gap_before": 40},
+        {"type": "body", "text": "Soul · Cinema Studio · Flux · Seedream · Kling · Minimax Hailuo · Veo", "size": 36, "color": "muted", "gap_before": 60}
+      ],
+      "footer": "MCP = MODEL CONTEXT PROTOCOL"
+    },
+    {
+      "eyebrow": "02 — Output",
+      "elements": [
+        {"type": "headline", "text": "STRAIGHT INTO\nYOUR FOLDERS", "size": 78, "color": "white", "gap_before": 80, "line_spacing": 1.2},
+        {"type": "divider", "gap_before": 50},
+        {"type": "body", "text": "4K images. 15-second video clips. No dashboards, no downloads, no renaming files.", "size": 42, "bold": true, "color": "accent2", "gap_before": 50}
+      ],
+      "footer": "JUST ANOTHER STEP IN THE BUILD"
+    },
+    {
+      "eyebrow": "03 — Consistency",
+      "elements": [
+        {"type": "headline", "text": "SOUL", "size": 110, "color": "white", "gap_before": 90},
+        {"type": "headline", "text": "CHARACTERS", "size": 110, "color": "accent1"},
+        {"type": "body", "text": "Define a character once. The same face carries across every image and video you generate after that.", "size": 40, "color": "white", "gap_before": 70}
+      ],
+      "footer": "A RECURRING BRAND PRESENCE, ON DEMAND"
+    },
+    {
+      "eyebrow": "04 — The Stack",
+      "elements": [
+        {"type": "headline", "text": "FOUR PIECES.", "size": 110, "color": "white", "gap_before": 110},
+        {"type": "headline", "text": "ONE LOOP.", "size": 110, "color": "accent1"},
+        {"type": "body", "text": "You set the direction once, in plain language. The system keeps executing against that brief across many sessions, not just one.", "size": 42, "color": "muted", "gap_before": 90}
+      ],
+      "footer": "THE SELF-RUNNING STACK"
+    },
+    {
+      "eyebrow": "04 — The Stack (cont.)",
+      "elements": [
+        {"type": "body", "text": "01  HIGGSFIELD CLI", "size": 40, "bold": true, "color": "accent2", "gap_before": 40},
+        {"type": "body", "text": "Generates the images and video", "size": 32, "color": "muted", "gap_before": 16},
+        {"type": "divider", "gap_before": 50},
+        {"type": "body", "text": "02  GOOGLE WORKSPACE CLI", "size": 40, "bold": true, "color": "accent2", "gap_before": 50},
+        {"type": "body", "text": "Reads and writes Sheets and Docs", "size": 32, "color": "muted", "gap_before": 16},
+        {"type": "divider", "gap_before": 50},
+        {"type": "body", "text": "03  CLAUDE CODE", "size": 40, "bold": true, "color": "accent2", "gap_before": 50},
+        {"type": "body", "text": "Plans the work and calls the tools", "size": 32, "color": "muted", "gap_before": 16},
+        {"type": "divider", "gap_before": 50},
+        {"type": "body", "text": "04  TRACKING SHEET", "size": 40, "bold": true, "color": "accent2", "gap_before": 50},
+        {"type": "body", "text": "The shared memory for the operation", "size": 32, "color": "muted", "gap_before": 16}
+      ],
+      "footer": "ALMOST NO MANUAL HANDOFF"
+    },
+    {
+      "eyebrow": "05 — Memory",
+      "elements": [
+        {"type": "headline", "text": "EVERY RUN,\nLOGGED", "size": 92, "color": "accent2", "gap_before": 90, "line_spacing": 1.2},
+        {"type": "body", "text": "Prompt. Model. Job ID. Cost. Every generation becomes a row in a sheet — and the sheet becomes a creative database.", "size": 40, "color": "white", "gap_before": 70}
+      ],
+      "footer": "THE NEXT SESSION LEARNS FROM THE LAST"
+    },
+    {
+      "eyebrow": "06 — The Loop",
+      "elements": [
+        {"type": "headline", "text": "CO-PILOT", "size": 100, "color": "white", "gap_before": 90},
+        {"type": "headline", "text": "CREATIVE", "size": 100, "color": "white"},
+        {"type": "headline", "text": "DIRECTOR", "size": 100, "color": "accent1"},
+        {"type": "body", "text": "Claude Code plans the next batch from what the tracking sheet shows — and adjusts prompts before it tries again.", "size": 38, "color": "muted", "gap_before": 70}
+      ],
+      "footer": "QUALITY COMPOUNDS, RUN OVER RUN"
+    },
+    {
+      "eyebrow": "07 — The Line",
+      "elements": [
+        {"type": "divider", "gap_before": 60},
+        {"type": "body", "text": "The bottleneck was never ideas.", "size": 56, "bold": true, "color": "white", "gap_before": 70},
+        {"type": "body", "text": "It was production time.", "size": 56, "bold": true, "color": "accent2", "gap_before": 30},
+        {"type": "divider", "gap_before": 70},
+        {"type": "body", "text": "Design tools. Stock photo searches. Video editors. All of it, collapsed into one continuous, self-documenting workflow.", "size": 38, "color": "muted", "gap_before": 60}
+      ],
+      "footer": "MOVE ~75% FASTER"
+    },
+    {
+      "eyebrow": "Your Next Step",
+      "elements": [
+        {"type": "headline", "text": "PICK ONE ASSET.", "size": 70, "color": "white", "gap_before": 80},
+        {"type": "headline", "text": "RUN IT FOR A WEEK.", "size": 70, "color": "accent1"},
+        {"type": "body", "text": "Your weekly social graphics. Your landing page hero. Track it in a sheet — and see how much of that 75% you get back.", "size": 38, "color": "white", "gap_before": 60},
+        {"type": "divider", "gap_before": 60},
+        {"type": "body", "text": "Full breakdown — link in bio. What would you automate first? Drop it below.", "size": 36, "bold": true, "color": "accent2", "gap_before": 50}
+      ],
+      "footer": "WATCH · SUBSCRIBE · COMMENT"
+    }
+  ]
+}
