@@ -15,7 +15,7 @@
   "aspect_ratio": "16:9",
   "caption": true,
   "background": "#0f0f1a",
-  "status": "processing",
+  "status": "completed",
   "key_ideas": [
     "Three core principles guide effective agent design: don't build agents for everything, keep it simple, and think like your agents",
     "Workflows are predefined sequences of LLM calls along a path you design; agents operate in an autonomous loop, deciding their own next steps based on environment feedback",
@@ -78,5 +78,9 @@
   ],
   "total_words": 1153,
   "estimated_duration_min": 8.87,
-  "video_id": "c164b7cb74e04c0aad7d5604d96aa649"
+  "video_id": "c164b7cb74e04c0aad7d5604d96aa649",
+  "duration_s": 429.923,
+  "gif_url": null,
+  "captioned_url": "https://files2.heygen.ai/movio/video/c164b7cb74e04c0aad7d5604d96aa649/dc6e9358735f40318515b355aa0e0813/caption.mp4?Expires=1781982210&Signature=YnOwEuNSnm6-yvpGwfbAE9UpJutwvtG6datGjt9ib63sZX0~SnoKpx619SZzc~cqXJm4~g2wrcyxiC2-ZWL611yd45fzZZguAxSjQfnyzuqaeYqWLBwblpUbfCwTawJI7wguUxQ0VOf15qK~lwL1VfseLEK~cZCDDo9~4SCksfPNfIzvCRRIPfcmnBE0VlFvH9EbgjASQiqAb85rBfE27J~0qcre1~iSqwlgaGljwIUF-TtazkYnqNcAuoHOV8Wumg~bj7utsDhWgO8OmiRtmJTwSxXnept2l~TIkNchwRLuY32EOfqfTBd1EhG2ki2z5H7WdKm2BfEpIwxtNyZSKg__&Key-Pair-Id=K38HBHX5LX3X2H",
+  "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/c164b7cb74e04c0aad7d5604d96aa649.mp4?Expires=1781981675&Signature=KvQcusMmNlExCAX7Aur~mE0Pe700yV24ky--TSedt4oUVTftc~ePIcc~Mx6jQgHBleEpKiSbR9V-n6VDEL3LGpEzve~h2bFPx7OI4bDdq5gV8-hm9J8v5hi3LUeC-U2SpaD8uTuv-vkSjCh2HXhbUpCfyUYhWBmB9MKE~v9q0sxJSPJCwGu66WvKwEGXijmVo0Q1e1QYeDOeXYhrwnQnR-AZ5TkGncxw1QYp2rA1mU-lWzAPmGd8teewYKAxR0k~6BPU8OZhIhVHncJMSa~I9RcCWgjX6VLxN95DXQh7Qm7PRXmO9pwu6IpUfKen7RY0Wo6SVAtkEhi08gQIUqDjDA__&Key-Pair-Id=K38HBHX5LX3X2H"
 }
