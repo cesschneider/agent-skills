@@ -3,7 +3,7 @@
 Source: [How We Build Effective Agents — Barry Zhang, Anthropic](https://youtu.be/D7_ipDqhtwk) (AI Engineer Summit 2025, New York)
 
 Carousel theme: "Claude brand" (cream/navy/terracotta, `carousel/01.png`–`10.png`).
-Chapter timestamps below are estimated from the script's word count (≈8:52 total) — replace with exact times once the rendered video's `duration_s` is known.
+Narration video rendered via HeyGen (`video_id: c164b7cb74e04c0aad7d5604d96aa649`, duration 7:10). Chapter timestamps below are proportional to that runtime.
 
 ## YouTube
 
@@ -20,13 +20,13 @@ We cover the real difference between a "workflow" and an "agent," a simple check
 
 Chapters:
 0:00 Hook — 3 rules for building agents
-1:06 Agents vs. Workflows
-2:15 Don't build agents for everything (the checklist)
-3:27 Coding: the ideal agent use case
-4:35 The three building blocks
-5:39 Think like your agent (token scarcity)
-6:48 Keep it simple, then look ahead
-7:54 Your next step
+0:54 Agents vs. Workflows
+1:49 Don't build agents for everything (the checklist)
+2:47 Coding: the ideal agent use case
+3:42 The three building blocks
+4:34 Think like your agent (token scarcity)
+5:29 Keep it simple, then look ahead
+6:23 Your next step
 
 If you're building anything agent-shaped right now, try the exercise at the end of this video — and let me know in the comments what's the biggest bottleneck in your own agent: tools, prompt, or environment?
 
