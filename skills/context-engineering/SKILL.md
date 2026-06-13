@@ -188,6 +188,7 @@ For richer context, use Model Context Protocol servers:
 | **PostgreSQL** | Direct database schema and query results |
 | **Filesystem** | Project file access and search |
 | **GitHub** | Issue, PR, and repository context |
+| **Social Media** (YouTube, X, LinkedIn, Instagram, etc.) | Posts, comments, and profile data — see [docs/social-media-integrations.md](../../docs/social-media-integrations.md) for setup |
 
 ## Confusion Management
 
