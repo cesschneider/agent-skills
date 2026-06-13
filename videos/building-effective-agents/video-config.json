@@ -15,7 +15,7 @@
   "aspect_ratio": "16:9",
   "caption": true,
   "background": "#0f0f1a",
-  "status": "draft",
+  "status": "processing",
   "key_ideas": [
     "Three core principles guide effective agent design: don't build agents for everything, keep it simple, and think like your agents",
     "Workflows are predefined sequences of LLM calls along a path you design; agents operate in an autonomous loop, deciding their own next steps based on environment feedback",
@@ -77,5 +77,6 @@
     }
   ],
   "total_words": 1153,
-  "estimated_duration_min": 8.87
+  "estimated_duration_min": 8.87,
+  "video_id": "c164b7cb74e04c0aad7d5604d96aa649"
 }
