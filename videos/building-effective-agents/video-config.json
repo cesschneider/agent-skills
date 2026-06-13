@@ -1,0 +1,81 @@
+{
+  "title": "How Anthropic Builds Effective AI Agents \u2014 Barry Zhang's Framework Explained",
+  "source_video": "https://youtu.be/D7_ipDqhtwk",
+  "target_duration_min": 9,
+  "render_backend": "heygen",
+  "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
+  "avatar_name": "Cesar Schneider at the microphone (city loft)",
+  "voice_id": "c0a044792fc64b3fa7dfc0700da93016",
+  "voice_name": "Cesar Schneider cloned voice",
+  "resolution": "1080p",
+  "dimension": {
+    "width": 1920,
+    "height": 1080
+  },
+  "aspect_ratio": "16:9",
+  "caption": true,
+  "background": "#0f0f1a",
+  "status": "draft",
+  "key_ideas": [
+    "Three core principles guide effective agent design: don't build agents for everything, keep it simple, and think like your agents",
+    "Workflows are predefined sequences of LLM calls along a path you design; agents operate in an autonomous loop, deciding their own next steps based on environment feedback",
+    "Decide which you need with a checklist: is the problem genuinely ambiguous/open-ended, is the value high enough to justify exploration cost, and how costly is it when the agent gets something wrong",
+    "Coding is close to the ideal agent use case: complex problem space, high value, agent-friendly tools (shell, compiler, search), and verifiable output via unit tests",
+    "Every agent needs three building blocks: an environment to act in, tools that provide action/feedback interfaces, and a system prompt defining goals and constraints",
+    "Agents typically work with only 10-20k usable tokens of context at each step \u2014 'think like your agent' by checking if that exact context is enough to complete the task",
+    "Start simple: get tool design and system prompts right before adding patterns like parallel tool calls, and keep the user able to see what the agent is doing",
+    "Open frontiers: agents that reason about their own cost/latency budgets, tools that self-improve from usage, and multi-agent systems that communicate beyond single user-assistant turns"
+  ],
+  "scenes": [
+    {
+      "id": 1,
+      "name": "Hook",
+      "script": "Right now, it feels like every company is racing to build \"AI agents.\" But here is something that might surprise you: a lot of teams building agents probably should not be. At the AI Engineer Summit, Barry Zhang, who works on Anthropic's Applied AI team helping companies build agentic systems, gave a talk that cuts through a lot of the hype. His framing comes down to three simple rules: do not build agents for everything, keep it simple, and think like your agents. In this video, I want to walk through what actually separates a workflow from a real agent, how to decide which one your problem needs, why coding turned out to be close to the perfect agent use case, the three things every agent needs to work, and the one constraint, token budget, that quietly shapes almost every design decision you will make.",
+      "words": 145
+    },
+    {
+      "id": 2,
+      "name": "Agents vs. Workflows",
+      "script": "So what is the actual difference between a workflow and an agent? A workflow is a set of language model calls wired together along a path you define ahead of time. Maybe step one classifies a request, step two routes it to a specialized prompt, and step three formats the output. The model does the thinking inside each step, but you decided the shape of the whole process in advance. An agent works differently. It runs in a loop: it looks at its environment, decides what to do next, takes an action, observes what happened, and decides again, with no predetermined path. That autonomy is powerful, but it is also slower, more expensive, and harder to predict. Barry's point is that this is not a value judgment. Workflows are not \"agents lite.\" For a huge number of tasks, a well designed workflow is simply the better engineering choice.",
+      "words": 148
+    },
+    {
+      "id": 3,
+      "name": "Don't Build Agents For Everything",
+      "script": "How do you actually decide which one you need? Barry suggests running through a short checklist before reaching for an agent. First, does the task genuinely involve an open ended, ambiguous problem space, one where you cannot enumerate the steps in advance? If the steps are predictable, a workflow will be faster, cheaper, and easier to debug. Second, is the value high enough to justify the exploration cost? Agents spend extra tokens and time exploring, and that only pays off if getting it right actually matters. Third, what does it cost when the agent gets it wrong? If a single mistake is expensive or hard to undo, you need to think hard about how much autonomy you are comfortable granting, and where a human needs to stay in the loop. High volume, tight budget, predictable steps point toward a workflow. Ambiguous, high value, and tolerant of some exploration is where agents start to earn their keep.",
+      "words": 156
+    },
+    {
+      "id": 4,
+      "name": "Coding: The Prime Agent Use Case",
+      "script": "If you want to see why agents work so well in one specific domain, look at coding. Barry calls it close to the ideal agent use case, and the reasons map directly onto that checklist. The problem space is genuinely complex. There is rarely one obviously correct way to implement a feature. The value is high, since engineering time is expensive and unblocking a developer matters. The tools already exist and are agent friendly. A coding agent can read files, run a shell, call a compiler, and search the web, all through interfaces built for exactly this kind of interaction. And maybe most importantly, the output is verifiable. You can run the unit tests and get a real signal about whether the agent's solution actually works. That combination of complexity, value, tooling, and verifiability is what makes coding agents some of the most successful agents in production today.",
+      "words": 148
+    },
+    {
+      "id": 5,
+      "name": "The Three Building Blocks",
+      "script": "Once you have decided an agent is the right call, Barry breaks down what it actually needs into three pieces. First, an environment: the world the agent operates in, whether that is a codebase, a browser, a set of APIs, or a customer database. Second, tools: the interfaces the agent uses to act on that environment and get feedback back, like run this command or search these documents. And third, a system prompt: the instructions that define the agent's goals, its constraints, and how it should behave when things go wrong. Get any one of these wrong and the whole agent struggles. A great system prompt cannot compensate for tools that return useless error messages, and the best tools in the world will not help if the agent does not understand what it is actually supposed to accomplish.",
+      "words": 138
+    },
+    {
+      "id": 6,
+      "name": "Think Like Your Agent",
+      "script": "Here is the constraint that, once you see it, changes how you design everything. Your agent is often working with a context window of only ten to twenty thousand usable tokens at any given step, which is much smaller than it sounds once you account for instructions, tool definitions, and conversation history. Barry's advice is to literally think like your agent. Take the exact information it has at a given step, no more and no less, and ask yourself: could I actually complete this task with just this? Often the answer is no, and that gap is exactly where agents fail. Maybe a tool's output is too verbose and crowds out everything else. Maybe an error message does not actually explain what went wrong. Designing for an agent with limited attention, rather than assuming it can figure it out, is one of the highest leverage things you can do.",
+      "words": 149
+    },
+    {
+      "id": 7,
+      "name": "Keep It Simple, Then Look Ahead",
+      "script": "So where should you actually spend your effort? Barry's advice is to resist the urge to over engineer early. Start with the basics: good tools, with clear names and outputs, and a clear, well scoped system prompt. Get that right before reaching for fancier patterns. Parallel tool calls, for example, can meaningfully cut latency, but introduce them once the core loop already works, and make sure the user can still see what the agent is doing while it happens. Looking ahead, Barry pointed to a few frontiers that are still wide open: giving agents real cost and latency budgets they can reason about, tools that improve themselves based on how agents actually use them, and multi agent systems that communicate with each other, not just back and forth with a single human. None of that replaces the fundamentals. It builds on top of them.",
+      "words": 144
+    },
+    {
+      "id": 8,
+      "name": "Your Next Step",
+      "script": "If you are building anything agent shaped right now, here is the exercise worth doing this week. Take your current project and ask Barry's three questions. Is this genuinely an agent problem, or would a simpler workflow do the job? What are the three pieces, environment, tools, and system prompt, and which one is weakest right now? And if you sat down with exactly the context your agent sees at each step, could you actually do the task yourself? That last one tends to be the most humbling, and the most useful. What is the biggest bottleneck in your own agent right now: tools, prompt, or environment? Let me know in the comments, and I will dig into the trickiest one in a future video.",
+      "words": 125
+    }
+  ],
+  "total_words": 1153,
+  "estimated_duration_min": 8.87
+}
