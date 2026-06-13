@@ -81,6 +81,10 @@ Render one 1920×1080 image per scene/key idea using `generate_slides.py` (in th
 
 > These images are **not** wired into the HeyGen submission; they're standalone assets for thumbnails, B-roll overlays in a video editor, and social posts. HeyGen submissions use a solid `background.color` (see the `heygen-api` skill for using uploaded images as backgrounds instead, now that asset upload is a direct API call).
 
+### 3a. Generate the YouTube Cover Image
+
+Render one 1280×720 thumbnail using `generate_slides.py` with the dark "blueprint" theme (same fonts/colors as the scene images, for visual consistency) — an eyebrow label (e.g. the source/series name), a punchy 2-line headline (the video's core hook), and a short bold supporting line (presenter/source attribution). Single slide, so `page_dots` has no effect regardless of config. Save the config as `videos/<topic>/youtube-cover-config.json` and the rendered image as `videos/<topic>/youtube-cover.png`.
+
 ### 3b. Generate B-roll via Higgsfield (optional)
 
 If `generate_broll: true`, use the `higgsfield-api` skill to generate a handful of cinematic stills/clips (one per concept scene is plenty) that an editor can cut over the avatar narration. Save outputs to `videos/<topic>/broll/`. This step is independent of `render_backend` — B-roll can accompany a HeyGen-narrated video too.
@@ -126,6 +130,8 @@ videos/<topic>/
   video-config.json
   submit.py
   scene-images/01.png ... NN.png
+  youtube-cover-config.json
+  youtube-cover.png
   broll/                        (only if generate_broll: true)
   carousel/01.png ... 10.png
   carousel/build_carousel.py   (or shared generate_slides.py + its config)
@@ -156,6 +162,7 @@ videos/<topic>/
 
 - [ ] `videos/<topic>/video-config.json` has scenes, accurate `total_words`/`estimated_duration_min`, `render_backend` recorded, and (after submission) `video_id`/`request_id`s + `status`
 - [ ] Scene images rendered to `videos/<topic>/scene-images/` (one per key idea)
+- [ ] `videos/<topic>/youtube-cover.png` rendered (1280×720) and visually inspected for legibility/clipping
 - [ ] If `generate_broll: true`, B-roll assets generated and saved to `videos/<topic>/broll/`
 - [ ] If `render_backend: "higgsfield"`, a test scene was run and the result shape inspected before submitting the full set
 - [ ] 10-slide carousel rendered to `videos/<topic>/carousel/`, each slide visually inspected for overlap/clipping

@@ -1,0 +1,21 @@
+{
+  "width": 1280, "height": 720, "margin": 60,
+  "background": "#0f0f1a", "grid_color": "#181828",
+  "colors": {"white": "#f5f5f7", "muted": "#9499a8",
+             "accent1": "#8b5cf6", "accent2": "#5eead4"},
+  "font_dir": "/mnt/skills/examples/canvas-design/canvas-fonts",
+  "fonts": {"headline": "BricolageGrotesque-Bold.ttf",
+            "body": "Outfit-Regular.ttf", "body_bold": "Outfit-Bold.ttf",
+            "mono": "GeistMono-Regular.ttf", "mono_bold": "GeistMono-Bold.ttf"},
+  "blueprint_grid": true, "corner_brackets": true, "page_dots": false,
+  "grid_step": 60,
+  "slides": [
+    {
+      "eyebrow": "ANTHROPIC TALK BREAKDOWN",
+      "elements": [
+        {"type": "headline", "text": "3 RULES FOR\nEFFECTIVE AGENTS", "size": 110, "color": "white", "gap_before": 50, "line_spacing": 1.15},
+        {"type": "body", "text": "Barry Zhang, Anthropic — Full Breakdown", "size": 36, "bold": true, "color": "accent2", "gap_before": 40}
+      ]
+    }
+  ]
+}
