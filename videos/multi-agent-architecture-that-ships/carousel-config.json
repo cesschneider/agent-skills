@@ -1,0 +1,141 @@
+{
+  "width": 1080, "height": 1350, "margin": 72,
+  "background": "#F3ECE2",
+  "blueprint_grid": false, "corner_brackets": false, "page_dots": false,
+  "letterbox": true,
+  "colors": {
+    "navy": "#1F2D4D",
+    "terracotta": "#C96A4A",
+    "charcoal": "#1A1A1A",
+    "muted": "#9499a8"
+  },
+  "font_dir": "/mnt/skills/examples/canvas-design/canvas-fonts",
+  "fonts": {
+    "headline": "Lora-Bold.ttf",
+    "body": "Lora-Regular.ttf",
+    "body_bold": "Lora-Bold.ttf",
+    "mono": "IBMPlexSerif-Regular.ttf",
+    "mono_bold": "IBMPlexSerif-Bold.ttf",
+    "serif_bold": "Lora-Bold.ttf",
+    "serif": "Lora-Regular.ttf"
+  },
+  "slides": [
+    {
+      "footer": "01 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 56, "align": "center"},
+        {"type": "title", "align": "center", "size": 56, "gap_before": 64, "lines": [
+          [{"text": "The Multi-Agent", "color": "navy"}],
+          [{"text": "Architecture That", "color": "charcoal"}],
+          [{"text": "Actually Ships", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 70,
+         "text": "Inside Factory's \"Missions\" framework: agents that plan, build, and verify real software projects for days at a time, almost without a human in the loop."}
+      ]
+    },
+    {
+      "footer": "02 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "By The Numbers", "size": 36, "gap_before": 60},
+        {"type": "headline", "text": "16 DAYS", "size": 170, "color": "terracotta", "gap_before": 50},
+        {"type": "body", "size": 40, "color": "charcoal", "gap_before": 50,
+         "text": "One autonomous Missions run. Roughly half the resulting codebase is tests, with about 90% coverage — and teams report going from ten projects in flight to thirty."}
+      ]
+    },
+    {
+      "footer": "03 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "The Real Bottleneck", "size": 36, "gap_before": 60},
+        {"type": "body", "size": 44, "color": "charcoal", "gap_before": 70,
+         "text": "Today's models can already work on fifty features at once. What can't scale is human attention — the time it takes someone to review, approve, and redirect all that work.\n\nMissions is designed around that limit, not around squeezing out more raw intelligence."}
+      ]
+    },
+    {
+      "footer": "04 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "Three Roles, One Mission", "size": 36, "gap_before": 60},
+        {"type": "icon_grid", "columns": 3, "gap_before": 80, "items": [
+          {"icon": "dashboard", "label": "Orchestrator\nPlans the work"},
+          {"icon": "clipboard", "label": "Worker\nBuilds features"},
+          {"icon": "shield", "label": "Validator\nProves it works"}
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 80,
+         "text": "Each role can run on a different model — the system plugs in whichever LLM fits planning, building, or checking best."}
+      ]
+    },
+    {
+      "footer": "05 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "Five Coordination Patterns", "size": 36, "gap_before": 60},
+        {"type": "icon_grid", "columns": 5, "gap_before": 70, "items": [
+          {"icon": "pin", "label": "Delegation"},
+          {"icon": "doc_alert", "label": "Creator-\nVerifier"},
+          {"icon": "dashboard", "label": "Broadcast"},
+          {"icon": "people_chat", "label": "Negotiation"},
+          {"icon": "bars_blocked", "label": "No Direct\nPeer Chat"}
+        ]},
+        {"type": "body", "size": 36, "color": "charcoal", "gap_before": 70,
+         "text": "Agents coordinate through their orchestrator, never directly with each other — keeping the whole mission's state consistent across days of work."}
+      ]
+    },
+    {
+      "footer": "06 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "Contracts Before Code", "size": 36, "gap_before": 60},
+        {"type": "body", "size": 44, "color": "charcoal", "gap_before": 70,
+         "text": "Before any code is written, the orchestrator drafts a validation contract — hundreds of specific checks the finished feature has to pass.\n\nTests get written against that contract, not against whatever the code ends up doing, so a passing suite actually means something."}
+      ]
+    },
+    {
+      "footer": "07 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "Serial Beats \"All At Once\"", "size": 36, "gap_before": 60},
+        {"type": "body", "size": 44, "color": "charcoal", "gap_before": 70,
+         "text": "Running every agent in parallel sounds faster — until five of them make five different architectural calls on the same codebase.\n\nMissions builds one feature at a time, while read-only work like searches, reviews, and research still runs in parallel in the background."}
+      ]
+    },
+    {
+      "footer": "08 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "700 Lines Of Prompt", "size": 36, "gap_before": 60},
+        {"type": "body", "size": 44, "color": "charcoal", "gap_before": 70,
+         "text": "There's no hard-coded orchestration logic underneath this — around 700 lines of prompt define how the whole system behaves.\n\nBecause each role can run on a different model, a validator never just rubber-stamps the patterns its own training data would produce."}
+      ]
+    },
+    {
+      "footer": "09 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 50, "gap_before": 120, "lines": [
+          [{"text": "The model brings", "color": "charcoal"}],
+          [{"text": "the intelligence.", "color": "charcoal"}],
+          [{"text": "The system brings", "color": "charcoal"}],
+          [{"text": "the discipline.", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 36, "color": "muted", "gap_before": 80,
+         "text": "The core idea behind Factory's Missions framework — and why it keeps working as new models ship."}
+      ]
+    },
+    {
+      "footer": "10 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 56, "gap_before": 70, "lines": [
+          [{"text": "Your Next", "color": "navy"}],
+          [{"text": "Step", "color": "charcoal"}]
+        ]},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "If you're building multi-agent systems, start with the validation contract: write down exactly what \"done\" means, in checkable terms, before any agent writes a line of code."},
+        {"type": "body", "size": 38, "color": "terracotta", "gap_before": 50,
+         "text": "What's the biggest blocker stopping your agents from running unsupervised? Tell us in the comments."}
+      ]
+    }
+  ]
+}
