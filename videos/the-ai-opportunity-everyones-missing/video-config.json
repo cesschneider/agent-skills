@@ -1,0 +1,75 @@
+{
+  "title": "The AI Opportunity Everyone's Missing (And Why I Can't Stop Thinking About It)",
+  "source_video": "https://youtu.be/xrLy3RxtpQE",
+  "target_duration_min": 7.5,
+  "render_backend": "heygen",
+  "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
+  "voice_id": "c0a044792fc64b3fa7dfc0700da93016",
+  "dimension": {"width": 1920, "height": 1080},
+  "aspect_ratio": "16:9",
+  "caption": true,
+  "background": "#0f0f1a",
+  "status": "draft",
+  "key_ideas": [
+    "Enterprise software work is mostly maintenance: keeping decades-old systems alive, not building new ones.",
+    "The common fear — 'AI writes code, so AI shrinks software jobs' — assumes the total amount of work is fixed.",
+    "Globally there are an estimated 800 billion lines of legacy code in production across large organizations.",
+    "Modernizing legacy code has historically cost roughly $10-15 per line, which is why most of it never gets touched.",
+    "AI-assisted analysis, refactoring, and testing is dropping that cost toward roughly $2 per line.",
+    "That cost collapse opens an addressable opportunity north of $1.6 trillion — not by replacing work, but by making deferred work viable.",
+    "The valuable skill shifts from 'write code fast' to 'understand a legacy system and direct AI to rebuild it safely' — part archaeology, part risk management.",
+    "At the industry level, cheaper modernization doesn't shrink IT services — it widens the market by clearing a backlog of 'someday, maybe' projects."
+  ],
+  "scenes": [
+    {
+      "id": 1,
+      "name": "Hook",
+      "script": "For years, I've worked on enterprise software — the kind of systems that run inside large organizations for a decade or more, passed between teams long after the people who built them have moved on. And if there's one thing that experience teaches you, it's this: most of the work in enterprise software isn't building new things. It's keeping old things running.\n\nSo when I came across a number recently — a genuinely huge number — about exactly that problem, I couldn't stop thinking about it. If it's even close to right, it says something big is about to happen to the kind of work I've spent my career doing. And almost nobody is framing it the way I think they should.",
+      "words": 122
+    },
+    {
+      "id": 2,
+      "name": "The Assumption Everyone Makes",
+      "script": "Here's the conversation I keep running into. Someone says, \"AI writes code now, doesn't that mean fewer developers, smaller teams, less work overall?\" It's the most common take on AI and software jobs, and I understand why people land there. If a tool can produce in minutes what used to take a team weeks, the obvious conclusion is that there's simply less work to go around.\n\nBut from where I sit, after years inside large engineering organizations, that take misses something important. It assumes the total amount of work is fixed, and AI just does the same work faster with fewer people. In my experience, that's almost never how it plays out in enterprise software. The real story is about what work suddenly becomes possible that wasn't possible before.",
+      "words": 129
+    },
+    {
+      "id": 3,
+      "name": "The Number That Changes Everything",
+      "script": "Here's the number that got me. Across large organizations worldwide, there's an estimated 800 billion lines of legacy code sitting in production — payroll, supply chains, banking, insurance, the systems that quietly keep everything running. Historically, modernizing that code, rewriting it, migrating it, untangling decades of patches, has cost somewhere around ten to fifteen dollars per line. At that price, most of it never gets touched. The business case never closes.\n\nNow, with AI handling a large share of the analysis, refactoring, and testing, that cost is dropping toward roughly two dollars a line. Do the math on that gap, and you get an addressable opportunity north of one and a half trillion dollars. Not by replacing work, but by making decades of deferred work suddenly worth doing.",
+      "words": 127
+    },
+    {
+      "id": 4,
+      "name": "The System Nobody Wants To Touch",
+      "script": "I want to make this concrete, because trillion-dollar numbers feel abstract. In every large engineering org I've worked in, there's always that one system. The one nobody wants to touch. The original team is long gone, the documentation is thin or nonexistent, and every change request quietly gets pushed to \"next quarter\" because the risk-to-reward ratio just isn't there.\n\nThat system isn't an edge case, it's the norm. It's where a huge share of an engineering organization's time, budget, and stress actually goes. And historically, the answer has always been \"live with it, because fixing it properly would cost too much and risk too much.\" What's changing right now is that equation. The things that were too expensive and too risky to touch are starting to look very different.",
+      "words": 129
+    },
+    {
+      "id": 5,
+      "name": "What This Means For Engineers",
+      "script": "So if the work isn't disappearing, what actually changes? I think it's the shape of the work, and specifically, who becomes valuable doing it. The skill that matters most here isn't \"can you write code fast.\" It's: can you read a messy, undocumented, twenty-year-old system, understand what it's actually supposed to do, and then direct a set of AI tools to rebuild it safely?\n\nThat's a very different skill from greenfield development. It's part archaeology, part risk management, part knowing how to ask an AI system the right questions and verify its answers against a system you can't afford to break. In my experience, the engineers who've spent years dealing with legacy systems, the ones everyone else tried to avoid, suddenly have a skill set that's about to become extremely valuable.",
+      "words": 131
+    },
+    {
+      "id": 6,
+      "name": "What This Means For The Industry",
+      "script": "Zoom out, and the same logic applies at the company level. For years, IT services and software firms have built businesses around this kind of work, at the old, expensive price point, for the small slice of legacy systems where the math actually worked. If AI genuinely drops that price by five to ten times, the naive read is that those firms now do the same amount of work for less money.\n\nBut the more I think about it, the more I think the opposite happens. A huge backlog of projects that sat in a \"someday, maybe\" pile suddenly clears the bar. The market doesn't shrink, it widens, because the threshold for \"worth doing\" just dropped dramatically. That's the part of this story I think most people are missing.",
+      "words": 129
+    },
+    {
+      "id": 7,
+      "name": "What I'm Exploring Next",
+      "script": "I'll be honest, I don't have this all figured out yet. What I do know is that after years inside enterprise software, watching legacy systems pile up while everyone chased the next shiny feature, this is the shift I've been waiting to see. And I want to actually dig into it, not just as a talking point, but as something I work through in public: what it looks like to apply AI to a real legacy system, what breaks, what genuinely saves time, and what's still just hype.\n\nThat's the kind of thing I plan to keep exploring and sharing, the real, hands-on version of this story, not just the trillion-dollar headline.",
+      "words": 112
+    },
+    {
+      "id": 8,
+      "name": "Join The Conversation",
+      "script": "If any of this connects with something you've seen in your own work, a system everyone's afraid to touch, a modernization project that never got the green light, or you're already experimenting with AI on legacy code, I'd genuinely like to hear about it.\n\nI'm sharing more of this thinking on LinkedIn, X, and Instagram, follow along, because this is just the start of the conversation, not the end of it. And drop a comment: what's the oldest, scariest system in your stack right now, and what would it take to finally fix it? Let's figure this out together.",
+      "words": 99
+    }
+  ],
+  "total_words": 978,
+  "estimated_duration_min": 7.52
+}
