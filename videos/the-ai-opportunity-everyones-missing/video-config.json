@@ -12,7 +12,7 @@
   "aspect_ratio": "16:9",
   "caption": true,
   "background": "#0f0f1a",
-  "status": "processing",
+  "status": "completed",
   "key_ideas": [
     "Enterprise software work is mostly maintenance: keeping decades-old systems alive, not building new ones.",
     "The common fear \u2014 'AI writes code, so AI shrinks software jobs' \u2014 assumes the total amount of work is fixed.",
@@ -75,5 +75,9 @@
   ],
   "total_words": 978,
   "estimated_duration_min": 7.52,
-  "video_id": "146c9631d7ca49dd98323b727bdadfe0"
+  "video_id": "146c9631d7ca49dd98323b727bdadfe0",
+  "duration_s": 368.588,
+  "gif_url": null,
+  "captioned_url": "https://files2.heygen.ai/movio/video/146c9631d7ca49dd98323b727bdadfe0/4b7e35236d5c4edcb6cebf6a93bc2fc1/caption.mp4?Expires=1782156010&Signature=nI6xG0HDSJ1lZj4P-DpTACuCAbKDDT2ijRY~Kb5K3iMoLM3E5XML46xlxuMe6bjyKwHv8XWrpjbkSZKfFIOzPT8v9x2d77zR-muo8NX05Ur6X-NPjj5dPAqandxwdQR7Fe98~vVBI7WKKpxxQVewRVSoicjC9Hg23ChwqYwTYWqjBLxn18qHIDJIf9zporyy6qPwe6rUULFyA-jy5-K90ddjIG7GI86Vdo1jBMntMmZmjOFo7rnUbVeNP-siPcow-QkLCk1wFep5adAFeFvDisdEMYLqo6ppM0-74qDiDAl08JaRCDwxT9SyyoP3nIhU4JxXYpzg8Pof1zGYqqtYxw__&Key-Pair-Id=K38HBHX5LX3X2H",
+  "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/146c9631d7ca49dd98323b727bdadfe0.mp4?Expires=1782155949&Signature=CcAr0CQC4a9U0fTgfOYcBLnNR8q3yBLNlRL2hJUJnFE3rG39IuuM6InjGoHc-iuB7C~hrP~7FoLFgM~eWKMjOpWnijnErBRV~h7GaCAkmIy8-pSAjsaLeYsEBKrZssywcHAv841ntdSOYQURuq5EyDG25NbJuBFvxNTL9DkZ7QubYfvZLcC-THM3T-y-IdPkVgLa4xh~LPbfUt-Po5dXvc5gKWm8dnUQGzNGV09XCo~B7VkV6xGP8UuGaJMzuxoGUH5kw86BW4omuEmwxczy8-9rrP1JZBzBt1ckbW-IpGGCDUl3nvQ3ZUIhe6Jr7lyOGc32nbbuPQ5x5P9hovURug__&Key-Pair-Id=K38HBHX5LX3X2H"
 }

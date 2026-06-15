@@ -3,7 +3,7 @@
 A personal essay video, written in my own voice, built around one number that reframes what AI means for enterprise software — and for anyone who, like me, has spent years keeping legacy systems alive.
 
 Carousel theme: "Claude brand" (cream/navy/terracotta, `carousel/01.png`–`10.png`).
-Narration video: avatar render via HeyGen, 8 scenes, ~978 words, estimated runtime ~7:31. Chapter timestamps below are proportional to that estimate and should be re-checked against the actual rendered duration once available.
+Narration video: avatar render via HeyGen (`video_id: 146c9631d7ca49dd98323b727bdadfe0`, duration 6:09). Chapter timestamps below are proportional to that runtime.
 
 ## YouTube
 
@@ -22,13 +22,13 @@ This isn't a polished thesis — it's where my head is at right now, and I want 
 
 Chapters:
 0:00 The thing my whole career has been about
-0:56 The assumption everyone makes about AI and jobs
-1:56 The number that changes everything ($1.6T)
-2:54 The system nobody wants to touch
-3:54 What this means for engineers
-4:54 What this means for the industry
-5:54 What I'm exploring next
-6:46 Join the conversation
+0:46 The assumption everyone makes about AI and jobs
+1:35 The number that changes everything ($1.6T)
+2:22 The system nobody wants to touch
+3:11 What this means for engineers
+4:00 What this means for the industry
+4:49 What I'm exploring next
+5:31 Join the conversation
 
 If you've ever worked next to "that one system" nobody wants to touch, or you're already experimenting with AI on legacy code, I want to hear about it — drop a comment with the oldest, scariest system in your stack. And if this kind of thinking is useful to you, follow me here and on LinkedIn, X, and Instagram — I'll be sharing more of this as I dig in. [Add your LinkedIn / X / Instagram links here.]
 
