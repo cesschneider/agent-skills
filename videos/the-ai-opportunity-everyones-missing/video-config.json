@@ -5,26 +5,29 @@
   "render_backend": "heygen",
   "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
   "voice_id": "c0a044792fc64b3fa7dfc0700da93016",
-  "dimension": {"width": 1920, "height": 1080},
+  "dimension": {
+    "width": 1920,
+    "height": 1080
+  },
   "aspect_ratio": "16:9",
   "caption": true,
   "background": "#0f0f1a",
-  "status": "draft",
+  "status": "processing",
   "key_ideas": [
     "Enterprise software work is mostly maintenance: keeping decades-old systems alive, not building new ones.",
-    "The common fear — 'AI writes code, so AI shrinks software jobs' — assumes the total amount of work is fixed.",
+    "The common fear \u2014 'AI writes code, so AI shrinks software jobs' \u2014 assumes the total amount of work is fixed.",
     "Globally there are an estimated 800 billion lines of legacy code in production across large organizations.",
     "Modernizing legacy code has historically cost roughly $10-15 per line, which is why most of it never gets touched.",
     "AI-assisted analysis, refactoring, and testing is dropping that cost toward roughly $2 per line.",
-    "That cost collapse opens an addressable opportunity north of $1.6 trillion — not by replacing work, but by making deferred work viable.",
-    "The valuable skill shifts from 'write code fast' to 'understand a legacy system and direct AI to rebuild it safely' — part archaeology, part risk management.",
-    "At the industry level, cheaper modernization doesn't shrink IT services — it widens the market by clearing a backlog of 'someday, maybe' projects."
+    "That cost collapse opens an addressable opportunity north of $1.6 trillion \u2014 not by replacing work, but by making deferred work viable.",
+    "The valuable skill shifts from 'write code fast' to 'understand a legacy system and direct AI to rebuild it safely' \u2014 part archaeology, part risk management.",
+    "At the industry level, cheaper modernization doesn't shrink IT services \u2014 it widens the market by clearing a backlog of 'someday, maybe' projects."
   ],
   "scenes": [
     {
       "id": 1,
       "name": "Hook",
-      "script": "For years, I've worked on enterprise software — the kind of systems that run inside large organizations for a decade or more, passed between teams long after the people who built them have moved on. And if there's one thing that experience teaches you, it's this: most of the work in enterprise software isn't building new things. It's keeping old things running.\n\nSo when I came across a number recently — a genuinely huge number — about exactly that problem, I couldn't stop thinking about it. If it's even close to right, it says something big is about to happen to the kind of work I've spent my career doing. And almost nobody is framing it the way I think they should.",
+      "script": "For years, I've worked on enterprise software \u2014 the kind of systems that run inside large organizations for a decade or more, passed between teams long after the people who built them have moved on. And if there's one thing that experience teaches you, it's this: most of the work in enterprise software isn't building new things. It's keeping old things running.\n\nSo when I came across a number recently \u2014 a genuinely huge number \u2014 about exactly that problem, I couldn't stop thinking about it. If it's even close to right, it says something big is about to happen to the kind of work I've spent my career doing. And almost nobody is framing it the way I think they should.",
       "words": 122
     },
     {
@@ -36,7 +39,7 @@
     {
       "id": 3,
       "name": "The Number That Changes Everything",
-      "script": "Here's the number that got me. Across large organizations worldwide, there's an estimated 800 billion lines of legacy code sitting in production — payroll, supply chains, banking, insurance, the systems that quietly keep everything running. Historically, modernizing that code, rewriting it, migrating it, untangling decades of patches, has cost somewhere around ten to fifteen dollars per line. At that price, most of it never gets touched. The business case never closes.\n\nNow, with AI handling a large share of the analysis, refactoring, and testing, that cost is dropping toward roughly two dollars a line. Do the math on that gap, and you get an addressable opportunity north of one and a half trillion dollars. Not by replacing work, but by making decades of deferred work suddenly worth doing.",
+      "script": "Here's the number that got me. Across large organizations worldwide, there's an estimated 800 billion lines of legacy code sitting in production \u2014 payroll, supply chains, banking, insurance, the systems that quietly keep everything running. Historically, modernizing that code, rewriting it, migrating it, untangling decades of patches, has cost somewhere around ten to fifteen dollars per line. At that price, most of it never gets touched. The business case never closes.\n\nNow, with AI handling a large share of the analysis, refactoring, and testing, that cost is dropping toward roughly two dollars a line. Do the math on that gap, and you get an addressable opportunity north of one and a half trillion dollars. Not by replacing work, but by making decades of deferred work suddenly worth doing.",
       "words": 127
     },
     {
@@ -71,5 +74,6 @@
     }
   ],
   "total_words": 978,
-  "estimated_duration_min": 7.52
+  "estimated_duration_min": 7.52,
+  "video_id": "146c9631d7ca49dd98323b727bdadfe0"
 }
