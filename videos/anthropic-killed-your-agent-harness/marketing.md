@@ -1,6 +1,6 @@
 # Marketing Copy — Anthropic Just Killed Your Agent Harness
 
-Source: https://youtu.be/nBH07G-zayk ("Anthropic Just Killed All Your Agent Harnesses", AI LABS). Narration video: avatar render via HeyGen (estimated duration 7:32 — timestamps below are proportional and will be corrected to the actual rendered runtime once the chapter clips are assembled).
+Source: https://youtu.be/nBH07G-zayk ("Anthropic Just Killed All Your Agent Harnesses", AI LABS). Narration video: avatar render via HeyGen, rendered runtime 7:06 (timestamps below reflect the actual assembled cut, intro + narrated chapter cards included).
 
 ## YouTube
 
@@ -15,13 +15,13 @@ In this video I break down both stories — the technical shift (Claude 4 hittin
 
 Chapters:
 0:00 Hook
-0:59 The Assumption Everyone Made
-1:56 The Number That Changes Everything
-2:51 The System Nobody Wants To Touch
-3:44 What This Means For Engineers
-4:41 What This Means For The Industry
-5:38 What I'm Exploring Next
-6:37 Join The Conversation
+1:12 The Assumption Everyone Made
+2:07 The Number That Changes Everything
+3:00 The System Nobody Wants To Touch
+3:55 What This Means For Engineers
+4:46 What This Means For The Industry
+5:44 What I'm Exploring Next
+6:32 Join The Conversation
 
 If you're maintaining agent tooling right now, tell me in the comments: what's the one piece of your harness you're least sure you still need?
 
