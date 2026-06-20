@@ -2,6 +2,7 @@
 node_modules/
 videos/*/final.mp4
 videos/*/final_compressed.mp4
+videos/*/final_*.mp4
 .env
 .env.*
 *.log
