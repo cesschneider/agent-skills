@@ -13,11 +13,18 @@ from scene-images-config.json) to exist.
 Reuses the channel intro at videos/_intro/intro.mp4 (rendered once by
 videos/_intro/submit_intro.py — run that first if it doesn't exist yet).
 
-Pipeline:
-  1. Download each chapter's captioned avatar clip, normalize to the
-     canonical spec (1920x1080, 30fps, yuv420p H.264, AAC 48kHz stereo).
-  2. Render each scene-images/NN.png into a CARD_DURATION-second clip
-     with a silent audio track, same canonical spec.
+Pipeline, per chapter:
+  1. Card: if the scene has a `card_video_url`/`card_captioned_url` (a
+     short HeyGen render of `card_script`, solid background, submitted
+     by this video's submit.py purely for narration audio), the card
+     plays the scene-images/NN.png slide as its visual for that clip's
+     actual duration, with the rendered narration as its audio track —
+     the avatar itself never appears during the slide. If no card
+     narration was rendered, falls back to a silent CARD_DURATION-second
+     card.
+  2. Avatar clip: download the chapter's captioned avatar clip, normalize
+     to the canonical spec (1920x1080, 30fps, yuv420p H.264, AAC 48kHz
+     stereo).
   3. Chain intro + (card, avatar) x N with XFADE_DURATION-second
      crossfades (video: xfade, audio: acrossfade) into one ffmpeg
      filter_complex, output videos/<topic>/final.mp4.
@@ -83,6 +90,28 @@ def render_card(image_path, dst, duration):
     ])
 
 
+def render_narrated_card(image_path, narration_audio_path, dst, duration):
+    """Slide image as the visual, narration audio as the soundtrack."""
+    fade = min(0.4, duration / 4)
+    run([
+        FFMPEG, "-y",
+        "-loop", "1", "-i", image_path,
+        "-i", narration_audio_path,
+        "-t", str(duration),
+        "-vf", f"scale={CANON_W}:{CANON_H}:force_original_aspect_ratio=decrease,"
+               f"pad={CANON_W}:{CANON_H}:(ow-iw)/2:(oh-ih)/2,setsar=1,fps={CANON_FPS},"
+               f"fade=t=in:st=0:d={fade},fade=t=out:st={duration - fade}:d={fade}",
+        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "medium",
+        "-c:a", "aac", "-ar", "48000", "-ac", "2",
+        "-shortest",
+        dst,
+    ])
+
+
+def extract_audio(src, dst):
+    run([FFMPEG, "-y", "-i", src, "-vn", "-c:a", "aac", "-ar", "48000", "-ac", "2", dst])
+
+
 def main(topic_dir):
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
     intro_path = os.path.join(repo_root, "videos", "_intro", "intro.mp4")
@@ -122,9 +151,21 @@ def main(topic_dir):
 
         for i, (scene, image_path) in enumerate(zip(scenes, image_paths)):
             card_path = os.path.join(tmp, f"card_{i+1:02d}.mp4")
-            print(f"Rendering card {i+1}/{len(scenes)}: {scene['name']}")
-            render_card(image_path, card_path, CARD_DURATION)
-            segments.append((card_path, CARD_DURATION))
+            card_narration_url = scene.get("card_video_url")
+            if scene.get("card_script") and scene.get("card_status") == "completed" and card_narration_url:
+                print(f"Rendering narrated card {i+1}/{len(scenes)}: {scene['name']}")
+                narration_raw = os.path.join(tmp, f"card_narration_{i+1:02d}_raw.mp4")
+                narration_audio = os.path.join(tmp, f"card_narration_{i+1:02d}.aac")
+                download(card_narration_url, narration_raw)
+                extract_audio(narration_raw, narration_audio)
+                os.remove(narration_raw)
+                card_duration = scene["card_duration_s"]
+                render_narrated_card(image_path, narration_audio, card_path, card_duration)
+            else:
+                print(f"Rendering silent card {i+1}/{len(scenes)}: {scene['name']}")
+                card_duration = CARD_DURATION
+                render_card(image_path, card_path, card_duration)
+            segments.append((card_path, card_duration))
 
             raw_path = os.path.join(tmp, f"avatar_{i+1:02d}_raw.mp4")
             norm_path = os.path.join(tmp, f"avatar_{i+1:02d}.mp4")

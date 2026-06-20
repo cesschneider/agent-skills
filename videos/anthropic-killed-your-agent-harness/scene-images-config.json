@@ -1,0 +1,78 @@
+{
+  "width": 1920, "height": 1080, "margin": 96,
+  "background": "#0f0f1a", "grid_color": "#181828",
+  "colors": {"white": "#f5f5f7", "muted": "#9499a8",
+             "accent1": "#8b5cf6", "accent2": "#5eead4"},
+  "font_dir": "/mnt/skills/examples/canvas-design/canvas-fonts",
+  "fonts": {"headline": "BricolageGrotesque-Bold.ttf",
+            "body": "Outfit-Regular.ttf", "body_bold": "Outfit-Bold.ttf",
+            "mono": "GeistMono-Regular.ttf", "mono_bold": "GeistMono-Bold.ttf"},
+  "blueprint_grid": true, "corner_brackets": true, "page_dots": true,
+  "grid_step": 60,
+  "slides": [
+    {
+      "eyebrow": "HOOK",
+      "elements": [
+        {"type": "headline", "text": "DELETE HALF\nYOUR AGENT CODE", "size": 120, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "That's Anthropic's own architecture guidance now", "size": 44, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "WHAT THE HARNESS SHAKE-UP MEANS FOR ENGINEERS"
+    },
+    {
+      "eyebrow": "01 — THE OLD PLAYBOOK",
+      "elements": [
+        {"type": "headline", "text": "CHAINS. FILTERS.\nMEMORY PIPELINES.", "size": 100, "color": "accent1", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "A year of scaffolding built on one assumption: the model needs hand-holding", "size": 42, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "THE ASSUMPTION EVERYONE MADE"
+    },
+    {
+      "eyebrow": "02 — THE NUMBER",
+      "elements": [
+        {"type": "headline", "text": "45.3% → 61.6%", "size": 140, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "BrowseComp accuracy, the moment the model wrote its own filters", "size": 44, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "THE NUMBER THAT CHANGES EVERYTHING"
+    },
+    {
+      "eyebrow": "03 — APRIL 4TH",
+      "elements": [
+        {"type": "headline", "text": "SANCTIONED STAYS.\nEVERYTHING ELSE PAYS.", "size": 100, "color": "accent2", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Third-party harnesses cut from subscription billing overnight", "size": 44, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "THE SYSTEM NOBODY WANTS TO TOUCH"
+    },
+    {
+      "eyebrow": "04 — FOR ENGINEERS",
+      "elements": [
+        {"type": "headline", "text": "TODAY'S HARNESS IS\nTOMORROW'S MIDDLEWARE", "size": 92, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "The abstraction you built for a weak platform becomes debt once it's strong", "size": 42, "bold": true, "color": "accent1", "gap_before": 60}
+      ],
+      "footer": "WHAT THIS MEANS FOR ENGINEERS"
+    },
+    {
+      "eyebrow": "05 — FOR THE INDUSTRY",
+      "elements": [
+        {"type": "headline", "text": "AUTONOMY VS.\nACCOUNTABILITY", "size": 110, "color": "accent2", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Sandboxing, memory, and audit trails survive. Rigid harnesses don't", "size": 44, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "WHAT THIS MEANS FOR THE INDUSTRY"
+    },
+    {
+      "eyebrow": "06 — WHAT'S NEXT",
+      "elements": [
+        {"type": "headline", "text": "WHAT STAYS.\nWHAT GOES.", "size": 130, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Auditing my own tooling, scene by scene, and sharing what breaks", "size": 44, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "WHAT I'M EXPLORING NEXT"
+    },
+    {
+      "eyebrow": "JOIN THE CONVERSATION",
+      "elements": [
+        {"type": "headline", "text": "WHAT'S THE ONE\nPIECE YOU'RE UNSURE OF?", "size": 86, "color": "accent1", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Follow along on LinkedIn, X, and Instagram — let's figure this out together", "size": 42, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "ANTHROPIC JUST KILLED YOUR AGENT HARNESS"
+    }
+  ]
+}
