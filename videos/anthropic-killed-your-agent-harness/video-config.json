@@ -12,7 +12,7 @@
   "aspect_ratio": "16:9",
   "caption": true,
   "background": "#0f0f1a",
-  "status": "draft",
+  "status": "rendered",
   "key_ideas": [
     "A year of agent tooling was built on the assumption that models need heavy scaffolding: prompt chains, hardcoded data filters, manual memory/RAG pipelines.",
     "Anthropic's own benchmarks flipped that assumption: Claude 4 hits near 50% on SWE-bench using only bash and a text editor \u2014 no custom orchestration.",
@@ -150,11 +150,18 @@
       "words": 116,
       "card_script": "Tell me the one piece of your harness you're least sure you still need.",
       "video_id": "a3ce636b8c254d559b8601b927239777",
-      "status": "processing",
+      "status": "completed",
       "card_video_id": "11af187a7497468dbc5f677f6cfe3f00",
-      "card_status": "processing"
+      "card_status": "completed",
+      "duration_s": 33.7502,
+      "captioned_url": "https://files2.heygen.ai/movio/video/a3ce636b8c254d559b8601b927239777/a7b96a5a07074fbb9f119365729b5bf5/caption.mp4?Expires=1782593878&Signature=HLvPqZs-jXOJeqQYOJD0NoaR2jeaAjTE7KUkewhRRIfOLFWTgGgVmrtUQhJIk~4TX1KV-jaItCtLOm3Le8RZ~~ZZhOyqJdtwt5vLRNGyaQ8OKnRiMFyNmYyDZuxIa5kINbBGjHZMvHN4ACQKXMzRfjlU21SjwXqlqe6YFPSPR-9SUS2b5exWVEXiTI-9optuKmk6UEi-4nf9HE3mn7bt~00BuuU7IFHlXcFo0OvyrxvghpMOw7s6mYMXGaMwwUeEMDwO003ntVOctpTQtkXzKqwrxhkGA4vAufvKypFbY1JLZAM63LcVgZL7iiue9e3il7A8vyvKYsk~L1HSa9igGA__&Key-Pair-Id=K38HBHX5LX3X2H",
+      "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/a3ce636b8c254d559b8601b927239777.mp4?Expires=1782593870&Signature=fY5ORYfky4Vz5pASWKPAlWiG1-3GMikPQKAJO15ydSct0p~vUUK1XsX6Upmy03StqPdhTbvHCkZTl1mTBW6BudmzhqPPT5sYO1sDuWZvdRGbN~vJwp3ieKn475PijGozDcjS6~4WcCURJquNBhmIui1x~FiZsJbS66ixqPDFT2CoZwC2tlonvTPH6TzYjLo3kyPFkY78kYDrP5sbve85XeAl5BqC~IKb7UDSYHyb6z1dT5addn0YeScXQ4CqQsJdpYIuC-PYe0rZS2nvnJ7an1oiIBG1XYVYaVbmUlS5vDG0l~Nl3DAC7woDRBZ1N-m5gzSyXIWCFH0CsgFwNj9DqQ__&Key-Pair-Id=K38HBHX5LX3X2H",
+      "card_duration_s": 3.94449,
+      "card_captioned_url": "https://files2.heygen.ai/movio/video/11af187a7497468dbc5f677f6cfe3f00/93f4a4e6f5b040e196a242c1b7ba7493/caption.mp4?Expires=1782593801&Signature=m1WNMFwCH~mW7GvzPTWzI3vUVdG8JRa6U8ehhr3XCteA2r8w~ZqfG4OkMrVqyb-JkHiMKF4AST5oRFRCZJ89l~knjubY80lFG8ZMAv8W6CkpLYi9iUv8gcRKiokxjW6jTBkoJDCivPzaE2je1u0cuWoTfey8qhTvogvGlc-5IFgpH1z6hw6ao6FmywrSgTw2Cf9cfo6xg6FHx2pMetkSNIpEf-KYjXs4S5ST5BuOL3TpElSBYPCwrBwiAD7oRFHs48P-LNSzucN7whKxp~Uxao73PX7cyfhjmBBgHYuSWPKEzVw019WL-NiDAZIR79w4Y1JEO0KVBnVSht266MsXyw__&Key-Pair-Id=K38HBHX5LX3X2H",
+      "card_video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/11af187a7497468dbc5f677f6cfe3f00.mp4?Expires=1782593795&Signature=J5zPNt1Iq8WC1siW1Jt7r4VpxNEV1OLamQlSzZyoh0PWO9cmiunnCF7VcaUr24lrFA1oPuHCbBnQqRIXrMKdNiDhXnelqdNoW0hZK07QMdSuERNdL5TnAdETAXxBi3MOQ7E2EZkhajS9c96TWVbyghlirYu-8G4C3m52XmylEBDo0nz~LFhdpP69ELz9VCG9oEJkk5DkAxHR16ghNM8oHbRyN1qJyeuOfuWTsrjigJI9PSodrBS5xe3kT37tP7A8YiklSxtDGcFbrhPgRfeF9MOLAxPNnvBt1YLPNOdmy3FDI7YmngfQZ01ox96~mi1MVH1MJZGIgmFmeDgC9ZW2Pg__&Key-Pair-Id=K38HBHX5LX3X2H"
     }
   ],
   "total_words": 977,
-  "estimated_duration_min": 7.52
+  "estimated_duration_min": 7.52,
+  "total_duration_s": 374.4131
 }
