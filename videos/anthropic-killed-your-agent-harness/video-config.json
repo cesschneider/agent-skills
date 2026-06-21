@@ -13,7 +13,7 @@
   "aspect_ratio": "16:9",
   "caption": true,
   "background": "#0f0f1a",
-  "status": "processing",
+  "status": "completed",
   "key_ideas": [
     "A year of agent tooling was built on the assumption that models need heavy scaffolding: prompt chains, hardcoded data filters, manual memory/RAG pipelines.",
     "Anthropic's own benchmarks flipped that assumption: Claude 4 hits near 50% on SWE-bench using only bash and a text editor \u2014 no custom orchestration.",
@@ -146,5 +146,9 @@
   ],
   "total_words": 977,
   "estimated_duration_min": 7.52,
-  "video_id": "fc9cb1b75f36436488afb2b1f1553030"
+  "video_id": "fc9cb1b75f36436488afb2b1f1553030",
+  "duration_s": 432.17,
+  "gif_url": null,
+  "captioned_url": "https://files2.heygen.ai/movio/video/fc9cb1b75f36436488afb2b1f1553030/3d6a664d772846dd981cbc2b6d52ba27/caption.mp4?Expires=1782607052&Signature=eS3FIlmeLvNoVW6tW4vWUZxstgDMzRs7xJZuDdepnAijVn-9McAs4IPfLNsl-z6-W5-hcahZyR9tTmnLAfYx94nY372pEM-K6B3vYaDLaM7JROiVpWxz73CRAptVITgTvmEZ6yDPrCZxufJkvpHOQVVboVKojjmJS8bfn444iTtUBhRJ80HYM1K4gg3zJjtrdtvbEl26XC5KWboe7obTtBh3eZZ6vd2zbglVdir0HZ1bn4IHilDrFZ58dP2Kal7U7Yc2-ReORwS~caIdTw8WrLrVuyukvXbxyjcQyxLpaSQe3Tf7TlWPyiHdyQqfvV0ZrCdDKPCH42U0z0EFgt4A9w__&Key-Pair-Id=K38HBHX5LX3X2H",
+  "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/fc9cb1b75f36436488afb2b1f1553030.mp4?Expires=1782607041&Signature=jLGRRTUdPzFyzVI988GrhX1B8jLTLdrqweBXLQNtaJy34QO2V1SJh6PDrXL2UzytdNL8z9iECAOqQNyh~liD31GiFSPMVFrGBmuHnBJLpXzm-kdI7KfWm2vqijM~iRNF9amKpBpz5HRZUQX~g4IZiOH9IZnQhyC9OE6ELMi1XpxiNGNGrQ~UVuXl7n~PM0dTajz90EE8tSoHNfXPuad~ft7SomxeiwNKw3uoHX3wag4hmA2BMRdoBnZ94UGIVgkt5KfB8fTeqeXGsSMslS1Eb5cdpuunWDLOy2aaElc1777wichyCTZhuIGbNZ7oTNrPukoPRUU1VgfdlBmC-f6TlQ__&Key-Pair-Id=K38HBHX5LX3X2H"
 }
