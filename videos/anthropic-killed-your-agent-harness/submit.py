@@ -1,19 +1,12 @@
 #!/usr/bin/env python3
-"""Render "Anthropic Just Killed Your Agent Harness" as 8 per-chapter HeyGen
-clips, plus one short card-narration clip per chapter.
+"""Render "Anthropic Just Killed Your Agent Harness" as ONE native HeyGen
+multi-scene video: an intro, then for each chapter a narrated slide scene
+(no avatar, full-frame scene image, voice-over) followed by the avatar
+scene for that chapter.
 
-Each scene is submitted as its OWN single-scene video (not one combined
-multi-scene render) so assemble.py can insert a chapter-card slide between
-chapters at a clean boundary. Each scene also gets a second, short
-single-scene render of `card_script` (same avatar/voice, solid background)
-— assemble.py keeps only that render's audio and pairs it with the
-scene-images/NN.png slide, so the slide plays with a spoken explanation
-instead of sitting silently. video_id/status/duration/video_url/
-captioned_url (and the card_ equivalents) are written back onto each scene
-in video-config.json as soon as they're known.
-
-Run this, then run assemble.py to stitch intro + narrated cards + clips
-into final.mp4.
+HeyGen stitches and transitions between scenes itself — no local ffmpeg
+assembly is needed. video_id/status/duration/video_url/captioned_url are
+written back onto video-config.json once the single render completes.
 """
 
 import json
@@ -21,9 +14,10 @@ import os
 import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "skills", "heygen-api"))
-from heygen_client import get_remaining_quota, generate_video_v2, poll_until_done
+from heygen_client import get_remaining_quota, upload_asset, generate_video_v2, poll_until_done
 
-config_path = os.path.join(os.path.dirname(__file__), "video-config.json")
+topic_dir = os.path.dirname(__file__)
+config_path = os.path.join(topic_dir, "video-config.json")
 with open(config_path) as f:
     config = json.load(f)
 
@@ -31,64 +25,68 @@ quota = get_remaining_quota()
 print(f"Quota: {quota.get('remaining_quota')} API credits")
 
 
-def submit_scene(scene, text, title_suffix, id_field, status_field):
-    if scene.get(id_field) and scene.get(status_field) in ("processing", "completed"):
-        print(f"Scene {scene['id']} ({scene['name']}) {title_suffix}: already submitted ({scene[id_field]}), skipping resubmit")
-        return
-    video_inputs = [{
-        "character": {"type": "talking_photo", "talking_photo_id": config["avatar_id"]},
-        "voice": {"type": "text", "input_text": text, "voice_id": config["voice_id"]},
-        "background": {"type": "color", "value": config["background"]},
-    }]
+def ensure_uploaded(scene):
+    """Upload a slide scene's image once and cache the asset URL in config."""
+    if scene.get("image_url"):
+        return scene["image_url"]
+    image_path = os.path.join(topic_dir, scene["image"])
+    print(f"Uploading slide image for scene {scene['id']} ({scene['name']})...")
+    asset = upload_asset(image_path)
+    scene["image_url"] = asset["url"]
+    with open(config_path, "w") as f:
+        json.dump(config, f, indent=2)
+    return scene["image_url"]
+
+
+video_inputs = []
+for scene in config["scenes"]:
+    if scene["type"] == "avatar":
+        video_inputs.append({
+            "character": {"type": "talking_photo", "talking_photo_id": config["avatar_id"]},
+            "voice": {"type": "text", "input_text": scene["script"], "voice_id": config["voice_id"]},
+            "background": {"type": "color", "value": config["background"]},
+        })
+    elif scene["type"] == "slide":
+        image_url = ensure_uploaded(scene)
+        video_inputs.append({
+            "voice": {"type": "text", "input_text": scene["narration"], "voice_id": config["voice_id"]},
+            "background": {"type": "image", "url": image_url},
+        })
+    else:
+        sys.exit(f"Unknown scene type {scene['type']!r} for scene {scene['id']}")
+
+if config.get("video_id") and config.get("status") in ("processing", "completed"):
+    print(f"Already submitted ({config['video_id']}, status={config['status']}), skipping resubmit")
+else:
+    print(f"Submitting {len(video_inputs)} scenes in a single multi-scene render...")
     video_id = generate_video_v2(
-        title=f"{config['title']} — {scene['name']} {title_suffix}",
+        title=config["title"],
         video_inputs=video_inputs,
         dimension=config["dimension"],
         caption=config["caption"],
     )
-    print(f"Scene {scene['id']} ({scene['name']}) {title_suffix}: submitted {video_id}")
-    scene[id_field] = video_id
-    scene[status_field] = "processing"
+    print(f"Submitted: {video_id}")
+    config["video_id"] = video_id
+    config["status"] = "processing"
     with open(config_path, "w") as f:
         json.dump(config, f, indent=2)
 
+print("Polling...")
+data = poll_until_done(
+    config["video_id"],
+    on_update=lambda i, status, d: print(f"  [{i*15}s] {status}"),
+)
 
-def poll_scene(scene, id_field, status_field, duration_field, captioned_field, url_field):
-    if scene.get(status_field) == "completed":
-        return
-    print(f"Polling scene {scene['id']} ({scene['name']}) [{status_field}]...")
-    data = poll_until_done(
-        scene[id_field],
-        on_update=lambda i, status, d, name=scene["name"]: print(f"  [{name}] [{i*15}s] {status}"),
-    )
-    scene[status_field] = "completed"
-    scene[duration_field] = data.get("duration")
-    scene[captioned_field] = data.get("video_url_caption", "")
-    scene[url_field] = data.get("video_url", "")
-    with open(config_path, "w") as f:
-        json.dump(config, f, indent=2)
-
-
-# --- Submit every chapter's main avatar clip and its card-narration clip
-# first, saving each video_id immediately, so an interrupted run never
-# loses progress and never resubmits a chapter that's already in flight. ---
-for scene in config["scenes"]:
-    submit_scene(scene, scene["script"], "(chapter)", "video_id", "status")
-    if scene.get("card_script"):
-        submit_scene(scene, scene["card_script"], "(card narration)", "card_video_id", "card_status")
-
-# --- Poll every chapter and card-narration clip until completed/failed,
-# writing results back as each one finishes. ---
-for scene in config["scenes"]:
-    poll_scene(scene, "video_id", "status", "duration_s", "captioned_url", "video_url")
-    if scene.get("card_script"):
-        poll_scene(scene, "card_video_id", "card_status", "card_duration_s", "card_captioned_url", "card_video_url")
-
-config["status"] = "rendered"
-config["total_duration_s"] = sum(s.get("duration_s", 0) for s in config["scenes"])
+config.update({
+    "status": "completed",
+    "duration_s": data.get("duration"),
+    "gif_url": data.get("gif_url", ""),
+    "captioned_url": data.get("video_url_caption", ""),
+    "video_url": data.get("video_url", ""),
+})
 with open(config_path, "w") as f:
     json.dump(config, f, indent=2)
 
-print(f"\nAll {len(config['scenes'])} chapter clips (+ card narrations) rendered.")
-print(f"Total avatar runtime: {config['total_duration_s']:.1f}s")
-print("Next: python3 ../../skills/social-video-production/assemble.py videos/anthropic-killed-your-agent-harness/")
+print(f"\nDone — {data.get('duration')}s")
+print(f"Captioned URL: {data.get('video_url_caption', '')[:100]}...")
+print(f"Video URL: {data.get('video_url', '')[:100]}...")
