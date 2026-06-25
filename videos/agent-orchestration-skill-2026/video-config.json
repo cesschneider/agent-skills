@@ -1,0 +1,170 @@
+{
+  "title": "Is Agent Orchestration the Top Engineering Skill of 2026?",
+  "source_post": "https://www.linkedin.com/posts/jonathan-peslar_nvidia-ceo-jensen-huang-just-showed-a-16-ugcPost-7475730750382907392-MURi/",
+  "render_mode": "single_multiscene_call",
+  "render_backend": "heygen",
+  "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
+  "voice_id": "c0a044792fc64b3fa7dfc0700da93016",
+  "dimension": {
+    "width": 1920,
+    "height": 1080
+  },
+  "aspect_ratio": "16:9",
+  "caption": true,
+  "background": "#0f0f1a",
+  "status": "completed",
+  "key_ideas": [
+    "A viral clip has Nvidia CEO Jensen Huang arguing agent orchestration, not coding, is the key 2026 engineering skill",
+    "Huang's claim: a $500K engineer should be comfortable spending ~$250K/year on tokens, likened to athlete conditioning",
+    "The bigger claim is a shift from solving one problem at a time to directing many agents in parallel",
+    "Framed as augmentation of existing tools (SQL, design software, creative tools), not replacement",
+    "Cited anecdotes: overnight enterprise stack rebuilds, a 7-year PhD's genomics research compressed to ~30 minutes",
+    "Pushback in comments: efficient engineers do more with fewer tokens; token spend isn't a skill metric",
+    "The orchestration gap is real regardless of the token debate: it isn't taught in CS programs, bootcamps, or degrees",
+    "Open question: is this the next core engineering skill, or overstating where the tooling is today"
+  ],
+  "scenes": [
+    {
+      "id": 0,
+      "type": "avatar",
+      "name": "Intro",
+      "script": "Hey, I'm Cesar Schneider. I've spent years building and maintaining enterprise software \u2014 and on this channel, I break down what's actually changing in software engineering and AI, one real idea at a time. Let's get into it.",
+      "words": 38
+    },
+    {
+      "id": 1,
+      "type": "slide",
+      "name": "Hook",
+      "image": "scene-images/01.png",
+      "narration": "A clip of Nvidia CEO Jensen Huang is making the rounds with a claim that's got engineers arguing: managing AI agents, not writing code yourself, is about to become the most valuable skill in software engineering.",
+      "words": 36,
+      "image_url": "https://resource2.heygen.ai/image/eee5c166194e4dd591fe1e20f87834f4/original.png"
+    },
+    {
+      "id": 2,
+      "type": "avatar",
+      "name": "Hook Expanded",
+      "script": "The argument isn't that coding disappears. It's that the job shifts from typing code yourself to coordinating dozens, maybe hundreds, of agents working in parallel \u2014 and that almost no curriculum out there teaches that yet.",
+      "words": 36
+    },
+    {
+      "id": 3,
+      "type": "slide",
+      "name": "The Token Claim",
+      "image": "scene-images/02.png",
+      "narration": "Huang's specific claim, as reported: a five-hundred-thousand-dollar engineer should be comfortable spending around two-hundred-fifty-thousand dollars a year on tokens \u2014 the same way an athlete invests in their own conditioning.",
+      "words": 30,
+      "image_url": "https://resource2.heygen.ai/image/5102e39fd0d9498fa06bdf7644e5824b/original.png"
+    },
+    {
+      "id": 4,
+      "type": "avatar",
+      "name": "Token Claim Expanded",
+      "script": "That's the line generating the most pushback, and we'll get to why. But the underlying point is about mindset: treating compute as a multiplier on a senior engineer's output, not as a cost to minimize.",
+      "words": 35
+    },
+    {
+      "id": 5,
+      "type": "slide",
+      "name": "The Orchestration Shift",
+      "image": "scene-images/03.png",
+      "narration": "The bigger claim is about orchestration. Instead of solving one problem at a time, an engineer directs many agents working simultaneously \u2014 turning problems that used to be too slow or too hard into something tractable.",
+      "words": 36,
+      "image_url": "https://resource2.heygen.ai/image/56806a7b50304d3da8f6e8f2da05169d/original.png"
+    },
+    {
+      "id": 6,
+      "type": "avatar",
+      "name": "Orchestration Expanded",
+      "script": "This tracks with what a lot of teams are already doing quietly \u2014 running several agent sessions in parallel on different parts of a codebase. What's new is hearing it framed as the headline skill, not a power-user trick.",
+      "words": 39
+    },
+    {
+      "id": 7,
+      "type": "slide",
+      "name": "Augmentation",
+      "image": "scene-images/04.png",
+      "narration": "The clip is also careful to frame this as augmentation, not replacement \u2014 agents sitting on top of existing tools like SQL databases or design software, scaling what a person can direct rather than swapping the tools out.",
+      "words": 38,
+      "image_url": "https://resource2.heygen.ai/image/0762c7aa3769455bb84ad084782cd499/original.png"
+    },
+    {
+      "id": 8,
+      "type": "avatar",
+      "name": "Augmentation Expanded",
+      "script": "That distinction matters if you're worried about a forced rebuild of your entire stack. The claim isn't throw out your tools \u2014 it's point more capable hands at the tools you already trust.",
+      "words": 33
+    },
+    {
+      "id": 9,
+      "type": "slide",
+      "name": "The Examples",
+      "image": "scene-images/05.png",
+      "narration": "The examples cited are dramatic: rebuilding an entire enterprise software stack overnight, and compressing genomics research that would normally take a seven-year PhD down to around thirty minutes.",
+      "words": 28,
+      "image_url": "https://resource2.heygen.ai/image/68b2899bf1024cb2831ea1b499abfccb/original.png"
+    },
+    {
+      "id": 10,
+      "type": "avatar",
+      "name": "Examples Expanded",
+      "script": "I'd treat those as best-case anecdotes, not a guaranteed outcome for every team. But even a fraction of that speed-up changes what's worth attempting in the first place.",
+      "words": 28
+    },
+    {
+      "id": 11,
+      "type": "slide",
+      "name": "The Pushback",
+      "image": "scene-images/06.png",
+      "narration": "Plenty of engineers pushed back on the framing itself. Their argument: efficient engineers get more done with fewer tokens, and a budget number doesn't measure skill \u2014 judgment does.",
+      "words": 29,
+      "image_url": "https://resource2.heygen.ai/image/00fb03fad13e4c1a85b43b5f32d53de7/original.png"
+    },
+    {
+      "id": 12,
+      "type": "avatar",
+      "name": "Pushback Expanded",
+      "script": "I think that pushback is fair, and worth keeping in the room. Spending more compute isn't automatically better engineering. The real skill is knowing when parallel agents save time, and when one focused session beats ten scattered ones.",
+      "words": 38
+    },
+    {
+      "id": 13,
+      "type": "slide",
+      "name": "The Real Gap",
+      "image": "scene-images/07.png",
+      "narration": "Whichever side of the token debate you land on, the orchestration point holds up: managing multiple agents well isn't something most CS programs, bootcamps, or degrees currently teach.",
+      "words": 28,
+      "image_url": "https://resource2.heygen.ai/image/9d4eb7a32b5047a399bc65d9450acb8a/original.png"
+    },
+    {
+      "id": 14,
+      "type": "avatar",
+      "name": "Real Gap Expanded",
+      "script": "That's the actual gap worth closing. Not spend more, but learn to direct several agents on real work without losing track of what each one is doing.",
+      "words": 27
+    },
+    {
+      "id": 15,
+      "type": "slide",
+      "name": "Join The Conversation",
+      "image": "scene-images/08.png",
+      "narration": "So here's the real question this clip raises: is managing agents truly the next core engineering skill, or is that still overstating where the tooling actually is today?",
+      "words": 28,
+      "image_url": "https://resource2.heygen.ai/image/cbe89d2beb614623bf2d68673ef309eb/original.png"
+    },
+    {
+      "id": 16,
+      "type": "avatar",
+      "name": "CTA",
+      "script": "If you're already running multiple agent sessions in parallel, I'd like to know \u2014 has it actually sped up your work, or has it mostly added overhead? Tell me in the comments, and follow along, I'll keep digging into claims like this one.",
+      "words": 43
+    }
+  ],
+  "total_words": 570,
+  "estimated_duration_min": 4.38,
+  "video_id": "a021673a97264abfa5b7fb8242c6e712",
+  "duration_s": 208.562,
+  "gif_url": null,
+  "captioned_url": "https://files2.heygen.ai/movio/video/a021673a97264abfa5b7fb8242c6e712/c98832cbb9ae48e88f68fa013ecb4c44/caption.mp4?Expires=1783032424&Signature=QdezEsK4YDla2Syv5PBW4PZhQcMPVr6nq8m4Np0RTKqHj1Cgcrj3BWMoqwMhcmCQw3RITRTO7zXDBowSZIp1R8bIcfkcVYRkUz~B8CrQzu1~te~i7Aa9lhEYGab62-Ui9a63K3meZsoFb979kV57zwTFhPh5fhusoGfmfb38pCsN3ugdSzwi3fjid4wfpKESbQkcP063SL0nYePXp65JhEdm6wGQw9KVK1DsrJC1K4wmCqCE~Y4YMlxLnBlM9B3gvU9riGVzhx2KUGY-5Qjk1hxG-RXbswIP-L0xNYIDGnokNvFi70yGxwW5kV5O6ysvtZxB-Q~J1hgHTB6xk5GENQ__&Key-Pair-Id=K38HBHX5LX3X2H",
+  "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/a021673a97264abfa5b7fb8242c6e712.mp4?Expires=1783032414&Signature=N73hDh569tpqrwe3DGf6qddmpDGuPYGPJFR~YGLOVmJaB62FOUQ9WIlGrvYkbtPUq0fHBxBQ7eTNTJHiyKTdvogYBmXDkvf5ez8mWBn8uUCuDsxZkqPvVRFm87OFu1h2z~gBoP2JIhIreWHxZcRuktstEtPpln3-ccU3WS3UIUBz3RA44r92Nh2uGOo8rdmvPPGZv6wVTaBI0dLzd~AbuGCdFBcTy5j3E2c9zigLl~TmVicnqjzmHmw1L1XDj3LCQkOb3dmnf4s86kLZfxaMTJ-hOmnZJghyewJ0UTn9sidocwX-aSJPCdmt5qye9SBUHQ~KHy9oqyOYGJOEh9V96Q__&Key-Pair-Id=K38HBHX5LX3X2H"
+}

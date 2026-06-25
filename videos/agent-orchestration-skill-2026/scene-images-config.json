@@ -1,0 +1,78 @@
+{
+  "width": 1920, "height": 1080, "margin": 96,
+  "background": "#0f0f1a", "grid_color": "#181828",
+  "colors": {"white": "#f5f5f7", "muted": "#9499a8",
+             "accent1": "#8b5cf6", "accent2": "#5eead4"},
+  "font_dir": "/mnt/skills/examples/canvas-design/canvas-fonts",
+  "fonts": {"headline": "BricolageGrotesque-Bold.ttf",
+            "body": "Outfit-Regular.ttf", "body_bold": "Outfit-Bold.ttf",
+            "mono": "GeistMono-Regular.ttf", "mono_bold": "GeistMono-Bold.ttf"},
+  "blueprint_grid": true, "corner_brackets": true, "page_dots": true,
+  "grid_step": 60,
+  "slides": [
+    {
+      "eyebrow": "HOOK",
+      "elements": [
+        {"type": "headline", "text": "MANAGE HUNDREDS\nOF AGENTS", "size": 104, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "The claim from a viral Jensen Huang clip, debated", "size": 44, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "IS AGENT ORCHESTRATION THE TOP SKILL OF 2026?"
+    },
+    {
+      "eyebrow": "01 — THE TOKEN CLAIM",
+      "elements": [
+        {"type": "headline", "text": "$500K ENGINEER.\n$250K IN TOKENS.", "size": 96, "color": "accent1", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Huang's comparison: compute spend as athlete-style conditioning", "size": 40, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "THE LINE GENERATING THE MOST PUSHBACK"
+    },
+    {
+      "eyebrow": "02 — THE BIGGER CLAIM",
+      "elements": [
+        {"type": "headline", "text": "FROM WRITING CODE\nTO RUNNING AGENTS", "size": 92, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Direct many agents in parallel instead of solving one thing at a time", "size": 40, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "THE ORCHESTRATION SHIFT"
+    },
+    {
+      "eyebrow": "03 — AUGMENTATION",
+      "elements": [
+        {"type": "headline", "text": "AGENTS AUGMENT TOOLS.\nTHEY DON'T REPLACE THEM.", "size": 76, "color": "accent2", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Sitting on top of SQL, design software, and creative tools you already trust", "size": 38, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "NOT A STACK REBUILD"
+    },
+    {
+      "eyebrow": "04 — THE EXAMPLES",
+      "elements": [
+        {"type": "headline", "text": "A 7-YEAR PHD.\n30 MINUTES.", "size": 110, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Dramatic anecdotes cited for genomics research and stack rebuilds", "size": 40, "bold": true, "color": "accent1", "gap_before": 60}
+      ],
+      "footer": "BEST-CASE, NOT GUARANTEED"
+    },
+    {
+      "eyebrow": "05 — THE PUSHBACK",
+      "elements": [
+        {"type": "headline", "text": "MORE TOKENS ISN'T\nMORE SKILL", "size": 94, "color": "accent2", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Critics: efficient engineers do more with fewer tokens, not more", "size": 40, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "A BUDGET NUMBER ISN'T A SKILL METRIC"
+    },
+    {
+      "eyebrow": "06 — THE REAL GAP",
+      "elements": [
+        {"type": "headline", "text": "ORCHESTRATION ISN'T\nTAUGHT YET", "size": 90, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "No CS program, bootcamp, or degree currently covers it", "size": 42, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "WHAT THIS MEANS FOR ENGINEERS"
+    },
+    {
+      "eyebrow": "JOIN THE CONVERSATION",
+      "elements": [
+        {"type": "headline", "text": "WHERE DO\nYOU LAND?", "size": 130, "color": "accent1", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Next core skill, or overstating where the tooling actually is?", "size": 42, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "IS AGENT ORCHESTRATION THE TOP SKILL OF 2026?"
+    }
+  ]
+}
