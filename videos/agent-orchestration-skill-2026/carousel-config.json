@@ -1,0 +1,141 @@
+{
+  "width": 1080, "height": 1350, "margin": 72,
+  "background": "#F3ECE2",
+  "blueprint_grid": false, "corner_brackets": false, "page_dots": false,
+  "letterbox": true,
+  "colors": {
+    "navy": "#1F2D4D",
+    "terracotta": "#C96A4A",
+    "charcoal": "#1A1A1A",
+    "muted": "#9499a8"
+  },
+  "font_dir": "/mnt/skills/examples/canvas-design/canvas-fonts",
+  "fonts": {
+    "headline": "Lora-Bold.ttf",
+    "body": "Lora-Regular.ttf",
+    "body_bold": "Lora-Bold.ttf",
+    "mono": "IBMPlexSerif-Regular.ttf",
+    "mono_bold": "IBMPlexSerif-Bold.ttf",
+    "serif_bold": "Lora-Bold.ttf",
+    "serif": "Lora-Regular.ttf"
+  },
+  "slides": [
+    {
+      "footer": "01 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 54, "gap_before": 90, "lines": [
+          [{"text": "Is Orchestration", "color": "navy"}],
+          [{"text": "the Top Skill", "color": "charcoal"}],
+          [{"text": "of 2026?", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 70,
+         "text": "A viral Jensen Huang clip says managing agents — not writing code — is the skill that matters next. Here's the case, and the pushback."}
+      ]
+    },
+    {
+      "footer": "02 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "The Claim", "size": 32, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Nvidia CEO Jensen Huang argues the job is shifting from typing code yourself to coordinating dozens — maybe hundreds — of AI agents working in parallel."}
+      ]
+    },
+    {
+      "footer": "03 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "The Token Line", "size": 32, "gap_before": 60},
+        {"type": "title", "align": "center", "size": 56, "gap_before": 60, "lines": [
+          [{"text": "$500K eng.", "color": "charcoal"}],
+          [{"text": "$250K tokens.", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 60,
+         "text": "His comparison, as reported: a senior engineer should spend on compute the way an athlete invests in conditioning. This is the line everyone is arguing about."}
+      ]
+    },
+    {
+      "footer": "04 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "The Real Shift", "size": 32, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Forget the dollar figure for a second. The deeper point is orchestration: directing many agents at once instead of solving one problem at a time."}
+      ]
+    },
+    {
+      "footer": "05 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "Augment, Don't Replace", "size": 28, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "The clip frames agents as sitting on top of tools you already trust — SQL, design software, creative tools — scaling what one person can direct, not swapping the stack out."}
+      ]
+    },
+    {
+      "footer": "06 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "The Examples", "size": 32, "gap_before": 60},
+        {"type": "title", "align": "center", "size": 58, "gap_before": 70, "lines": [
+          [{"text": "7-year PhD", "color": "charcoal"}],
+          [{"text": "to 30 minutes", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 70,
+         "text": "Cited anecdotes: overnight enterprise stack rebuilds, genomics research compressed from years to half an hour. Best-case, not guaranteed — but it changes what's worth attempting."}
+      ]
+    },
+    {
+      "footer": "07 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "The Pushback", "size": 32, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Plenty of engineers disagreed: efficient engineers do MORE with fewer tokens. A budget number doesn't measure skill — judgment does. That critique is fair, and worth keeping in the room."}
+      ]
+    },
+    {
+      "footer": "08 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "The Skill That Survives", "size": 28, "gap_before": 60},
+        {"type": "icon_grid", "columns": 3, "gap_before": 80, "items": [
+          {"icon": "people_chat", "label": "Direct\nmany agents\nin parallel"},
+          {"icon": "clipboard", "label": "Track\nwhat each\none is doing"},
+          {"icon": "shield", "label": "Judge\nwhen NOT to\nfan out"}
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 90,
+         "text": "The real skill isn't spending more — it's knowing when parallel agents save time, and when one focused session beats ten scattered ones."}
+      ]
+    },
+    {
+      "footer": "09 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 46, "gap_before": 110, "lines": [
+          [{"text": "Whichever side", "color": "charcoal"}],
+          [{"text": "of the token debate", "color": "charcoal"}],
+          [{"text": "you land on —", "color": "charcoal"}],
+          [{"text": "orchestration isn't taught yet.", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 70,
+         "text": "No CS program, bootcamp, or degree currently covers it. That's the actual gap worth closing."}
+      ]
+    },
+    {
+      "footer": "10 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 50, "gap_before": 70, "lines": [
+          [{"text": "Where Do", "color": "navy"}],
+          [{"text": "You Land?", "color": "charcoal"}]
+        ]},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Is managing agents the next core engineering skill — or is that overstating where the tooling actually is today?"},
+        {"type": "body", "size": 38, "color": "terracotta", "gap_before": 50,
+         "text": "Tell me where you land in the comments — and follow along on LinkedIn, X, and Instagram."}
+      ]
+    }
+  ]
+}
