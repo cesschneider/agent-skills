@@ -1,0 +1,78 @@
+{
+  "width": 1920, "height": 1080, "margin": 96,
+  "background": "#0f0f1a", "grid_color": "#181828",
+  "colors": {"white": "#f5f5f7", "muted": "#9499a8",
+             "accent1": "#8b5cf6", "accent2": "#5eead4"},
+  "font_dir": "/mnt/skills/examples/canvas-design/canvas-fonts",
+  "fonts": {"headline": "BricolageGrotesque-Bold.ttf",
+            "body": "Outfit-Regular.ttf", "body_bold": "Outfit-Bold.ttf",
+            "mono": "GeistMono-Regular.ttf", "mono_bold": "GeistMono-Bold.ttf"},
+  "blueprint_grid": true, "corner_brackets": true, "page_dots": true,
+  "grid_step": 60,
+  "slides": [
+    {
+      "eyebrow": "HOOK",
+      "elements": [
+        {"type": "headline", "text": "FABLE 5 IS HERE", "size": 130, "color": "white", "gap_before": 100},
+        {"type": "body", "text": "Anthropic's first public Mythos-class model", "size": 46, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "CLAUDE FABLE 5 LAUNCH BREAKDOWN"
+    },
+    {
+      "eyebrow": "01 — A NEW TIER",
+      "elements": [
+        {"type": "headline", "text": "MYTHOS-CLASS", "size": 130, "color": "accent1", "gap_before": 100},
+        {"type": "body", "text": "State of the art on nearly every benchmark Anthropic tests", "size": 44, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "THE HARDER THE TASK, THE BIGGER THE LEAD"
+    },
+    {
+      "eyebrow": "02 — AUTONOMY",
+      "elements": [
+        {"type": "headline", "text": "50M LINES.\nONE DAY.", "size": 110, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Stripe's Ruby migration: 2+ months of work, done overnight", "size": 46, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "LONG-HORIZON WORK, NO BABYSITTING"
+    },
+    {
+      "eyebrow": "03 — SAFETY",
+      "elements": [
+        {"type": "headline", "text": "CLASSIFIERS\nON GUARD", "size": 110, "color": "accent1", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Risky topics quietly reroute to Claude Opus 4.8", "size": 46, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "TRIGGERS IN UNDER 5% OF SESSIONS"
+    },
+    {
+      "eyebrow": "04 — PRICING",
+      "elements": [
+        {"type": "headline", "text": "$10 / $50 PER\nMILLION TOKENS", "size": 96, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Less than half the price of Claude Mythos Preview", "size": 46, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "FREE ON PAID PLANS THROUGH JUNE 22"
+    },
+    {
+      "eyebrow": "05 — DAY ONE",
+      "elements": [
+        {"type": "headline", "text": "EVERYWHERE,\nINSTANTLY", "size": 110, "color": "accent2", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Amazon Bedrock · GitHub Copilot · Harvey · Claude apps & API", "size": 42, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "ALREADY IN THE TOOLS YOU USE"
+    },
+    {
+      "eyebrow": "06 — MYTHOS 5",
+      "elements": [
+        {"type": "headline", "text": "THE OTHER HALF", "size": 120, "color": "white", "gap_before": 100},
+        {"type": "body", "text": "Same model, fewer guardrails — for vetted cyberdefenders via Project Glasswing", "size": 42, "bold": true, "color": "accent1", "gap_before": 60}
+      ],
+      "footer": "TWO TIERS, ONE FRONTIER MODEL"
+    },
+    {
+      "eyebrow": "YOUR NEXT STEP",
+      "elements": [
+        {"type": "headline", "text": "FREE THROUGH\nJUNE 22. GO TEST IT.", "size": 92, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Give it one big, messy task and see how far it gets on its own", "size": 46, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "WATCH · SUBSCRIBE · COMMENT"
+    }
+  ]
+}

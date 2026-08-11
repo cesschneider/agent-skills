@@ -1,0 +1,78 @@
+{
+  "width": 1920, "height": 1080, "margin": 96,
+  "background": "#0f0f1a", "grid_color": "#181828",
+  "colors": {"white": "#f5f5f7", "muted": "#9499a8",
+             "accent1": "#8b5cf6", "accent2": "#5eead4"},
+  "font_dir": "/mnt/skills/examples/canvas-design/canvas-fonts",
+  "fonts": {"headline": "BricolageGrotesque-Bold.ttf",
+            "body": "Outfit-Regular.ttf", "body_bold": "Outfit-Bold.ttf",
+            "mono": "GeistMono-Regular.ttf", "mono_bold": "GeistMono-Bold.ttf"},
+  "blueprint_grid": true, "corner_brackets": true, "page_dots": true,
+  "grid_step": 60,
+  "slides": [
+    {
+      "eyebrow": "HOOK",
+      "elements": [
+        {"type": "headline", "text": "MOST OF MY CAREER\nHAS BEEN THIS", "size": 120, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Keeping old enterprise systems running, not building new ones", "size": 44, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "A PERSONAL TAKE ON THE BIGGEST AI OPPORTUNITY"
+    },
+    {
+      "eyebrow": "01 — THE ASSUMPTION",
+      "elements": [
+        {"type": "headline", "text": "\"AI WRITES CODE,\nSO THERE'S LESS WORK\"", "size": 100, "color": "accent1", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "That assumes the total amount of work is fixed. It isn't.", "size": 46, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "THE TAKE I KEEP HEARING — AND WHY IT'S INCOMPLETE"
+    },
+    {
+      "eyebrow": "02 — THE NUMBER",
+      "elements": [
+        {"type": "headline", "text": "800B LINES OF CODE.\n$1.6T OPPORTUNITY.", "size": 110, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Modernization cost dropping from ~$10-15/line to ~$2/line", "size": 46, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "THE NUMBER THAT GOT ME"
+    },
+    {
+      "eyebrow": "03 — THE SYSTEM",
+      "elements": [
+        {"type": "headline", "text": "THAT ONE SYSTEM\nNOBODY TOUCHES", "size": 120, "color": "accent2", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Every org has one. It's the norm, not the exception.", "size": 46, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "WHERE THE TIME, BUDGET, AND STRESS ACTUALLY GO"
+    },
+    {
+      "eyebrow": "04 — FOR ENGINEERS",
+      "elements": [
+        {"type": "headline", "text": "PART ARCHAEOLOGY.\nPART AI ORCHESTRATION.", "size": 100, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "The new valuable skill: understand legacy systems, then direct AI safely", "size": 44, "bold": true, "color": "accent1", "gap_before": 60}
+      ],
+      "footer": "THE PEOPLE EVERYONE ELSE AVOIDED BECOME THE EXPERTS"
+    },
+    {
+      "eyebrow": "05 — FOR THE INDUSTRY",
+      "elements": [
+        {"type": "headline", "text": "THE MARKET DOESN'T\nSHRINK. IT WIDENS.", "size": 110, "color": "accent2", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Cheaper modernization clears a backlog of 'someday, maybe' projects", "size": 44, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "THE THRESHOLD FOR 'WORTH DOING' JUST DROPPED"
+    },
+    {
+      "eyebrow": "06 — WHAT'S NEXT",
+      "elements": [
+        {"type": "headline", "text": "I'M DIGGING INTO\nTHIS — IN PUBLIC", "size": 110, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "What works, what breaks, and what's still just hype", "size": 46, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "THE HANDS-ON VERSION OF THIS STORY"
+    },
+    {
+      "eyebrow": "JOIN THE CONVERSATION",
+      "elements": [
+        {"type": "headline", "text": "WHAT'S YOUR\nSCARIEST SYSTEM?", "size": 130, "color": "accent1", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Follow along on LinkedIn, X, and Instagram — let's figure this out together", "size": 42, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "THE AI OPPORTUNITY EVERYONE'S MISSING"
+    }
+  ]
+}

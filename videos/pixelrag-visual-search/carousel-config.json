@@ -1,0 +1,139 @@
+{
+  "width": 1080, "height": 1350, "margin": 72,
+  "background": "#F3ECE2",
+  "blueprint_grid": false, "corner_brackets": false, "page_dots": false,
+  "letterbox": true,
+  "colors": {
+    "navy": "#1F2D4D",
+    "terracotta": "#C96A4A",
+    "charcoal": "#1A1A1A",
+    "muted": "#9499a8"
+  },
+  "font_dir": "/mnt/skills/examples/canvas-design/canvas-fonts",
+  "fonts": {
+    "headline": "Lora-Bold.ttf",
+    "body": "Lora-Regular.ttf",
+    "body_bold": "Lora-Bold.ttf",
+    "mono": "IBMPlexSerif-Regular.ttf",
+    "mono_bold": "IBMPlexSerif-Bold.ttf",
+    "serif_bold": "Lora-Bold.ttf",
+    "serif": "Lora-Regular.ttf"
+  },
+  "slides": [
+    {
+      "footer": "01 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 56, "gap_before": 90, "lines": [
+          [{"text": "PixelRAG:", "color": "navy"}],
+          [{"text": "Visual Search", "color": "charcoal"}],
+          [{"text": "at Scale", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 70,
+         "text": "Why web scraping is about to change — and what it means if you maintain a RAG pipeline."}
+      ]
+    },
+    {
+      "footer": "02 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 54, "gap_before": 100, "lines": [
+          [{"text": "Stop Parsing.", "color": "charcoal"}],
+          [{"text": "Start", "color": "charcoal"}],
+          [{"text": "Rendering.", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 40, "color": "charcoal", "gap_before": 80,
+         "text": "A new project called PixelRAG indexes screenshots instead of parsed HTML text. The early results are forcing a rethink of how RAG systems read the web."}
+      ]
+    },
+    {
+      "footer": "03 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "The Hidden Cost of Parsing", "size": 30, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "A single HTML-to-text parser can drop more than 40% of a page's content. Swap one parser for another, and accuracy alone can shift by roughly 10 percentage points — before the model ever sees a question."}
+      ]
+    },
+    {
+      "footer": "04 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "The Idea", "size": 32, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Render the page, PDF, or image as a picture, and search across pictures directly. If a human can understand a page by looking at it, the argument goes, a vision model should be able to as well."}
+      ]
+    },
+    {
+      "footer": "05 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "The Numbers", "size": 32, "gap_before": 60},
+        {"type": "title", "align": "center", "size": 60, "gap_before": 70, "lines": [
+          [{"text": "+18.1%", "color": "terracotta"}],
+          [{"text": "accuracy", "color": "charcoal"}]
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 70,
+         "text": "On text-only questions, vs. a traditional text-RAG baseline. Its Wikipedia proof-of-concept index holds 30M+ screenshots — no text conversion involved."}
+      ]
+    },
+    {
+      "footer": "06 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "How It Works", "size": 32, "gap_before": 60},
+        {"type": "icon_grid", "columns": 3, "gap_before": 80, "items": [
+          {"icon": "image_frame", "label": "Render\nPages, PDFs,\nimages to tiles"},
+          {"icon": "dashboard", "label": "Embed\nVision model,\nLoRA fine-tuned"},
+          {"icon": "binoculars", "label": "Index\nFAISS +\nsearch API"}
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 90,
+         "text": "No text extraction step at any stage — the image is the unit of retrieval, start to finish."}
+      ]
+    },
+    {
+      "footer": "07 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "Why It Matters For Engineers", "size": 28, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Every parser, every chunker, every cleanup script you've written to compensate for messy HTML is a place where information can quietly disappear — and a place you now have to maintain forever."}
+      ]
+    },
+    {
+      "footer": "08 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "Try It Yourself", "size": 32, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Open source (Apache-2.0), single setup script, no MCP server or backend required. It also ships a Claude Code plugin that screenshots URLs and reads rendered pages directly."}
+      ]
+    },
+    {
+      "footer": "09 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 46, "gap_before": 110, "lines": [
+          [{"text": "The gap between", "color": "charcoal"}],
+          [{"text": "rendering a page", "color": "charcoal"}],
+          [{"text": "and parsing it", "color": "charcoal"}],
+          [{"text": "just got harder to ignore.", "color": "terracotta"}]
+        ]}
+      ]
+    },
+    {
+      "footer": "10 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 50, "gap_before": 70, "lines": [
+          [{"text": "Will Screenshots", "color": "navy"}],
+          [{"text": "Replace Scraping?", "color": "charcoal"}]
+        ]},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Would you trust a screenshot-based index over a text one today — or is this still too early for production?"},
+        {"type": "body", "size": 38, "color": "terracotta", "gap_before": 50,
+         "text": "Tell me where you land in the comments — and follow along on LinkedIn, X, and Instagram."}
+      ]
+    }
+  ]
+}

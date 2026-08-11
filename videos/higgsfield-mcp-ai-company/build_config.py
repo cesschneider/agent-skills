@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+"""Build video-config.json for the Higgsfield MCP / Self-Running AI Company breakdown video."""
+
+import json, os
+
+scenes = [
+    {
+        "id": 1,
+        "name": "Hook",
+        "script": "What if your AI assistant could not just write code, but actually produce the video, the ad creative, and the landing page graphics for your next launch, all in one sitting? That is the promise behind a tool called Higgsfield MCP. It plugs more than thirty different image and video generation models directly into Claude, the same way you would plug in a search tool or a calendar. Suddenly your coding assistant has hands. It can sketch a hero shot, animate a product demo, and drop the finished files straight into your project folder while you are still drinking your coffee. In this video, I want to walk through exactly how that pipeline works, and why people are calling it a way to move seventy five percent faster."
+    },
+    {
+        "id": 2,
+        "name": "Higgsfield MCP Gives Claude Hands",
+        "script": "So what exactly is Higgsfield MCP? MCP stands for Model Context Protocol, a standard way for an AI model like Claude to call out to external tools. Higgsfield built a server that exposes its entire creative suite through that protocol, and we are talking about more than thirty models in one place. There is Soul for stylized portraits and product photography, Cinema Studio for cinematic motion, plus Flux, Seedream, Kling, Minimax Hailuo, and Google's Veo for video. Instead of opening ten different apps, copying prompts back and forth, and downloading files by hand, you describe what you want in plain language, and Claude picks the right model, sends the request, and waits for the result. It is the difference between describing a photo to a designer over email, and having that designer sitting right next to you, ready to start the moment you finish your sentence."
+    },
+    {
+        "id": 3,
+        "name": "Output Straight Into Your Working Folders",
+        "script": "Here is the part that makes this practical instead of just a neat demo. The outputs do not get stuck in some web dashboard you have to log into and download from one file at a time. Images come back at resolutions up to four K, and video clips up to fifteen seconds, and they land directly inside your working folder, organized the way your project already expects. That means if you are building a landing page, the hero image generation and the page layout can happen in the same session, by the same agent, without you ever leaving your editor. If you are prepping a product launch, you can generate the ad creative, the social thumbnails, and the demo clip back to back, and they are all sitting in the right directories before you have finished your second coffee. No exporting, no renaming files, no dragging things between apps. The agent treats image and video generation the same way it treats writing a file or running a test, just another step in the build."
+    },
+    {
+        "id": 4,
+        "name": "Soul Characters Keep You Consistent",
+        "script": "One of the trickiest problems with AI generated marketing has always been consistency. You generate one great image of a spokesperson or a mascot, and the next one looks like a completely different person. Higgsfield solves this with something called Soul Characters. You define a character once, and that same face, the same styling, the same vibe, carries across every image and video you generate afterward. So you can put your character in a product shot, then in a short video ad, then in a carousel slide, and it is recognizably the same person every time. For a solo creator or a small team, that is huge. It means you can build an actual recurring brand presence, a face people start to recognize, without hiring a model, a photographer, and a video crew for every single asset."
+    },
+    {
+        "id": 5,
+        "name": "The Stack: CLI, GWS CLI, Claude Code, and a Sheet",
+        "script": "Now let's talk about how this actually gets wired into a working pipeline, because model access alone is not the whole story. The setup getting a lot of attention combines four pieces. First, the Higgsfield CLI, which is the command line entry point to all those generation models. Second, a Google Workspace CLI, which lets the agent read and write Google Sheets and Docs directly. Third, Claude Code, running as the orchestrator that plans the work and calls the tools. And fourth, a tracking spreadsheet that acts as the shared memory for the whole operation. Claude Code reads the plan from the sheet, generates the assets, and writes the results back. None of these pieces are exotic on their own. What is new is wiring them together so the loop runs with almost no manual handoff. You set the direction once, in plain language, and the system keeps executing against that brief across many sessions, not just one."
+    },
+    {
+        "id": 6,
+        "name": "Every Generation Becomes a Searchable Database",
+        "script": "Every single generation gets logged automatically. The prompt that was used, the model that ran it, the job ID, even the cost, all get written into that tracking sheet as a row. At first that might sound like just good bookkeeping, but it quickly becomes something more valuable. Over weeks of runs, that sheet turns into a searchable history of what worked. You can look back and see which prompts produced your best performing thumbnails, which character renders got reused the most, and which video styles took multiple retries before they landed. It becomes a creative database that the next session can learn from, instead of every generation starting from a blank page and a vague memory of what worked last time."
+    },
+    {
+        "id": 7,
+        "name": "A Self-Improving Planning Layer",
+        "script": "This is where it stops being a content factory and starts acting like a creative director. Claude Code is not just executing a fixed list of prompts, it is planning the next batch based on what the tracking sheet shows. If a certain style of product shot consistently needs three attempts to look right, the planning layer adjusts the prompt template before it even tries again. If a campaign needs a week of social posts, a landing page hero, and a launch video, Claude Code can break that into a queue, work through it model by model, and check each result against the brief before moving on. Run after run, the prompts get sharper and the output gets closer to what you actually wanted on the first try. The system is not just producing assets, it is accumulating a point of view about what your brand looks like, and refining it on every pass."
+    },
+    {
+        "id": 8,
+        "name": "Your Next Step",
+        "script": "So here is the takeaway. The bottleneck for small teams was never ideas, it was production time, the hours spent in design tools, stock photo searches, and video editors. Higgsfield MCP, paired with Claude Code and a simple tracking sheet, collapses a lot of that into one continuous, self-documenting workflow. Your next step does not have to be rebuilding your whole stack. Pick one recurring asset, maybe your weekly social graphics or your landing page hero, and try running just that piece through an agent with model access for one week. Track what it produces in a simple sheet, and see how much of that seventy five percent speedup you actually get back. If this kind of breakdown is useful, subscribe, and tell me in the comments what you would automate first."
+    },
+]
+
+for s in scenes:
+    s["words"] = len(s["script"].split())
+
+total_words = sum(s["words"] for s in scenes)
+estimated_duration_min = round(total_words / 130, 1)
+
+config = {
+    "title": "Build a Self-Running AI Company in 16 Minutes (Move 75% Faster) — Higgsfield MCP Breakdown",
+    "source_video": "https://youtu.be/Baa71rPgxvA",
+    "target_duration_min": 9,
+    "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
+    "avatar_name": "Cesar Schneider at the microphone (city loft)",
+    "voice_id": "c0a044792fc64b3fa7dfc0700da93016",
+    "voice_name": "Cesar Schneider cloned voice",
+    "resolution": "1080p",
+    "dimension": {"width": 1920, "height": 1080},
+    "aspect_ratio": "16:9",
+    "caption": True,
+    "background": "#0f0f1a",
+    "status": "draft",
+    "key_ideas": [
+        "Higgsfield MCP gives Claude 'hands' — direct access to 30+ image/video models (Soul, Cinema Studio, Flux, Seedream, Kling, Minimax Hailuo, Veo) through one interface",
+        "Outputs land directly in your working folders — images up to 4K, videos up to 15 seconds, ready to drop into a campaign",
+        "Soul Characters keep a consistent 'face' across every asset — same character in product shots, ads, and video clips",
+        "The 'self-running company' stack = Higgsfield CLI + GWS CLI + Claude Code + a Google Sheets tracking schema",
+        "Every generation is logged automatically — prompt, job ID, model, cost — building a searchable creative database over time",
+        "Claude Code becomes the creative director: it plans a content calendar, queues generations, and reviews outputs against the brief",
+        "A self-improving planning layer feeds each cycle's results back into prompts, so quality compounds run over run",
+        "Result: a one-person team moving roughly 75% faster — a week of social/landing-page assets in one focused session"
+    ],
+    "scenes": scenes,
+    "total_words": total_words,
+    "estimated_duration_min": estimated_duration_min,
+}
+
+config_path = os.path.join(os.path.dirname(__file__), "video-config.json")
+with open(config_path, "w") as f:
+    json.dump(config, f, indent=2, ensure_ascii=False)
+
+print(f"Total words: {total_words}")
+print(f"Estimated duration: {estimated_duration_min} min")
+print(f"Wrote {config_path}")

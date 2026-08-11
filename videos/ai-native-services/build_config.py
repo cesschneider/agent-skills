@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+"""Build video-config.json for the AI-Native Services Company breakdown video."""
+
+import json, os
+
+scenes = [
+    {
+        "id": 1,
+        "name": "Hook",
+        "script": "There's a new video from Y Combinator that's making founders rethink their entire business model. It's called How to Build an AI-Native Services Company — and the core idea is this: the biggest companies of the next decade might not be software companies at all. They will be insurance carriers, law firms, tax practices, and audit shops — except AI does the bulk of the work, and humans supervise the outcome.\n\nI broke down this video and pulled out the framework that matters most. If you are building anything in the AI space right now, this changes how you should think about your product. Let's get into it."
+    },
+    {
+        "id": 2,
+        "name": "The Trillion-Dollar Shift",
+        "script": "For the last few years, the AI playbook was simple: build software, sell licenses, let humans use the tool. That playbook is already crowded.\n\nThe new opportunity is different. Instead of selling a tool to a law firm, you become the law firm. Instead of selling software to an insurance company, you become the carrier — powered by AI, supervised by a small team of experts.\n\nSectors like tax, audit, insurance, legal, and healthcare share three things: they are enormous, they are full of repetitive, judgment-light work, and they are protected by regulation that keeps new competitors out — which, once you are inside, becomes your moat too.\n\nThis is not a small niche. We are talking about trillions of dollars in services that have never been touched by AI-native delivery. And the companies that get there first will not look like tech startups. They will look like the industries they are disrupting — just radically more efficient."
+    },
+    {
+        "id": 3,
+        "name": "Three Attributes — Domain Fluency, Low Judgment, Operational Rigor",
+        "script": "So what does it actually take to build one of these companies? Three things.\n\nFirst: domain fluency. You need to deeply understand the industry you are entering — the regulations, the workflows, the language professionals use, the edge cases that trip up outsiders. AI does not replace this knowledge. It needs it as an input.\n\nSecond: low judgment at the task level. This sounds counterintuitive, but it is the key. You take a complex job — like reviewing a tax return or underwriting a policy — and break it into dozens of small steps, most of which require almost no judgment at all. Read the document. Extract the number. Compare it to the rule. Flag the exception. Each step is simple enough for AI to do reliably.\n\nThird: operational rigor. This is the unglamorous part — process discipline, quality control, consistent execution at scale. Most AI startups skip this. The ones that win treat it as the product itself.\n\nDomain knowledge tells you what to build. Task decomposition tells you how AI can do it. Operational rigor is what makes it trustworthy enough for someone to actually pay for."
+    },
+    {
+        "id": 4,
+        "name": "Outcomes, Not Software",
+        "script": "Here is the part that changes everything about your business model: you stop selling software, and you start selling outcomes.\n\nA traditional SaaS company charges a monthly fee for access to a tool. An AI-native services company gets paid based on the result it delivers — a tax return filed correctly, a claim processed, a contract reviewed and cleared.\n\nThis is value-based pricing, and it flips the incentive structure. Your success and your customer's success become the same thing. If you do the work faster and more accurately, your margins improve — without raising prices on the customer.\n\nCompare that to selling a tool: the customer still has to do all the work themselves, and your revenue is capped by how many seats you can sell.\n\nWhen AI does the bulk of the labor, and your pricing is tied to outcomes, you are no longer competing on features. You are competing on results. And results are a much higher bar — but also a much bigger market."
+    },
+    {
+        "id": 5,
+        "name": "The Operation Is the Product",
+        "script": "There is a phrase from the video that stuck with me: the operation is the product.\n\nIn a services business, your customers do not experience your code. They experience your throughput, your turnaround time, and — most importantly — your consistency.\n\nVariance is the killer of trust. If a tax filing takes two days for one client and two weeks for another, with different quality each time, customers leave. Not because the average was bad — because they could not predict it.\n\nSo the metrics that matter are not engagement or daily active users. They are cycle time, error rate, and variance across every case you handle.\n\nThis means your AI systems need to be measured the same way you would measure a factory floor or a call center — not the way you would measure an app. Reliability is not a nice-to-have. In a services business, reliability is the entire product."
+    },
+    {
+        "id": 6,
+        "name": "Human-in-the-Loop, Scaling Non-Linearly",
+        "script": "None of this means humans disappear. It means their role changes completely.\n\nIn an AI-native services company, humans provide judgment exactly where AI falls short — the ambiguous case, the angry customer, the edge case nobody anticipated, the final sign-off on something high-stakes.\n\nHere is the test the video proposes, and it is a sharp one: if your headcount grows at the same rate as your revenue, you are not running an AI-native business. You are running a traditional services business with some AI features bolted on.\n\nIn a real AI-native company, revenue scales fast — and your team grows slowly, because each person is supervising more and more AI-driven work, not doing the work themselves.\n\nThat ratio — revenue growth versus headcount growth — might be the single clearest signal of whether a services company is actually AI-native, or just AI-assisted."
+    },
+    {
+        "id": 7,
+        "name": "The Five-Part Autonomous Loop",
+        "script": "So how do you actually build the system that does the work? The video lays out a five-part loop, and I think this is the most practical framework in the entire piece.\n\nOne: a sensor — something that captures a signal that work needs to happen. An email comes in, a document gets uploaded, a deadline approaches.\n\nTwo: a policy — a clear rule for what AI can decide on its own, and what needs a human.\n\nThree: tools — the actual systems and APIs that take action. Pull a record, file a form, update a database.\n\nFour: a quality gate — automated checks plus human review for anything high-risk before it goes out the door.\n\nFive: learning — every mistake, every correction a human makes, feeds back into the system so it gets better next time.\n\nSensor, policy, tools, quality gate, learning. Run that loop enough times, on enough processes, and you are not running a company that uses AI — you are running a company built out of AI loops, with humans supervising the exceptions."
+    },
+    {
+        "id": 8,
+        "name": "Your Next Step",
+        "script": "Here is what I would take away from this if you are building something right now.\n\nDo not try to redesign your entire company around this model on day one. Pick one process — just one. Map it out, build the five-part loop around it, and make it bulletproof before you touch anything else.\n\nThen move to the next process. And the next. Incremental wins compound faster than a chaotic full rebuild — and they let you learn what operational rigor actually means for your specific business.\n\nIf this kind of breakdown is useful, subscribe — I cover practical AI workflows and frameworks like this every week.\n\nAnd tell me in the comments: which industry do you think is most ready to be rebuilt as an AI-native services company? I'll read every reply."
+    },
+]
+
+for s in scenes:
+    s["words"] = len(s["script"].split())
+
+total_words = sum(s["words"] for s in scenes)
+estimated_duration_min = round(total_words / 130, 1)
+
+config = {
+    "title": "How to Build an AI-Native Services Company — Y Combinator Breakdown",
+    "source_video": "https://youtu.be/gSNFJbgoaHI (Y Combinator Startup Podcast — Charlie Warren, \"How to Build an AI-Native Services Company\")",
+    "target_duration_min": 9,
+    "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
+    "avatar_name": "Cesar Schneider at the microphone (city loft)",
+    "voice_id": "c0a044792fc64b3fa7dfc0700da93016",
+    "voice_name": "Cesar Schneider cloned voice",
+    "resolution": "1080p",
+    "dimension": {"width": 1920, "height": 1080},
+    "aspect_ratio": "16:9",
+    "caption": True,
+    "background": "#0f0f1a",
+    "status": "draft",
+    "key_ideas": [
+        "AI-native services companies vs traditional SaaS — selling outcomes instead of software",
+        "Trillion-dollar opportunity in tax, audit, insurance, legal, healthcare",
+        "Three attributes: domain fluency, low judgment at the task level, operational rigor",
+        "Value-based / outcome-based pricing aligns company success with customer success",
+        "\"The operation is the product\" — throughput, cycle time, and variance as core metrics",
+        "Human-in-the-loop must scale non-linearly with revenue",
+        "Five-part autonomous loop: sensor, policy, tools, quality gate, learning",
+        "Implementation strategy: one process at a time, bulletproof before scaling"
+    ],
+    "scenes": scenes,
+    "total_words": total_words,
+    "estimated_duration_min": estimated_duration_min,
+}
+
+config_path = os.path.join(os.path.dirname(__file__), "video-config.json")
+with open(config_path, "w") as f:
+    json.dump(config, f, indent=2, ensure_ascii=False)
+
+print(f"Total words: {total_words}")
+print(f"Estimated duration: {estimated_duration_min} min")
+print(f"Wrote {config_path}")

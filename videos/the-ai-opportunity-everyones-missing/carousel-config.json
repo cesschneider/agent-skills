@@ -1,0 +1,136 @@
+{
+  "width": 1080, "height": 1350, "margin": 72,
+  "background": "#F3ECE2",
+  "blueprint_grid": false, "corner_brackets": false, "page_dots": false,
+  "letterbox": true,
+  "colors": {
+    "navy": "#1F2D4D",
+    "terracotta": "#C96A4A",
+    "charcoal": "#1A1A1A",
+    "muted": "#9499a8"
+  },
+  "font_dir": "/mnt/skills/examples/canvas-design/canvas-fonts",
+  "fonts": {
+    "headline": "Lora-Bold.ttf",
+    "body": "Lora-Regular.ttf",
+    "body_bold": "Lora-Bold.ttf",
+    "mono": "IBMPlexSerif-Regular.ttf",
+    "mono_bold": "IBMPlexSerif-Bold.ttf",
+    "serif_bold": "Lora-Bold.ttf",
+    "serif": "Lora-Regular.ttf"
+  },
+  "slides": [
+    {
+      "footer": "01 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 56, "gap_before": 64, "lines": [
+          [{"text": "The AI Opportunity", "color": "navy"}],
+          [{"text": "Everyone's", "color": "charcoal"}],
+          [{"text": "Missing", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 70,
+         "text": "A personal take from someone who's spent years keeping enterprise systems alive — on the number that changes everything."}
+      ]
+    },
+    {
+      "footer": "02 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 58, "gap_before": 100, "lines": [
+          [{"text": "Most of My Career", "color": "charcoal"}],
+          [{"text": "Has Been", "color": "navy"}],
+          [{"text": "This.", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 40, "color": "charcoal", "gap_before": 80,
+         "text": "In enterprise software, most of the work isn't building new things. It's keeping old things running. So when I found a number about exactly that problem, I couldn't stop thinking about it."}
+      ]
+    },
+    {
+      "footer": "03 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "The Assumption Everyone Makes", "size": 34, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "\"AI writes code now, so there's less work for developers.\" I hear this constantly.\n\nIt assumes the total amount of work is fixed and AI just does the same work faster, with fewer people. After years inside large engineering orgs, I don't think that's how it plays out."}
+      ]
+    },
+    {
+      "footer": "04 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "The Number That Got Me", "size": 36, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Globally, there's an estimated 800 billion lines of legacy code in production. Modernizing it has historically cost ~$10-15 per line — too expensive for most of it to ever get touched.\n\nWith AI handling analysis, refactoring, and testing, that's dropping toward ~$2 per line. The gap: an addressable opportunity north of $1.6 trillion."}
+      ]
+    },
+    {
+      "footer": "05 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "That One System Nobody Touches", "size": 32, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Every org has one. The original team is gone, the docs are thin, and every change request gets pushed to \"next quarter\" because the risk-to-reward isn't there.\n\nThat system isn't an edge case — it's where a huge share of an engineering org's time, budget, and stress actually goes."}
+      ]
+    },
+    {
+      "footer": "06 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "What This Means For Engineers", "size": 34, "gap_before": 60},
+        {"type": "icon_grid", "columns": 3, "gap_before": 80, "items": [
+          {"icon": "map", "label": "Archaeology\nUnderstand the\nold system"},
+          {"icon": "shield", "label": "Risk Management\nDon't break what\nworks"},
+          {"icon": "dashboard", "label": "AI Orchestration\nDirect tools to\nrebuild safely"}
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 90,
+         "text": "The engineers who spent years on legacy systems — the ones everyone avoided — suddenly have the skill set that matters most."}
+      ]
+    },
+    {
+      "footer": "07 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "What This Means For The Industry", "size": 30, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "If AI drops modernization cost by 5-10x, the naive read is: same work, less money.\n\nBut I think the opposite happens — a huge backlog of \"someday, maybe\" projects suddenly clears the bar. The market doesn't shrink. It widens, because the threshold for \"worth doing\" just dropped."}
+      ]
+    },
+    {
+      "footer": "08 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "What I'm Exploring Next", "size": 36, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "I don't have this all figured out. But after years watching legacy systems pile up while everyone chased the next shiny feature, this is the shift I've been waiting for.\n\nI want to work through it in public — what applying AI to a real legacy system actually looks like, what breaks, what saves time, and what's still hype."}
+      ]
+    },
+    {
+      "footer": "09 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 50, "gap_before": 110, "lines": [
+          [{"text": "The market", "color": "charcoal"}],
+          [{"text": "doesn't shrink.", "color": "charcoal"}],
+          [{"text": "It widens.", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 36, "color": "muted", "gap_before": 80,
+         "text": "The threshold for \"worth doing\" just dropped — and that changes everything about where the work goes next."}
+      ]
+    },
+    {
+      "footer": "10 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 54, "gap_before": 70, "lines": [
+          [{"text": "What's Your", "color": "navy"}],
+          [{"text": "Scariest System?", "color": "charcoal"}]
+        ]},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "A system everyone's afraid to touch. A modernization project that never got the green light. Or you're already experimenting with AI on legacy code."},
+        {"type": "body", "size": 38, "color": "terracotta", "gap_before": 50,
+         "text": "Tell me about it in the comments — and follow along on LinkedIn, X, and Instagram. Let's figure this out together."}
+      ]
+    }
+  ]
+}

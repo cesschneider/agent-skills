@@ -1,0 +1,78 @@
+{
+  "width": 1920, "height": 1080, "margin": 96,
+  "background": "#0f0f1a", "grid_color": "#181828",
+  "colors": {"white": "#f5f5f7", "muted": "#9499a8",
+             "accent1": "#8b5cf6", "accent2": "#5eead4"},
+  "font_dir": "/mnt/skills/examples/canvas-design/canvas-fonts",
+  "fonts": {"headline": "BricolageGrotesque-Bold.ttf",
+            "body": "Outfit-Regular.ttf", "body_bold": "Outfit-Bold.ttf",
+            "mono": "GeistMono-Regular.ttf", "mono_bold": "GeistMono-Bold.ttf"},
+  "blueprint_grid": true, "corner_brackets": true, "page_dots": true,
+  "grid_step": 60,
+  "slides": [
+    {
+      "eyebrow": "HOOK",
+      "elements": [
+        {"type": "headline", "text": "3 RULES FOR\nBUILDING AGENTS", "size": 120, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Don't build agents for everything. Keep it simple. Think like your agents.", "size": 44, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "BARRY ZHANG, ANTHROPIC — AI ENGINEER SUMMIT"
+    },
+    {
+      "eyebrow": "01 — THE DISTINCTION",
+      "elements": [
+        {"type": "headline", "text": "WORKFLOWS VS\nAGENTS", "size": 130, "color": "accent1", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Predefined paths vs. autonomous loops driven by feedback", "size": 46, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "NOT A VALUE JUDGMENT — JUST A FIT"
+    },
+    {
+      "eyebrow": "02 — THE CHECKLIST",
+      "elements": [
+        {"type": "headline", "text": "AMBIGUITY.\nVALUE. RISK.", "size": 130, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Three questions to ask before you reach for an agent", "size": 46, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "PREDICTABLE STEPS? USE A WORKFLOW"
+    },
+    {
+      "eyebrow": "03 — THE PROOF",
+      "elements": [
+        {"type": "headline", "text": "CODING IS THE\nIDEAL AGENT TASK", "size": 110, "color": "accent2", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Complex, high-value, great tools, and verifiable with tests", "size": 46, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "WHY CODING AGENTS WORK SO WELL"
+    },
+    {
+      "eyebrow": "04 — THE BLUEPRINT",
+      "elements": [
+        {"type": "headline", "text": "ENVIRONMENT.\nTOOLS. PROMPT.", "size": 110, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "The three building blocks every agent needs", "size": 46, "bold": true, "color": "accent1", "gap_before": 60}
+      ],
+      "footer": "THE WEAKEST LINK BREAKS THE AGENT"
+    },
+    {
+      "eyebrow": "05 — THE CONSTRAINT",
+      "elements": [
+        {"type": "headline", "text": "10-20K TOKENS\nOF CONTEXT", "size": 110, "color": "accent2", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Think like your agent — could YOU do this with just that?", "size": 46, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "LIMITED ATTENTION, NOT LIMITED INTELLIGENCE"
+    },
+    {
+      "eyebrow": "06 — WHAT'S NEXT",
+      "elements": [
+        {"type": "headline", "text": "SIMPLE FIRST.\nTHEN SCALE.", "size": 120, "color": "accent1", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Nail tools and prompts first — parallelize and self-improve later", "size": 44, "bold": true, "color": "white", "gap_before": 60}
+      ],
+      "footer": "COST BUDGETS · SELF-IMPROVING TOOLS · MULTI-AGENT"
+    },
+    {
+      "eyebrow": "YOUR NEXT STEP",
+      "elements": [
+        {"type": "headline", "text": "ASK THE 3\nQUESTIONS", "size": 130, "color": "white", "gap_before": 100, "line_spacing": 1.2},
+        {"type": "body", "text": "Agent or workflow? Which block is weakest? Could YOU do it with this context?", "size": 42, "bold": true, "color": "accent2", "gap_before": 60}
+      ],
+      "footer": "BUILDING EFFECTIVE AGENTS — BREAKDOWN"
+    }
+  ]
+}

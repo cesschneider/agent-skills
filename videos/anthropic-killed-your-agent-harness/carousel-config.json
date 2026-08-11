@@ -1,0 +1,136 @@
+{
+  "width": 1080, "height": 1350, "margin": 72,
+  "background": "#F3ECE2",
+  "blueprint_grid": false, "corner_brackets": false, "page_dots": false,
+  "letterbox": true,
+  "colors": {
+    "navy": "#1F2D4D",
+    "terracotta": "#C96A4A",
+    "charcoal": "#1A1A1A",
+    "muted": "#9499a8"
+  },
+  "font_dir": "/mnt/skills/examples/canvas-design/canvas-fonts",
+  "fonts": {
+    "headline": "Lora-Bold.ttf",
+    "body": "Lora-Regular.ttf",
+    "body_bold": "Lora-Bold.ttf",
+    "mono": "IBMPlexSerif-Regular.ttf",
+    "mono_bold": "IBMPlexSerif-Bold.ttf",
+    "serif_bold": "Lora-Bold.ttf",
+    "serif": "Lora-Regular.ttf"
+  },
+  "slides": [
+    {
+      "footer": "01 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 54, "gap_before": 64, "lines": [
+          [{"text": "Anthropic Just", "color": "navy"}],
+          [{"text": "Killed Your", "color": "charcoal"}],
+          [{"text": "Agent Harness", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 70,
+         "text": "What an enterprise engineer is actually deleting from their agent stack this week — and why."}
+      ]
+    },
+    {
+      "footer": "02 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 56, "gap_before": 100, "lines": [
+          [{"text": "Delete Half", "color": "charcoal"}],
+          [{"text": "Your Agent", "color": "navy"}],
+          [{"text": "Code.", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 40, "color": "charcoal", "gap_before": 80,
+         "text": "That's Anthropic's own architecture guidance now. For a year, teams built heavy scaffolding around these models. That assumption just broke."}
+      ]
+    },
+    {
+      "footer": "03 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "The Assumption Everyone Made", "size": 32, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Models are unreliable, so wrap them in structure: prompt chains, hardcoded filters, manual memory pipelines.\n\nI've built versions of this in enterprise software for years. It was good engineering — for the platforms we had at the time."}
+      ]
+    },
+    {
+      "footer": "04 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "The Number That Changes Everything", "size": 28, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Claude 4 hit near 50% on SWE-bench using only bash and a text editor. No custom orchestration.\n\nOn BrowseComp, accuracy jumped from 45.3% to 61.6% the moment the model wrote its own filters instead of using hand-built ones."}
+      ]
+    },
+    {
+      "footer": "05 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "The System Nobody Wants to Touch", "size": 30, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "On April 4th, Anthropic cut third-party harnesses off subscription billing overnight. Sanctioned tools stayed covered; everything outside that boundary got metered.\n\nIf you've maintained enterprise systems, you know this move."}
+      ]
+    },
+    {
+      "footer": "06 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "What This Means For Engineers", "size": 32, "gap_before": 60},
+        {"type": "icon_grid", "columns": 3, "gap_before": 80, "items": [
+          {"icon": "map", "label": "Audit\nKeep what's a\nreal boundary"},
+          {"icon": "shield", "label": "Question\nWhat's habit,\nnot necessity"},
+          {"icon": "dashboard", "label": "Delete\nLet the model\norchestrate itself"}
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 90,
+         "text": "The abstraction you build to cover a weak platform becomes debt the moment the platform gets strong."}
+      ]
+    },
+    {
+      "footer": "07 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "What This Means For The Industry", "size": 28, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Maximum performance wants maximum autonomy. Enterprises want accountability. That tension doesn't get solved by rigid harnesses — it gets solved by sandboxing, memory, and audit trails.\n\nThat's the layer that survives."}
+      ]
+    },
+    {
+      "footer": "08 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "What I'm Exploring Next", "size": 36, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "I'm going back through my own agent tooling, scene by scene, asking what exists because the model needed it versus what I just assumed it would.\n\nAudit and permissions stay. Control for control's sake goes."}
+      ]
+    },
+    {
+      "footer": "09 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 48, "gap_before": 110, "lines": [
+          [{"text": "The model did better", "color": "charcoal"}],
+          [{"text": "when we stopped", "color": "charcoal"}],
+          [{"text": "pre-deciding how it thinks.", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 34, "color": "muted", "gap_before": 80,
+         "text": "That's not a small tooling update. That's a different relationship between engineer and model."}
+      ]
+    },
+    {
+      "footer": "10 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Cesar Schneider", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 50, "gap_before": 70, "lines": [
+          [{"text": "What's the One Piece", "color": "navy"}],
+          [{"text": "You're Unsure Of?", "color": "charcoal"}]
+        ]},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "A piece of your agent harness you built defensively and haven't questioned since."},
+        {"type": "body", "size": 38, "color": "terracotta", "gap_before": 50,
+         "text": "Tell me about it in the comments — and follow along on LinkedIn, X, and Instagram. Let's figure this out together."}
+      ]
+    }
+  ]
+}

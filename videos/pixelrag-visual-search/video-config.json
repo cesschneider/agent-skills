@@ -1,0 +1,170 @@
+{
+  "title": "PixelRAG: Visual Search at Scale",
+  "source_post": "https://www.linkedin.com/posts/akshay-pachaar_web-scraping-will-never-be-the-same-100-ugcPost-7473820758474137600-CXUM/",
+  "render_mode": "single_multiscene_call",
+  "render_backend": "heygen",
+  "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
+  "voice_id": "c0a044792fc64b3fa7dfc0700da93016",
+  "dimension": {
+    "width": 1920,
+    "height": 1080
+  },
+  "aspect_ratio": "16:9",
+  "caption": true,
+  "background": "#0f0f1a",
+  "status": "completed",
+  "key_ideas": [
+    "PixelRAG indexes rendered screenshots instead of parsed HTML text",
+    "A single HTML-to-text parser can drop 40%+ of a page's content",
+    "Parser swaps alone can shift accuracy ~10 percentage points",
+    "PixelRAG reports an 18.1% accuracy boost over text-RAG on text-only questions",
+    "Wikipedia proof-of-concept index holds 30M+ screenshots",
+    "Pipeline: render pages/PDFs/images -> embed with a LoRA-tuned vision model -> FAISS index + search API",
+    "Open-source (Apache-2.0), single setup script, no MCP server/backend required",
+    "Ships a Claude Code plugin that screenshots URLs and reads rendered pages"
+  ],
+  "scenes": [
+    {
+      "id": 0,
+      "type": "avatar",
+      "name": "Intro",
+      "script": "Hey, I'm Cesar Schneider. I've spent years building and maintaining enterprise software \u2014 and on this channel, I break down what's actually changing in software engineering and AI, one real idea at a time. Let's get into it.",
+      "words": 38
+    },
+    {
+      "id": 1,
+      "type": "slide",
+      "name": "Hook",
+      "image": "scene-images/01.png",
+      "narration": "A new project called PixelRAG just challenged one of the oldest assumptions in web retrieval: that you have to turn a page into text before a model can use it. Instead, it indexes screenshots \u2014 and the results are forcing a rethink of how search and RAG systems read the web.",
+      "words": 51,
+      "image_url": "https://resource2.heygen.ai/image/2ad140c49d3d4f75a9e7aeaceee4b4f4/original.png"
+    },
+    {
+      "id": 2,
+      "type": "avatar",
+      "name": "Hook Expanded",
+      "script": "For years, the standard pipeline for letting an AI search the web looked the same everywhere: fetch the HTML, strip the tags, chunk the text, embed it, and search. It works, mostly. But every one of those steps throws something away. And it turns out what gets thrown away is often the part that mattered.",
+      "words": 55
+    },
+    {
+      "id": 3,
+      "type": "slide",
+      "name": "The Hidden Cost of Parsing",
+      "image": "scene-images/02.png",
+      "narration": "Independent testing on this kind of pipeline found that a single HTML-to-text parser can drop more than forty percent of a page's content. Swap one parser for another, and accuracy alone can shift by roughly ten percentage points \u2014 before the model even sees a question.",
+      "words": 46,
+      "image_url": "https://resource2.heygen.ai/image/e8c8e77a71614bd6906e3515f637a4aa/original.png"
+    },
+    {
+      "id": 4,
+      "type": "avatar",
+      "name": "Hidden Cost Expanded",
+      "script": "That's the quiet failure mode nobody talks about. Tables get flattened into nonsense. Charts disappear entirely. Layout \u2014 which is often how a page communicates meaning, like a price next to a product, or a caption under an image \u2014 gets stripped out along with the formatting. The text is technically still there. The information isn't.",
+      "words": 56
+    },
+    {
+      "id": 5,
+      "type": "slide",
+      "name": "The Idea",
+      "image": "scene-images/03.png",
+      "narration": "PixelRAG's answer is almost stubbornly simple: stop parsing. Instead, render the page, the PDF, or the image as a picture, and search across pictures directly. If a human can understand a page by looking at it, the argument goes, a vision model should be able to as well.",
+      "words": 48,
+      "image_url": "https://resource2.heygen.ai/image/f8f6fd419201408690245944ee01251a/original.png"
+    },
+    {
+      "id": 6,
+      "type": "avatar",
+      "name": "Idea Expanded",
+      "script": "This isn't a totally new idea \u2014 vision-language models have been getting good enough to read screenshots for a while now. What's new is treating that as the primary retrieval strategy instead of a fallback, and building the indexing pipeline specifically around it.",
+      "words": 43
+    },
+    {
+      "id": 7,
+      "type": "slide",
+      "name": "The Numbers",
+      "image": "scene-images/04.png",
+      "narration": "On text-only questions, PixelRAG reported an eighteen-point-one percent accuracy boost over a traditional text RAG baseline. Its proof-of-concept index for Wikipedia alone holds more than thirty million screenshots \u2014 built entirely without ever converting a page to text.",
+      "words": 38,
+      "image_url": "https://resource2.heygen.ai/image/430d3b3f87ba45288a6c981214e3caeb/original.png"
+    },
+    {
+      "id": 8,
+      "type": "avatar",
+      "name": "Numbers Expanded",
+      "script": "Eighteen points is not a rounding error. That's the kind of gap that usually comes from changing architecture, not tuning a prompt. And it shows up specifically on text questions \u2014 the exact category text-based RAG should have the advantage on.",
+      "words": 41
+    },
+    {
+      "id": 9,
+      "type": "slide",
+      "name": "How It Works",
+      "image": "scene-images/05.png",
+      "narration": "Under the hood it's a three-stage pipeline. First, render web pages, PDFs, or images into tiles. Second, embed each tile with a vision-language embedding model, fine-tuned with LoRA for this task. Third, index those embeddings with FAISS and expose them behind a search API.",
+      "words": 44,
+      "image_url": "https://resource2.heygen.ai/image/647341259fab4649804ce420f04d295d/original.png"
+    },
+    {
+      "id": 10,
+      "type": "avatar",
+      "name": "Pipeline Expanded",
+      "script": "None of those three stages are exotic on their own \u2014 rendering, embedding, vector search. What's different is that the embedding step never touches a text extraction step at all. The image is the unit of retrieval, start to finish.",
+      "words": 40
+    },
+    {
+      "id": 11,
+      "type": "slide",
+      "name": "Why It Matters",
+      "image": "scene-images/06.png",
+      "narration": "If you maintain a RAG pipeline, this is worth paying attention to. Every parser, every chunker, every cleanup script you've written to compensate for messy HTML is a place where information can quietly disappear \u2014 and a place you now have to maintain forever.",
+      "words": 44,
+      "image_url": "https://resource2.heygen.ai/image/c6cf4ca4216f4612ac721d583532eb16/original.png"
+    },
+    {
+      "id": 12,
+      "type": "avatar",
+      "name": "Why It Matters Expanded",
+      "script": "That's a pattern I've seen plenty of times in enterprise systems too \u2014 the workaround you build for a weak step in the pipeline becomes the thing you're afraid to touch two years later. If visual retrieval keeps improving, a chunk of that workaround layer may simply stop being necessary.",
+      "words": 50
+    },
+    {
+      "id": 13,
+      "type": "slide",
+      "name": "Try It",
+      "image": "scene-images/07.png",
+      "narration": "The project ships Apache-2.0 licensed, with a single setup script \u2014 no MCP server, no separate backend to stand up. There's also a Claude Code plugin that lets Claude screenshot a URL and read the rendered page directly.",
+      "words": 38,
+      "image_url": "https://resource2.heygen.ai/image/424fbf2458b74800ba43ec47d8f8cdbd/original.png"
+    },
+    {
+      "id": 14,
+      "type": "avatar",
+      "name": "Try It Expanded",
+      "script": "That last part is the one I'd actually go try first. Giving an agent the ability to look at a page the way a person does, instead of only ever seeing a scraped wall of text, changes what kinds of pages it can reliably work with \u2014 dashboards, PDFs, anything dense with layout.",
+      "words": 53
+    },
+    {
+      "id": 15,
+      "type": "slide",
+      "name": "Join The Conversation",
+      "image": "scene-images/08.png",
+      "narration": "I don't think text parsing disappears overnight. But I do think the gap between rendering a page and parsing it just got a lot harder to ignore. Tell me where you land on this.",
+      "words": 34,
+      "image_url": "https://resource2.heygen.ai/image/d06856d9413b438f9e88d266b2ccec17/original.png"
+    },
+    {
+      "id": 16,
+      "type": "avatar",
+      "name": "CTA",
+      "script": "If you're building anything that touches web or document retrieval, I'd genuinely like to know: would you trust a screenshot-based index over a text one today, or is this still too early for production? Drop your take in the comments, and follow along \u2014 I'll keep digging into shifts like this one as they happen.",
+      "words": 55
+    }
+  ],
+  "total_words": 774,
+  "estimated_duration_min": 5.95,
+  "video_id": "aaa3e51268ae4f79910d47822a374c04",
+  "duration_s": 294.713,
+  "gif_url": null,
+  "captioned_url": "https://files2.heygen.ai/movio/video/aaa3e51268ae4f79910d47822a374c04/0f9caccd3900441abba438d671e108e3/caption.mp4?Expires=1782775467&Signature=Fnli65SPjlzShd-Lbz1s14FX10a7TDxnWI0JS93JlUW3S1dNt-Asl9r4QehKWACkNZ1u-IVR5LlpAN7WdIYMNn05ChXj04PygaDW~moKXOrOmwPmQcZngSD039GSnAiCRWEWZcWVbV3DxDO~7ONXUN60DgBbpy~Od77JWMVGczlZD7KqeOGuWdyXPyYrPiAtAnoACdS7A7mJ68sh-VXKVa9KNBjnWhruxhxmnUA-kY~P8AzPcDnHWlKcP6mNpxk5GoVWEPykOh89CvNmlKa0NCtx7C1HdYpETA1em4-u1NdrNjIpERG50klU9tmPOLjDqJ82OZTS9cwFTEd2NY9dPw__&Key-Pair-Id=K38HBHX5LX3X2H",
+  "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/aaa3e51268ae4f79910d47822a374c04.mp4?Expires=1782775465&Signature=FgMBM~3Jj~ifuDE4YFRZgMMaQOsAA45Qh7ZrADbw0Doi2xTjEw8a-7HO16tQl2eOnM6ROEk6niFZTCoM8bUgLiqugW6be1KihfucAco0o0EANeSpEKuRQQAPsyC8WXJzawb1r027TB6ddFnNY19nJIzKMG5dlGFVlmdPCt0eNYH6RiJvNODJaugZV9n9nM8Ykn~gjtnHbXrIO6HcKDMbUYvtcrnPDoBnhyfTKtR82gpLXgGvuYIt~jwldYYBe9g-sxi5rGEmZLERYXUp4WIeIQ2i-AubcSCZco3GbJ7RL5qaoJ84WHlf1sAVnRyUlZ3mf8f9AaZvH0jHh-16hj2CUw__&Key-Pair-Id=K38HBHX5LX3X2H"
+}

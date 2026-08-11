@@ -1,0 +1,142 @@
+{
+  "width": 1080, "height": 1350, "margin": 72,
+  "background": "#F3ECE2",
+  "blueprint_grid": false, "corner_brackets": false, "page_dots": false,
+  "letterbox": true,
+  "colors": {
+    "navy": "#1F2D4D",
+    "terracotta": "#C96A4A",
+    "charcoal": "#1A1A1A",
+    "muted": "#9499a8"
+  },
+  "font_dir": "/mnt/skills/examples/canvas-design/canvas-fonts",
+  "fonts": {
+    "headline": "Lora-Bold.ttf",
+    "body": "Lora-Regular.ttf",
+    "body_bold": "Lora-Bold.ttf",
+    "mono": "IBMPlexSerif-Regular.ttf",
+    "mono_bold": "IBMPlexSerif-Bold.ttf",
+    "serif_bold": "Lora-Bold.ttf",
+    "serif": "Lora-Regular.ttf"
+  },
+  "slides": [
+    {
+      "footer": "01 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 56, "align": "center"},
+        {"type": "title", "align": "center", "size": 56, "gap_before": 64, "lines": [
+          [{"text": "3 Rules for", "color": "navy"}],
+          [{"text": "Building", "color": "charcoal"}],
+          [{"text": "Effective Agents", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 70,
+         "text": "Anthropic's Barry Zhang breaks down when to build an agent, when not to, and the three things every agent actually needs."}
+      ]
+    },
+    {
+      "footer": "02 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 58, "gap_before": 100, "lines": [
+          [{"text": "Most Teams", "color": "charcoal"}],
+          [{"text": "Don't Need", "color": "navy"}],
+          [{"text": "An Agent.", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 40, "color": "charcoal", "gap_before": 80,
+         "text": "Anthropic's Applied AI team has helped dozens of companies build agentic systems. Their advice starts with knowing when NOT to build one."}
+      ]
+    },
+    {
+      "footer": "03 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "Agent vs. Workflow", "size": 36, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "A workflow is a set of model calls wired along a path you design ahead of time — you decide the shape, the model does the thinking inside each step.\n\nAn agent runs in a loop: it looks at its environment, acts, observes what happened, and decides again, with no predetermined path. Neither is \"better\" — they fit different problems."}
+      ]
+    },
+    {
+      "footer": "04 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "Three Questions First", "size": 36, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Is the problem genuinely ambiguous — can't enumerate the steps in advance? Is the value high enough to justify the extra exploration cost? What does it cost when the agent gets it wrong?\n\nPredictable steps and a tight budget point to a workflow. Ambiguous and high-value is where agents earn their keep."}
+      ]
+    },
+    {
+      "footer": "05 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "Coding: The Ideal Agent Task", "size": 34, "gap_before": 60},
+        {"type": "icon_grid", "columns": 4, "gap_before": 80, "items": [
+          {"icon": "map", "label": "Genuinely\nComplex"},
+          {"icon": "dashboard", "label": "High\nValue"},
+          {"icon": "clipboard", "label": "Agent-Ready\nTools"},
+          {"icon": "doc_alert", "label": "Verifiable\nWith Tests"}
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 90,
+         "text": "That combination is why coding agents are some of the most successful agents running in production today."}
+      ]
+    },
+    {
+      "footer": "06 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "Every Agent Needs Three Things", "size": 32, "gap_before": 60},
+        {"type": "icon_grid", "columns": 3, "gap_before": 80, "items": [
+          {"icon": "map", "label": "Environment\nThe world it acts in"},
+          {"icon": "clipboard", "label": "Tools\nAction + feedback"},
+          {"icon": "doc_alert", "label": "System Prompt\nGoals & limits"}
+        ]},
+        {"type": "body", "size": 38, "color": "charcoal", "gap_before": 90,
+         "text": "Get one wrong and the whole agent struggles — great tools can't fix a confused prompt, and a great prompt can't fix tools that return useless errors."}
+      ]
+    },
+    {
+      "footer": "07 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "Think Like Your Agent", "size": 36, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Your agent often has only 10,000 to 20,000 usable tokens of context at each step — once instructions, tools, and history are counted, that's smaller than it sounds.\n\nTake that exact context and ask: could I do this task with just it? If not, that gap is exactly where agents fail."}
+      ]
+    },
+    {
+      "footer": "08 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "section_header", "text": "Simple First, Then Scale", "size": 36, "gap_before": 60},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Nail the basics first: clear tools with useful outputs, and a tight system prompt. Add parallel tool calls later to cut latency, while keeping the user able to see what's happening.\n\nWhat's next: cost-aware agents, tools that self-improve, and multi-agent systems that talk to each other."}
+      ]
+    },
+    {
+      "footer": "09 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 52, "gap_before": 110, "lines": [
+          [{"text": "Don't build agents", "color": "charcoal"}],
+          [{"text": "for everything.", "color": "charcoal"}],
+          [{"text": "Build them on purpose.", "color": "terracotta"}]
+        ]},
+        {"type": "body", "size": 36, "color": "muted", "gap_before": 80,
+         "text": "The throughline of Anthropic's approach to agent design — match the tool to the problem."}
+      ]
+    },
+    {
+      "footer": "10 / 10",
+      "elements": [
+        {"type": "logo_header", "text": "Claude", "size": 48, "align": "center"},
+        {"type": "title", "align": "center", "size": 56, "gap_before": 70, "lines": [
+          [{"text": "Your Next", "color": "navy"}],
+          [{"text": "Step", "color": "charcoal"}]
+        ]},
+        {"type": "body", "size": 42, "color": "charcoal", "gap_before": 70,
+         "text": "Take your current project and ask: is this genuinely an agent problem, or would a simpler workflow do? Which of the three building blocks, environment, tools, or prompt, is weakest right now?"},
+        {"type": "body", "size": 38, "color": "terracotta", "gap_before": 50,
+         "text": "What's the biggest bottleneck in your agent: tools, prompt, or environment? Tell us in the comments."}
+      ]
+    }
+  ]
+}

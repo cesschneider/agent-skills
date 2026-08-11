@@ -1,0 +1,154 @@
+{
+  "title": "Anthropic Just Told Us To Delete Our Agent Harnesses (Here's What I'm Actually Doing About It)",
+  "source_video": "https://youtu.be/nBH07G-zayk",
+  "target_duration_min": 7.5,
+  "render_backend": "heygen",
+  "render_mode": "single_multiscene_call",
+  "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
+  "voice_id": "c0a044792fc64b3fa7dfc0700da93016",
+  "dimension": {
+    "width": 1920,
+    "height": 1080
+  },
+  "aspect_ratio": "16:9",
+  "caption": true,
+  "background": "#0f0f1a",
+  "status": "completed",
+  "key_ideas": [
+    "A year of agent tooling was built on the assumption that models need heavy scaffolding: prompt chains, hardcoded data filters, manual memory/RAG pipelines.",
+    "Anthropic's own benchmarks flipped that assumption: Claude 4 hits near 50% on SWE-bench using only bash and a text editor \u2014 no custom orchestration.",
+    "On BrowseComp, accuracy jumped from 45.3% to 61.6% when the model wrote its own code filters instead of using hand-built ones.",
+    "The new pitch: code is the orchestration language. Give the model a sandboxed shell and a REPL and let it write its own glue.",
+    "On April 4, Anthropic cut third-party harnesses (OpenClaw, Hermes, and similar Claude wrappers) off subscription billing \u2014 they now need separate pay-as-you-go usage.",
+    "Claude Code and Claude Cowork stay covered; everything built outside Anthropic's sanctioned surface area got metered overnight.",
+    "The stated enterprise tension: maximum model performance wants maximum autonomy, but compliance wants control \u2014 the proposed fix is infrastructure (sandboxing, audit trails, permissioning), not a return to rigid harnesses.",
+    "This mirrors a pattern enterprise engineers have lived through before: years spent building abstraction layers over a platform, only to watch the platform absorb that exact capability."
+  ],
+  "scenes": [
+    {
+      "id": 0,
+      "type": "avatar",
+      "name": "Intro",
+      "script": "Hey, I'm Cesar Schneider. I've spent years building and maintaining enterprise software \u2014 and on this channel, I break down what's actually changing in software engineering and AI, one real idea at a time. Let's get into it."
+    },
+    {
+      "id": 1,
+      "type": "slide",
+      "name": "Hook (slide)",
+      "image": "scene-images/01.png",
+      "narration": "Here's the shift in one frame: a year of heavy scaffolding, replaced almost overnight by a much simpler idea.",
+      "image_url": "https://resource2.heygen.ai/image/a410d6463afe4ac792d4e207984220a3/original.png"
+    },
+    {
+      "id": 2,
+      "type": "avatar",
+      "name": "Hook",
+      "script": "Anthropic just told every team building AI agents to delete half their code. Not as a joke, not as a hot take \u2014 as the literal architecture recommendation in their own engineering guidance. For the last year, I watched teams, including ones I've worked with, pour months into orchestration layers around these models. Prompt chains. Hardcoded filters. Custom memory pipelines. All of it built on one assumption: that the model needed us to hold its hand. That assumption just broke. And on the same week, Anthropic quietly cut off a huge chunk of the tools that were built on top of it. I want to walk you through both stories, because if you're building anything with AI agents right now, this changes what you should be building next."
+    },
+    {
+      "id": 3,
+      "type": "slide",
+      "name": "The Assumption Everyone Made (slide)",
+      "image": "scene-images/02.png",
+      "narration": "The old playbook, in three layers: prompt chains, hardcoded filters, and manual memory pipelines.",
+      "image_url": "https://resource2.heygen.ai/image/79b7c12b2f74405bb75b8961799c77bc/original.png"
+    },
+    {
+      "id": 4,
+      "type": "avatar",
+      "name": "The Assumption Everyone Made",
+      "script": "Here's the assumption that shaped almost every agent framework over the past year: models are unreliable narrators, so you wrap them in structure. You chain prompts so each step only sees what it needs. You hardcode filters so the model never touches raw, messy data. You build memory systems and retrieval pipelines so the model doesn't have to reason over everything itself. I've built versions of this in enterprise systems for years \u2014 not for AI, for plain old software. Every time a platform felt unreliable, the answer was always the same: add a layer. Add a queue. Add a cache. Add a translation service in between. It felt like good engineering. It was good engineering, for the platforms we had at the time."
+    },
+    {
+      "id": 5,
+      "type": "slide",
+      "name": "The Number That Changes Everything (slide)",
+      "image": "scene-images/03.png",
+      "narration": "Forty-five point three percent to sixty-one point six. The model wrote its own filters and got better.",
+      "image_url": "https://resource2.heygen.ai/image/339352fd57034beb9e852b2cdf36db36/original.png"
+    },
+    {
+      "id": 6,
+      "type": "avatar",
+      "name": "The Number That Changes Everything",
+      "script": "Then Anthropic published the numbers that undercut the whole premise. Claude 4, given nothing but a sandboxed bash shell and a text editor, hit close to fifty percent on SWE-bench. No custom orchestration. No bespoke tool design. Just the raw model and two generic tools it could use however it wanted. And on a benchmark called BrowseComp, accuracy jumped from forty-five point three percent to sixty-one point six percent the moment the model was allowed to write its own filtering code instead of using filters engineers had hand-built for it. Read that twice. The model did better when we stopped pre-deciding how it should think. That's not a small tooling update. That's a different relationship between engineer and model."
+    },
+    {
+      "id": 7,
+      "type": "slide",
+      "name": "The System Nobody Wants To Touch (slide)",
+      "image": "scene-images/04.png",
+      "narration": "April 4th: sanctioned tools stayed covered. Everything outside that boundary got metered.",
+      "image_url": "https://resource2.heygen.ai/image/0535546ce5d540d3b1bf8f3838fc8eae/original.png"
+    },
+    {
+      "id": 8,
+      "type": "avatar",
+      "name": "The System Nobody Wants To Touch",
+      "script": "While that technical story was unfolding, a quieter, more commercial one landed at the same time. On April 4th, Anthropic cut off third-party agent harnesses \u2014 tools like OpenClaw and Hermes that had been authenticating through the same OAuth tokens as Claude Code \u2014 from running on subscription billing. Overnight, those wrappers needed separate, metered, pay-as-you-go usage to keep working. Claude Code and Claude Cowork, Anthropic's own sanctioned surfaces, stayed fully covered. Everything built outside that boundary got a bill. If you've maintained enterprise systems, you know this move. It's the platform owner deciding which integrations are partners and which ones are just unpriced load on their infrastructure. I've been on both sides of that line."
+    },
+    {
+      "id": 9,
+      "type": "slide",
+      "name": "What This Means For Engineers (slide)",
+      "image": "scene-images/05.png",
+      "narration": "The harness you built to cover a weak model becomes debt the moment the model gets strong.",
+      "image_url": "https://resource2.heygen.ai/image/4bb8d2b850764f34a4a05333998f24be/original.png"
+    },
+    {
+      "id": 10,
+      "type": "avatar",
+      "name": "What This Means For Engineers",
+      "script": "Here's what I keep coming back to from my own years in enterprise software: the abstraction layer you build to compensate for a weak platform becomes technical debt the moment the platform gets strong. I've shipped middleware whose entire job was translating between two systems that, two years later, learned to talk to each other directly. The middleware didn't fail. It just became unnecessary weight nobody wanted to own. That's exactly what's happening to a lot of agent scaffolding right now. If your harness exists because the model couldn't reason over messy data, that reason is disappearing. The engineering question isn't 'how do I build a better harness.' It's 'which parts of my harness am I keeping out of habit, not necessity.'"
+    },
+    {
+      "id": 11,
+      "type": "slide",
+      "name": "What This Means For The Industry (slide)",
+      "image": "scene-images/06.png",
+      "narration": "The model wants autonomy. The enterprise wants proof and boundaries. That gap is the next product category.",
+      "image_url": "https://resource2.heygen.ai/image/a6a714e318bd4865be163352fe08471c/original.png"
+    },
+    {
+      "id": 12,
+      "type": "avatar",
+      "name": "What This Means For The Industry",
+      "script": "Zoom out and there's a real tension here that Anthropic itself is naming: maximum model performance wants maximum autonomy \u2014 a model with a shell and a REPL and minimal restriction. But enterprises can't ship that without controls, because autonomy without accountability is a compliance nightmare. The proposed answer isn't going back to rigid harnesses. It's a different kind of infrastructure: sandboxed execution environments, persistent and queryable memory, immutable audit trails for every action the agent took. That's a meaningful shift for the ecosystem of startups that built businesses around being the harness. Some of that category gets compressed into the model itself. What survives is the layer enterprises will always need: proof of what happened, and a boundary around what's allowed to happen."
+    },
+    {
+      "id": 13,
+      "type": "slide",
+      "name": "What I'm Exploring Next (slide)",
+      "image": "scene-images/07.png",
+      "narration": "What stays: audit and permissions. What goes: control for control's sake. I'm testing that line live.",
+      "image_url": "https://resource2.heygen.ai/image/020a572dab2a43a68c9ec01fdbd517e7/original.png"
+    },
+    {
+      "id": 14,
+      "type": "avatar",
+      "name": "What I'm Exploring Next",
+      "script": "So here's what I'm actually doing with this, not just thinking about it. I'm going back through tooling I've built around agents this year and asking, scene by scene, which piece exists because the model needed it, and which piece exists because I assumed it would. Some of it stays \u2014 anything that's really an audit boundary, a permission check, a place where I need a record of what the agent decided and why. That's not scaffolding, that's governance, and it doesn't go away. But the prompt-chaining-for-the-sake-of-control stuff, the hand-built filters doing a job a sandboxed shell can now do itself \u2014 I'm cutting that, deliberately, and measuring what breaks. I'll be sharing what I find, because I suspect most of us built more harness than we needed."
+    },
+    {
+      "id": 15,
+      "type": "slide",
+      "name": "Join The Conversation (slide)",
+      "image": "scene-images/08.png",
+      "narration": "Tell me the one piece of your harness you're least sure you still need.",
+      "image_url": "https://resource2.heygen.ai/image/852aa1c80b8a4cb298ee5626b911b4b4/original.png"
+    },
+    {
+      "id": 16,
+      "type": "avatar",
+      "name": "Join The Conversation",
+      "script": "If you're maintaining agent tooling right now, I'd bet you have at least one layer you built defensively that you haven't questioned since. I'd genuinely like to know what it is. Drop a comment with the piece of your own harness you're most unsure about, and I'll dig into a few of them in a future video. If this kind of breakdown \u2014 real engineering decisions, not just AI headlines \u2014 is useful to you, follow the channel so you don't miss the next one, and connect with me on LinkedIn, X, or Instagram, where I post the shorter version of these ideas as they're still forming. I read every comment. Let's figure this out together."
+    }
+  ],
+  "total_words": 977,
+  "estimated_duration_min": 7.52,
+  "video_id": "fc9cb1b75f36436488afb2b1f1553030",
+  "duration_s": 432.17,
+  "gif_url": null,
+  "captioned_url": "https://files2.heygen.ai/movio/video/fc9cb1b75f36436488afb2b1f1553030/3d6a664d772846dd981cbc2b6d52ba27/caption.mp4?Expires=1782607052&Signature=eS3FIlmeLvNoVW6tW4vWUZxstgDMzRs7xJZuDdepnAijVn-9McAs4IPfLNsl-z6-W5-hcahZyR9tTmnLAfYx94nY372pEM-K6B3vYaDLaM7JROiVpWxz73CRAptVITgTvmEZ6yDPrCZxufJkvpHOQVVboVKojjmJS8bfn444iTtUBhRJ80HYM1K4gg3zJjtrdtvbEl26XC5KWboe7obTtBh3eZZ6vd2zbglVdir0HZ1bn4IHilDrFZ58dP2Kal7U7Yc2-ReORwS~caIdTw8WrLrVuyukvXbxyjcQyxLpaSQe3Tf7TlWPyiHdyQqfvV0ZrCdDKPCH42U0z0EFgt4A9w__&Key-Pair-Id=K38HBHX5LX3X2H",
+  "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/fc9cb1b75f36436488afb2b1f1553030.mp4?Expires=1782607041&Signature=jLGRRTUdPzFyzVI988GrhX1B8jLTLdrqweBXLQNtaJy34QO2V1SJh6PDrXL2UzytdNL8z9iECAOqQNyh~liD31GiFSPMVFrGBmuHnBJLpXzm-kdI7KfWm2vqijM~iRNF9amKpBpz5HRZUQX~g4IZiOH9IZnQhyC9OE6ELMi1XpxiNGNGrQ~UVuXl7n~PM0dTajz90EE8tSoHNfXPuad~ft7SomxeiwNKw3uoHX3wag4hmA2BMRdoBnZ94UGIVgkt5KfB8fTeqeXGsSMslS1Eb5cdpuunWDLOy2aaElc1777wichyCTZhuIGbNZ7oTNrPukoPRUU1VgfdlBmC-f6TlQ__&Key-Pair-Id=K38HBHX5LX3X2H"
+}

@@ -1,0 +1,124 @@
+{
+  "title": "The AI Opportunity Everyone's Missing (And Why I Can't Stop Thinking About It)",
+  "source_video": "https://youtu.be/xrLy3RxtpQE",
+  "target_duration_min": 7.5,
+  "render_backend": "heygen",
+  "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
+  "voice_id": "c0a044792fc64b3fa7dfc0700da93016",
+  "dimension": {
+    "width": 1920,
+    "height": 1080
+  },
+  "aspect_ratio": "16:9",
+  "caption": true,
+  "background": "#0f0f1a",
+  "status": "rendered",
+  "key_ideas": [
+    "Enterprise software work is mostly maintenance: keeping decades-old systems alive, not building new ones.",
+    "The common fear \u2014 'AI writes code, so AI shrinks software jobs' \u2014 assumes the total amount of work is fixed.",
+    "Globally there are an estimated 800 billion lines of legacy code in production across large organizations.",
+    "Modernizing legacy code has historically cost roughly $10-15 per line, which is why most of it never gets touched.",
+    "AI-assisted analysis, refactoring, and testing is dropping that cost toward roughly $2 per line.",
+    "That cost collapse opens an addressable opportunity north of $1.6 trillion \u2014 not by replacing work, but by making deferred work viable.",
+    "The valuable skill shifts from 'write code fast' to 'understand a legacy system and direct AI to rebuild it safely' \u2014 part archaeology, part risk management.",
+    "At the industry level, cheaper modernization doesn't shrink IT services \u2014 it widens the market by clearing a backlog of 'someday, maybe' projects."
+  ],
+  "scenes": [
+    {
+      "id": 1,
+      "name": "Hook",
+      "script": "For years, I've worked on enterprise software \u2014 the kind of systems that run inside large organizations for a decade or more, passed between teams long after the people who built them have moved on. And if there's one thing that experience teaches you, it's this: most of the work in enterprise software isn't building new things. It's keeping old things running.\n\nSo when I came across a number recently \u2014 a genuinely huge number \u2014 about exactly that problem, I couldn't stop thinking about it. If it's even close to right, it says something big is about to happen to the kind of work I've spent my career doing. And almost nobody is framing it the way I think they should.",
+      "words": 122,
+      "video_id": "af20f29b0fcc48c69f29ae2f732b34d9",
+      "status": "completed",
+      "duration_s": 43.0759,
+      "captioned_url": "https://files2.heygen.ai/movio/video/af20f29b0fcc48c69f29ae2f732b34d9/c9266b48bf684677b5a816838edc3342/caption.mp4?Expires=1782591952&Signature=JWyAYGSB-kuV2gSd7RzMzzbLDI1k2gjw1sy1y5DwHvU-jLssBy4bPMGD9Se~VReJukziPftoYKInSXz5aMheu5TCqIrH2FOUzeAGsjrvjYl9Z7q8XWGGSHtz8Sltqq~G~Arv3haVCrCQ5mw6UUqCZFHSYTJHbm6kdETM7P0PtiGyKyopmmdYYmxVujQGI7-tL1U7wt4~ds2R8~ky6oAbR-XeKWTIxZzkALTeETKAnePqcLMna-ncnOYt6XyaD-XLZM2QAwUVAN7utLJZWZAA2PuLXmWk~kyszQ76Z9X2qP97-OlZvI6YXOC8oBoM48WZDmPQBwUypKAhPHzxjLNsVQ__&Key-Pair-Id=K38HBHX5LX3X2H",
+      "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/af20f29b0fcc48c69f29ae2f732b34d9.mp4?Expires=1782591951&Signature=JTc92pV6jYbjufVZcafuELdIOW6kqo6kvn4dqpiHsSxV0oVCioL9cyYeB1yu48q-ezRG2c~0LwYp5wzzFIYqAJ55N09Ih1A8Rj~NcturBRFrgj2uQHiHhjeWuQ~5AlIlvz76JDGaKnUVl-MTEsVh~ABDGwn4tFxGFZyrrFU4p3b6lq37yYxOlNkRBkjfxnkO3TxhwpaqOp3mjvcBWmC7LGdSzPryNRKD235bfjb9mh4gMxr~Cr2ELGee~hX5-0LjLxndIurVPuceLMOfJdPg~KqG32zMbRx4WmBxt6~Dthh~8xBpoSY9tG2n-kRIqLMps83VpcukyYAtoL98fN0~hg__&Key-Pair-Id=K38HBHX5LX3X2H"
+    },
+    {
+      "id": 2,
+      "name": "The Assumption Everyone Makes",
+      "script": "Here's the conversation I keep running into. Someone says, \"AI writes code now, doesn't that mean fewer developers, smaller teams, less work overall?\" It's the most common take on AI and software jobs, and I understand why people land there. If a tool can produce in minutes what used to take a team weeks, the obvious conclusion is that there's simply less work to go around.\n\nBut from where I sit, after years inside large engineering organizations, that take misses something important. It assumes the total amount of work is fixed, and AI just does the same work faster with fewer people. In my experience, that's almost never how it plays out in enterprise software. The real story is about what work suddenly becomes possible that wasn't possible before.",
+      "words": 129,
+      "video_id": "7081a0045c5d44019225de220af3ccfe",
+      "status": "completed",
+      "duration_s": 51.9576,
+      "captioned_url": "https://files2.heygen.ai/movio/video/7081a0045c5d44019225de220af3ccfe/af3f8cfcbdaa4b1bac2738683dfd7328/caption.mp4?Expires=1782591952&Signature=hLJAE~6gnUYclm8AqbgpjFiXxpGs8o21y9O65bKkQgD9Tfi1y-xFzlwe9LKNOv51O-iBSrQXtMqlQII-39i~I6Ld6IDdtibEzF0HQHqPUGt-ZA086nbL-gFba02uMgtSvDtKrMik8T0tdmwg0M6RDhMZ7fOkJmelMcPluIbnhYTvmhrGuDtD41bDJWT~HvxgzQpor~ps11Z9xkkRPSs13dcV~w~zJOQl4mmT28AXXtgp1VlKQF8xmnAEEwvdHNHOXMuVN9prxl7zvX7R47wtbgkVGDKAUNto75pWlt5vrFKTmuJrtZmtJKTAVtZNb74KN-Q9hosu25fEHevWK45Daw__&Key-Pair-Id=K38HBHX5LX3X2H",
+      "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/7081a0045c5d44019225de220af3ccfe.mp4?Expires=1782591940&Signature=CrS2X7GtM6f~pTa-W3pcDslaqZr5UQKUiJe7LtqjsGKYSXz5TovXCiuFfbQQDLaxwhi1ioo5W9kfk1UjRfHolDhaUZr4UfbvYjB510nGb3uHvZS55Tq~TCXZwvAv6owL5gBo82yjWQyYHNBQRHiNAsNKc1IxlHIaBOKzrEjUlXJpKCK8kMjuAYfZa3K-Pt1tghF7tnMZg-MDcFS7mHRXbMPBwos-5iy31k70YBmJ2F7Nixws9QoECEMhT8t2Qg~9roSLiRkJagBG9AcluKyEdJoBPrRJAMlw~wOByiUEYLoSykd1-e8WizQXdh8F8x9SQRL3hcbH8b-8jbHmXKmRUg__&Key-Pair-Id=K38HBHX5LX3X2H"
+    },
+    {
+      "id": 3,
+      "name": "The Number That Changes Everything",
+      "script": "Here's the number that got me. Across large organizations worldwide, there's an estimated 800 billion lines of legacy code sitting in production \u2014 payroll, supply chains, banking, insurance, the systems that quietly keep everything running. Historically, modernizing that code, rewriting it, migrating it, untangling decades of patches, has cost somewhere around ten to fifteen dollars per line. At that price, most of it never gets touched. The business case never closes.\n\nNow, with AI handling a large share of the analysis, refactoring, and testing, that cost is dropping toward roughly two dollars a line. Do the math on that gap, and you get an addressable opportunity north of one and a half trillion dollars. Not by replacing work, but by making decades of deferred work suddenly worth doing.",
+      "words": 127,
+      "video_id": "5e4d36c007174ffc9c02ac63822ed536",
+      "status": "completed",
+      "duration_s": 53.2637,
+      "captioned_url": "https://files2.heygen.ai/movio/video/5e4d36c007174ffc9c02ac63822ed536/548d78c731ab44a6b4107ccb7a3640c3/caption.mp4?Expires=1782591998&Signature=E~4xR1pyoZczuewQ6R1DSk-tn3U1sNaf~ME72yvZVUgEGUhGUqb2nUG51DmSVlzJBoVH0y3McPUMwmH7qWqFfWJNLYwb2RisMyI9I4HpS8ENGBGy-ywvZeNv8jjdODK~g0bJFBTAYA~ESHxjKqwCN9pC~vM-0aT2wuV92vasbbBH9UDy9cseCuUHvLxuzRzPy2G7Cd-MqD-QeWv1rps1ZY-nlOudvbGCR0kktEoxtM3f4nReSRjT89FO9HZUg59frzUtGJws8GwWhWRLHk6MM9eX1ZcaLyzKZX7r-MQ~fEqnJEuCdZ8QQLa4fsWxb-D1oubIs88T10c3rJtnF5JeTw__&Key-Pair-Id=K38HBHX5LX3X2H",
+      "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/5e4d36c007174ffc9c02ac63822ed536.mp4?Expires=1782591989&Signature=jrr4F53c3tAyOe7rh1GmiJPVlbqpEzgwMJnc9IM~Uas23WBgi7sWZiSuS3We1JO0l5WPALufhtDJwXQ7Vh9kVm2Za0pYXa2XLsWyaHGc~QS6cORPaABHT~Jwi~Dwob-W1W3B~V3HtS0UCvIxH-4McHeQjaK2tzUfib-DcFDFoJESTp8su1iTWdb4DIe9fVQVuB4NbvP0cR4mkk7lK6Z6tFs3d4FfMNCkfDrWIUJNahbAjpVcps3gk2eMbrjaysPUDkrErL4SKt-qLyxVN0s7KYGSpVP63uqCek03owBdpN2RZ5iRsFHCOr7517mReDflVromPj-jr-m~8o6SzGwPvQ__&Key-Pair-Id=K38HBHX5LX3X2H"
+    },
+    {
+      "id": 4,
+      "name": "The System Nobody Wants To Touch",
+      "script": "I want to make this concrete, because trillion-dollar numbers feel abstract. In every large engineering org I've worked in, there's always that one system. The one nobody wants to touch. The original team is long gone, the documentation is thin or nonexistent, and every change request quietly gets pushed to \"next quarter\" because the risk-to-reward ratio just isn't there.\n\nThat system isn't an edge case, it's the norm. It's where a huge share of an engineering organization's time, budget, and stress actually goes. And historically, the answer has always been \"live with it, because fixing it properly would cost too much and risk too much.\" What's changing right now is that equation. The things that were too expensive and too risky to touch are starting to look very different.",
+      "words": 129,
+      "video_id": "103c3f12265f4ace82819a38bd96a6cd",
+      "status": "completed",
+      "duration_s": 52.48,
+      "captioned_url": "https://files2.heygen.ai/movio/video/103c3f12265f4ace82819a38bd96a6cd/f7312972e3b045ec9daa3de7efaf1f4b/caption.mp4?Expires=1782591994&Signature=P6U9Y3CrnfTb4KTZgqNRPiIYtM0qQXoCaqt3UaRltpswdx88MXKvDmvLqFISatjiCna4kr~bnXehGiHTqH8TqYNc1rauxFm6j7jGYStDwCNT0R1PtLZK9FP99SIsJuj9hS-V35a3-kQ-R6QESpr7qfjfRX~wgOQ-xefGctCKroffoHqKyTDPpz2Hf06JTyK237YS5esd60tdSDnvknhX~o5DK~MSg3qcPv4wtYy5fTthpiglzauSm-mfhnxr~c9Xb4zxST7qx5lV5O3RbymVXwzgLMy2gUUmapE7ly2~J-HnXdKW7Oe17K1hSgox8xeC3MaNh5bSFO2gN71Fi-AL2w__&Key-Pair-Id=K38HBHX5LX3X2H",
+      "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/103c3f12265f4ace82819a38bd96a6cd.mp4?Expires=1782591976&Signature=PIKcCA~O3CoIbEoOVbOxQaYLX3ZdXs00lABNsmFyfA9ByD-RH6ccM45yslcJFaSldWYbqm08Aq~eJwS4l8-sjWLD0~yhYXWcz9G2w~GJ4gycYvd8y5qgFUmdnlQAZ9wvdW1eJF5W~jqVRsEKKm3zyfDsBaigyrp0exywhc1BxJ73jjoo4VCuuQ56OQxQJXhqVBmTZsj-T0pAP5lnOZgWpXNovHnkK2mBGwk8DgxMYgUrmb~KeW08N~7VgSfTxQF5boaq86Wl1uQuWdPTcPFxLrus7fkAFeuRGQOrG1k2uqgBQTv5RBIW-b6g6rw2JIyXUUQphbs5loPzpxMIDYuStA__&Key-Pair-Id=K38HBHX5LX3X2H"
+    },
+    {
+      "id": 5,
+      "name": "What This Means For Engineers",
+      "script": "So if the work isn't disappearing, what actually changes? I think it's the shape of the work, and specifically, who becomes valuable doing it. The skill that matters most here isn't \"can you write code fast.\" It's: can you read a messy, undocumented, twenty-year-old system, understand what it's actually supposed to do, and then direct a set of AI tools to rebuild it safely?\n\nThat's a very different skill from greenfield development. It's part archaeology, part risk management, part knowing how to ask an AI system the right questions and verify its answers against a system you can't afford to break. In my experience, the engineers who've spent years dealing with legacy systems, the ones everyone else tried to avoid, suddenly have a skill set that's about to become extremely valuable.",
+      "words": 131,
+      "video_id": "c2a3336c33d14d9e822d140a12e0ccd8",
+      "status": "completed",
+      "duration_s": 52.0098,
+      "captioned_url": "https://files2.heygen.ai/movio/video/c2a3336c33d14d9e822d140a12e0ccd8/1dbe63d1bafd49648e618a05ff658821/caption.mp4?Expires=1782591978&Signature=XTFmiUMdDW3eM7vqWcajj7W7TeN6taz7UwuLvrIS6jGsgLUxNvjAFXhwyOOHDdsHLvRLiHqTHU7duXP63oBmxcqSjIct3rWaXLRk4ONVVkTl200j2kzuMA-0uEVqZ8hH-pdiDigsqkSvjuiU24fM3P408gnL0mwv0dGhdGvuLJ0Wn8-usYoV~1R7AhUt3wiQb~hw28VOaYds~~UBKmFOuRVbrVG1zsOzV6CFCVOGyC3NQK5koeyZ-InfEiEe~t-0~T~yDUVLU1bNpL~quAu0eUfM5NftARVsaZ3h2eh9OhVnvRuyah2ABR9MTf-iATCSH9JGK2IOHv1KJ8y-QiwTJA__&Key-Pair-Id=K38HBHX5LX3X2H",
+      "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/c2a3336c33d14d9e822d140a12e0ccd8.mp4?Expires=1782591966&Signature=XzM~Ybgqgh~q-YhdJvRhzSzeYFrTl89-cGRa4cn1nG~rNelFuIMeNGVrsB3TLT43~37bGer9FKZqdz9ZBuF-Xafm3jTep178ETO~rtRA3oEHlN-hvtgGlUFnkIXUQ1UUEZquWAWnZvhO9dQ~wUCPLME8BseBewBd7FVhn8eGJFdz-OPJlSvuD0ZnaxoGBrywUzgNXbFjJ6rMGhv~f-bbXOxEJBaQ64xku0eKcI7BgY2ohFBlPBjQVv0407MrsFX84-ijVeyf4PNxNkwy6QJPgslHPw1Ra8-cO1kw1X9sMs6cGySMsqVWl6gk5XenSWEj1x-428Qh4xZsAnbZcYaJlA__&Key-Pair-Id=K38HBHX5LX3X2H"
+    },
+    {
+      "id": 6,
+      "name": "What This Means For The Industry",
+      "script": "Zoom out, and the same logic applies at the company level. For years, IT services and software firms have built businesses around this kind of work, at the old, expensive price point, for the small slice of legacy systems where the math actually worked. If AI genuinely drops that price by five to ten times, the naive read is that those firms now do the same amount of work for less money.\n\nBut the more I think about it, the more I think the opposite happens. A huge backlog of projects that sat in a \"someday, maybe\" pile suddenly clears the bar. The market doesn't shrink, it widens, because the threshold for \"worth doing\" just dropped dramatically. That's the part of this story I think most people are missing.",
+      "words": 129,
+      "video_id": "1b4b453def53464d85ca3b27fdad9338",
+      "status": "completed",
+      "duration_s": 46.6286,
+      "captioned_url": "https://files2.heygen.ai/movio/video/1b4b453def53464d85ca3b27fdad9338/af6dfa86ea4c468686959dc45e40de49/caption.mp4?Expires=1782591971&Signature=ShB8TXMmZz0uNSfghUtXdA1oqR2GOCAEKGwcicNLOMfdaN4PxUO~LZVJ~crgIb1oEhRS2OgSqK3Fv1C8wHmTR5gkaxz8nG1Nfn2x2fxtmKjkXTwhRd8dkVDYygfYfIMY9cIQnKYHO59tGxtMpoH2YEWSOIw79H9gY9vjCML4TTsIdXKmKm2F0a4guNYgVQe4zYoHtAGa8Qk6vRZpqE1o80HGydCS-g98yLn2jIYKLiXmPssnlIQIUfRU6nAjFBkOK5nfxCfNTZzE-XVCHLjwxN7ea6qI5H~WPJS8TuIZyGAoPPabywssh82O3l0oB~EpLrrMtmvbukNC4BcaBr9MMA__&Key-Pair-Id=K38HBHX5LX3X2H",
+      "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/1b4b453def53464d85ca3b27fdad9338.mp4?Expires=1782591952&Signature=DYaTy-xv0NYPZe2FEgtXsLo1tjvVvZa7xj5o13DfgRma9dL6CVIt1Hrw6xHarQYnGZt024IOIUB7tYLFuBBS73MB0BDEWayZEctDK-HJgW~tw7VM5u8Ziw~5iqdQqOgboBPAq-2cuS-KbsC2Y-HipprvUvaWJYog4CIVOw7XNGTylKa2R1U7VcQM55-XuovIvPiGN~gXAIfjphUdPayWQ5NMLZqoJ3JmDtRkBbHeai8TY6IYEeCCKT1MSWKqeEQj7tO35poYdUC5HgCsuuzsqaHx~XpH68vk~I6zSoRO-DgIlut3d7BoRDnADbz4EB~hw7vt6wa0hsIhkJRm~-3psg__&Key-Pair-Id=K38HBHX5LX3X2H"
+    },
+    {
+      "id": 7,
+      "name": "What I'm Exploring Next",
+      "script": "I'll be honest, I don't have this all figured out yet. What I do know is that after years inside enterprise software, watching legacy systems pile up while everyone chased the next shiny feature, this is the shift I've been waiting to see. And I want to actually dig into it, not just as a talking point, but as something I work through in public: what it looks like to apply AI to a real legacy system, what breaks, what genuinely saves time, and what's still just hype.\n\nThat's the kind of thing I plan to keep exploring and sharing, the real, hands-on version of this story, not just the trillion-dollar headline.",
+      "words": 112,
+      "video_id": "881cb2ff3289442ea78f88efc71b5f80",
+      "status": "completed",
+      "duration_s": 38.5829,
+      "captioned_url": "https://files2.heygen.ai/movio/video/881cb2ff3289442ea78f88efc71b5f80/943bf3374d3b49408256f9b1bc5da7d2/caption.mp4?Expires=1782591982&Signature=NJiVN3TERvEu8FUGQ4rtJpS3AwLDdvw5hOIZDlApj9nUXgSh7aamUUfWBM7cbTy6N9~3kChJcWf2QW4Cw-INILCKe3TdeKix5fhm~RVbT6nE030oY2f9ksDAzSfY3ohLBxo-qe-3o44b1DR04XksIpi1mwtQhUNgTQGIQ4ky3IQOO2XrzgUXYLE1MYEtfLMPBgLy16lOdaXUEFfw6WOmlRnLaX5qZbwct7YDC2kNyKpQCw2lgyvBzgY~E8bcg~n1UAeXxsitzVx-rU9MMAu3Fx2FrywnsTnUG9Fvja-jhzz2EvOiTgoOg0yHZ2A49r~T1bek19LRO5o890u1XE9x3Q__&Key-Pair-Id=K38HBHX5LX3X2H",
+      "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/881cb2ff3289442ea78f88efc71b5f80.mp4?Expires=1782591966&Signature=kP2rtCpRGqI4cvBcgVHvJJca0U9Q1olieRNdSCcfTqjRlU7UR1eXCV2z4fNESQJPx0EimoV9p1ztAxp5xC-mrnHDgmUDCDPAU4Cag-p-eBEw4rmHg7N~gtISDn4ZWAx4TX3E09BJwg64-lu7kkElXzkfvlMbCJi1AX8byfCHSOk8sdMsXgBSoJGoAC~q-G~05pJOsjdAE2ANX8ue97Maq8G2aqhPeVvySyduuwcwK0mlSkRqjtecToMcI7WZ42HiMmNWEByA~qF4wJtn0qAa~rFdkIlbOh7UOgxQxG5ngClfg9oLn4vLP4moUlvROhDdqzAsTU85U15EDD4HMBV9gQ__&Key-Pair-Id=K38HBHX5LX3X2H"
+    },
+    {
+      "id": 8,
+      "name": "Join The Conversation",
+      "script": "If any of this connects with something you've seen in your own work, a system everyone's afraid to touch, a modernization project that never got the green light, or you're already experimenting with AI on legacy code, I'd genuinely like to hear about it.\n\nI'm sharing more of this thinking on LinkedIn, X, and Instagram, follow along, because this is just the start of the conversation, not the end of it. And drop a comment: what's the oldest, scariest system in your stack right now, and what would it take to finally fix it? Let's figure this out together.",
+      "words": 99,
+      "video_id": "0084969dbb1949e98b0410cb971fca81",
+      "status": "completed",
+      "duration_s": 31.1641,
+      "captioned_url": "https://files2.heygen.ai/movio/video/0084969dbb1949e98b0410cb971fca81/c7fa7274ee1845c69431e35727da9a07/caption.mp4?Expires=1782591937&Signature=MUAr7TmUI9yhQgOy06rk2fC4Ld7wA7iXoUb9SX8lmhvBbxwyvDf30OTLX5pmruvtjt41i30Mx7d9~3kKYBtZ-lho4yVnc6R1YwltJXTnjxmDI3g96AIZTTefxCtZ4Ot5fn2mubBYv1w0ozEGX6-EMJIytV7tB7eo9XDoLyFrAfdytUNAPg5~LtfeyQJ8IUkRyf5CGDRa9f0V5na-~iLA8HcCwzyjiNFjQ~ZnX03ywUleDGEO0-2dL62hEtBHh7e4jQ8H9XvOlSILjAezgpQioGkhqa3tQGB8d-RTONMYo21FYYsD~y3mxxSu2Jyi8sfeVmJgY77W-SxI6HjehXGoEA__&Key-Pair-Id=K38HBHX5LX3X2H",
+      "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/0084969dbb1949e98b0410cb971fca81.mp4?Expires=1782591928&Signature=BNXSAKyEF33IbKfXeNc6WKi3iTfkrnybzHYzTRcShCKCY4qoi-E7WtWvRH1UkUocjU9D~KhBNSLOPa~wGUjciLggL9bdvj2kehE29NQlbRt5m02uYc852MBUKOWWfpmfDaODQVaQj9SmWf~O4dRRopMc9ewkQh5931SF8VDYdG34L6sSr~gTACEjqY8gY0f9hTjSl1-wtxEDYLB7952GVTOhajKGTf0PHCobIbxgEUivPHka47ItTHNNtGYAtye~yhLOIVnolfOQByquEqo1NDMIwvH7NF12QVpHqvu15fA6~433EJTN1GdJmC7~UytknRLQ2zk84BjsYfidrRGW4Q__&Key-Pair-Id=K38HBHX5LX3X2H"
+    }
+  ],
+  "total_words": 978,
+  "estimated_duration_min": 7.52,
+  "video_id": "146c9631d7ca49dd98323b727bdadfe0",
+  "duration_s": 368.588,
+  "gif_url": null,
+  "captioned_url": "https://files2.heygen.ai/movio/video/146c9631d7ca49dd98323b727bdadfe0/4b7e35236d5c4edcb6cebf6a93bc2fc1/caption.mp4?Expires=1782156010&Signature=nI6xG0HDSJ1lZj4P-DpTACuCAbKDDT2ijRY~Kb5K3iMoLM3E5XML46xlxuMe6bjyKwHv8XWrpjbkSZKfFIOzPT8v9x2d77zR-muo8NX05Ur6X-NPjj5dPAqandxwdQR7Fe98~vVBI7WKKpxxQVewRVSoicjC9Hg23ChwqYwTYWqjBLxn18qHIDJIf9zporyy6qPwe6rUULFyA-jy5-K90ddjIG7GI86Vdo1jBMntMmZmjOFo7rnUbVeNP-siPcow-QkLCk1wFep5adAFeFvDisdEMYLqo6ppM0-74qDiDAl08JaRCDwxT9SyyoP3nIhU4JxXYpzg8Pof1zGYqqtYxw__&Key-Pair-Id=K38HBHX5LX3X2H",
+  "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/146c9631d7ca49dd98323b727bdadfe0.mp4?Expires=1782155949&Signature=CcAr0CQC4a9U0fTgfOYcBLnNR8q3yBLNlRL2hJUJnFE3rG39IuuM6InjGoHc-iuB7C~hrP~7FoLFgM~eWKMjOpWnijnErBRV~h7GaCAkmIy8-pSAjsaLeYsEBKrZssywcHAv841ntdSOYQURuq5EyDG25NbJuBFvxNTL9DkZ7QubYfvZLcC-THM3T-y-IdPkVgLa4xh~LPbfUt-Po5dXvc5gKWm8dnUQGzNGV09XCo~B7VkV6xGP8UuGaJMzuxoGUH5kw86BW4omuEmwxczy8-9rrP1JZBzBt1ckbW-IpGGCDUl3nvQ3ZUIhe6Jr7lyOGc32nbbuPQ5x5P9hovURug__&Key-Pair-Id=K38HBHX5LX3X2H",
+  "total_duration_s": 369.1626
+}

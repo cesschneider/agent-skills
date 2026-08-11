@@ -1,0 +1,21 @@
+{
+  "title": "Channel Intro \u2014 Cesar Schneider",
+  "purpose": "Reusable channel intro, rendered once via HeyGen and re-used at the start of every video by assemble.py. Do not re-render unless the script or avatar/voice changes.",
+  "render_backend": "heygen",
+  "avatar_id": "731e46ac49bf4795bd4e4c799f1d3b95",
+  "voice_id": "c0a044792fc64b3fa7dfc0700da93016",
+  "dimension": {
+    "width": 1920,
+    "height": 1080
+  },
+  "aspect_ratio": "16:9",
+  "caption": true,
+  "background": "#0f0f1a",
+  "status": "completed",
+  "script": "Hey, I'm Cesar Schneider. I've spent years building and maintaining enterprise software \u2014 and on this channel, I break down what's actually changing in software engineering and AI, one real idea at a time. Let's get into it.",
+  "words": 38,
+  "video_id": "147600571eef46ccac19655ac5f781e7",
+  "duration_s": 13.871,
+  "captioned_url": "https://files2.heygen.ai/movio/video/147600571eef46ccac19655ac5f781e7/0b586a25724e4b6ca85403da8e134ed7/caption.mp4?Expires=1782496706&Signature=c7pj~k~CJ9tBjSXuJeD3v9cHdDInVRXDGpl1uRYF74rwthyGt9SZSZufi3p37RlYvjhFYWPwFis3SVuLTEtU-jC7IxslQRrdQXdKWTWlk2wzuwFdH~3kOIJBtWgNVHTFHWyoMhop1aUyWHKNIAfqvd~mY1Hrh138bHX1Tvduudun-d7WYnbgResFG0A3hpHh79H-UOue8enimxaseafFrfFelcVNBlC54QYkDQZZEXW6Ts-kTLoM4CnXjyCz7yQUQDG-M2l0qqR4k-IlZUojBi-3aI9X1ZFi-SfyzZqOZe9RzKiKuDjPZiBZ0wFTaHpc32GYtNPcsZiCaizLwsGFoQ__&Key-Pair-Id=K38HBHX5LX3X2H",
+  "video_url": "https://files2.heygen.ai/aws_pacific/avatar_tmp/15f134ea20d3436299573bf4f9fc9e60/147600571eef46ccac19655ac5f781e7.mp4?Expires=1782496694&Signature=b83sJqn~j7gny46QzvRFwcIsBfUOSH02SDbulMVjXPGZ9wL1uzgOsaP9N7UzY-RFXXTkZFoRBHUFNotVLV8aJH7OHXECnD8vV9jyiEDkhZ0Yy~ncXq20wang9xcrcosQaLYqP~q3KE5ksDrKUyJ~G855PhttkV9FBvfiSOcdxPRkzldQnVQM5R9NXtgFVKyohXiDQN5HyjuMGV5A524HzodPNqBdQ2NMsuXIYvuEojZrsA7UqsSQp7~aULt3bWZFwffd6sC-GvGK1yiFgo15~13JUl1zYHgGOUFfvbkTyrKUU8ATnq7hP0zFzbSMollvOxmM2jahboIhdh-sM-MVgw__&Key-Pair-Id=K38HBHX5LX3X2H"
+}
